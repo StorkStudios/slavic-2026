@@ -14,7 +14,7 @@ public class MinigameStation : MonoBehaviour, IInteractable
 
     public bool CanInteract()
     {
-        return true;
+        return minigame.CanStart();
     }
 
     public void Interact()
