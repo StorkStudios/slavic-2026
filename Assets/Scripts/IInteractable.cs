@@ -2,5 +2,7 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    public void Interact(GameObject playerObject);
+    public void Interact();
+
+    public bool CanInteract();
 }

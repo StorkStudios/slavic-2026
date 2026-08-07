@@ -9,7 +9,7 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField]
     private Transform camera;
 
-    public bool CanInteract => interactable != null;
+    public bool CanInteract => interactable != null && interactable.CanInteract();
     public IInteractable Interactable => interactable;
 
     private IInteractable interactable;
@@ -23,7 +23,7 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (CanInteract)
         {
-            interactable?.Interact(gameObject);
+            interactable?.Interact();
         }
     }
 

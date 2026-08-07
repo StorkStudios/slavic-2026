@@ -10,7 +10,12 @@ public class MinigameStation : MonoBehaviour, IInteractable
         minigame = GetComponent<Minigame>();
     }
 
-    public void Interact(GameObject playerObject)
+    public bool CanInteract()
+    {
+        return true;
+    }
+
+    public void Interact()
     {
         minigame.StartMinigame();
     }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6004414926601020252}
   - component: {fileID: 7737308924805848802}
   - component: {fileID: 223170661142555968}
+  - component: {fileID: 7010013754845259417}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -35,6 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3845495660007619244}
+  - {fileID: 4910254794328993237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2820284827655310756
@@ -150,6 +152,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
   interactionRange: 3
   camera: {fileID: 3845495660007619244}
+--- !u!114 &7010013754845259417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34050895700071304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb4dfb173802494396b69df45e36339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerObjectHolder
+  objectHoldLocations:
+    pairs:
+    - Key:
+        item: meat
+      Value: {fileID: 4910254794328993237}
+--- !u!1 &4603371539887369878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4910254794328993237}
+  m_Layer: 0
+  m_Name: MeatHoldLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4910254794328993237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4603371539887369878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.2588191, y: 0.9659258, z: 0, w: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4727451400308799275}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 30}
 --- !u!1 &8803178351989513085
 GameObject:
   m_ObjectHideFlags: 0
