@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (2)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -231,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (5)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (7)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -355,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (6)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -681,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (1)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -837,7 +837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (3)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1023,7 +1023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6317244867925930870, guid: 483b5b2ade464954f8f3dd67c9d516a2, type: 3}
       propertyPath: m_Name
-      value: MeatRow (4)
+      value: MeatRow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
