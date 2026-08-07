@@ -77,6 +77,7 @@ MonoBehaviour:
   animationCameraTarget: {fileID: 4363047259447710850}
   pickupHalfDuration: 1
   objectType: grinded meat
+  hotinGainSpeed: 1
 --- !u!1 &2669991775725619647
 GameObject:
   m_ObjectHideFlags: 0

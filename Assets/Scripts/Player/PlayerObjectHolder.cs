@@ -19,6 +19,14 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         InputAdapter.drop.performed += OnDrop;
     }
 
+    public void Update()
+    {
+        if (IsHoldingObject && CurrentObject.HotinGainSpeed > 0)
+        {
+            Hotin.Instance.AddDeltaTimeScaled(CurrentObject.HotinGainSpeed);
+        }
+    }
+
     private void OnDrop(InputAction.CallbackContext obj)
     {
         if (!IsHoldingObject)

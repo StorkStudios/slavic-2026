@@ -11,6 +11,8 @@ public class PickupableObject : MonoBehaviour, IInteractable
     private float pickupHalfDuration;
     [SerializeField]
     private string objectType;
+    [SerializeField]
+    private float hotinGainSpeed;
 
     public string ObjectType => objectType;
     string IInteractable.ActionName => "pick up " + ObjectType;
@@ -20,6 +22,8 @@ public class PickupableObject : MonoBehaviour, IInteractable
     {
         colliders = GetComponentsInChildren<Collider>();
     }
+
+    public float HotinGainSpeed => hotinGainSpeed;
 
     public bool CanInteract()
     {
