@@ -9,6 +9,7 @@ public abstract class Minigame : MonoBehaviour
     protected CinemachineCamera cinemachineCamera;
 
     private CursorLockMode lastLockMode;
+    private bool started = false;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public abstract class Minigame : MonoBehaviour
         canvas.gameObject.SetActive(true);
         lastLockMode = Cursor.lockState;
         CursorManager.Instance.UnlockCursor();
+        PlayerController.Instance.active = false;
+        started = true;
     }
 
     public virtual void EndMinigame()
@@ -32,5 +35,12 @@ public abstract class Minigame : MonoBehaviour
         {
             CursorManager.Instance.LockCursor();
         }
+        PlayerController.Instance.active = true;
+        started = false;
+    }
+
+    public virtual bool CanStart()
+    {
+        return !started;
     }
 }
