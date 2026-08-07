@@ -1,16 +1,18 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
+[RequireComponent(typeof(Minigame))]
 public class MinigameStation : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Minigame minigame;
+
+    private void Start()
     {
-        
+        minigame = GetComponent<Minigame>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
+        minigame.StartMinigame();
     }
 }
