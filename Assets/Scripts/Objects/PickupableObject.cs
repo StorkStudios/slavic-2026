@@ -35,6 +35,7 @@ public class PickupableObject : MonoBehaviour, IInteractable
         Transform holdLocation = objectHolder.GetHoldLocation(objectType);
         transform.DOMove(holdLocation.position, pickupHalfDuration);
         transform.DORotate(holdLocation.eulerAngles, pickupHalfDuration);
+        transform.DOScale(holdLocation.lossyScale, pickupHalfDuration);
         this.CallDelayed(pickupHalfDuration, () => PlayerController.Instance.active = true);
     }
 }
