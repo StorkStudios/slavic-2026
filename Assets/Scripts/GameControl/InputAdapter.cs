@@ -7,6 +7,7 @@ public static class InputAdapter
     public static readonly InputAction look;
     public static readonly InputAction interact;
     public static readonly InputAction sprint;
+    public static readonly InputAction drop;
 
     static InputAdapter()
     {
@@ -14,5 +15,6 @@ public static class InputAdapter
         look = InputSystem.actions.FindAction("Look");
         interact = InputSystem.actions.FindAction("Interact");
         sprint = InputSystem.actions.FindAction("Sprint");
+        drop = InputSystem.actions.FindAction("Drop");
     }
 }

@@ -1,5 +1,6 @@
 using StorkStudios.CoreNest;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 {
@@ -9,6 +10,21 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
     public bool IsHoldingObject => currentObject != null;
 
     private GameObject currentObject;
+
+    public void Start()
+    {
+        InputAdapter.drop.performed += OnDrop;
+    }
+
+    private void OnDrop(InputAction.CallbackContext obj)
+    {
+        if (!IsHoldingObject)
+        {
+            return;
+        }
+
+        DropObject();
+    }
 
     public Transform GetHoldLocation(string objectType)
     {
