@@ -20,6 +20,12 @@ public abstract class Minigame : MonoBehaviour
     [SerializeField]
     private float itemAnimtionDuration;
 
+    [Header("Product")]
+    [SerializeField]
+    private GameObject productPrefab;
+    [SerializeField]
+    private Transform[] productLocations;
+
     private CursorLockMode lastLockMode;
     private bool started = false;
     private PickupableObject currentItem;
@@ -73,6 +79,10 @@ public abstract class Minigame : MonoBehaviour
         {
             Destroy(currentItem.gameObject);
             currentItem = null;
+            foreach (Transform productLocation in productLocations)
+            {
+                Instantiate(productPrefab, productLocation.position, productLocation.rotation);
+            }
         }
     }
 
