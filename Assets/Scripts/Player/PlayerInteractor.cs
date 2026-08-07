@@ -30,8 +30,7 @@ public class PlayerInteractor : MonoBehaviour
     private void Update()
     {
         if (Physics.Raycast(camera.position, camera.forward, out RaycastHit hitInfo, interactionRange) &&
-            hitInfo.rigidbody != null &&
-            hitInfo.rigidbody.TryGetComponent(out IInteractable newInteractable))
+            hitInfo.transform.TryGetComponent(out IInteractable newInteractable))
         {
             interactable = newInteractable;
         }

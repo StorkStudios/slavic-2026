@@ -188,7 +188,6 @@ GameObject:
   - component: {fileID: 5134578400723492732}
   - component: {fileID: 611484256068328101}
   - component: {fileID: 2794236786043571094}
-  - component: {fileID: 112091387924004707}
   m_Layer: 0
   m_Name: CuttingTable
   m_TagString: Untagged
@@ -268,27 +267,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &112091387924004707
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6689913824332098566}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7451133452178465589
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +309,7 @@ GameObject:
   - component: {fileID: 4546872122882546905}
   - component: {fileID: 8535054616401662718}
   - component: {fileID: 2823749574814867712}
+  - component: {fileID: 5825605237658938645}
   m_Layer: 0
   m_Name: CuttingTable
   m_TagString: Untagged
@@ -387,6 +366,27 @@ MonoBehaviour:
   meatPrefab: {fileID: 0}
   markerPrefab: {fileID: 3601982553510612219}
   meatSpawnPoint: {fileID: 7016456542737398902}
+--- !u!65 &5825605237658938645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618340584681493179}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1.4, z: 2}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!1 &7704901414111438294
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +398,6 @@ GameObject:
   - component: {fileID: 3332826418085376545}
   - component: {fileID: 2058694741340557156}
   - component: {fileID: 2045783347745827210}
-  - component: {fileID: 3625934386404371356}
   m_Layer: 0
   m_Name: CuttingTable
   m_TagString: Untagged
@@ -478,27 +477,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3625934386404371356
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7704901414111438294}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4225512013999231816
 PrefabInstance:
   m_ObjectHideFlags: 0
