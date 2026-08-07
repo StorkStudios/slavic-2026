@@ -23,7 +23,7 @@ public class HUDController : MonoBehaviour
         if (PlayerInteractor.Instance.CanInteract)
         {
             interactAlfa = 1;
-            interactTooltip.text = $"[{InputAdapter.interact.GetBindingDisplayString()}] {PlayerInteractor.Instance.Interactable.ActionName}";
+            interactTooltip.text = $"[{InputAdapter.interact.GetBindingDisplayString(group: "Keyboard&Mouse")}] {PlayerInteractor.Instance.Interactable.ActionName}";
         }
         else
         {
@@ -33,7 +33,7 @@ public class HUDController : MonoBehaviour
         if (PlayerObjectHolder.Instance.IsHoldingObject)
         {
             dropAlfa = 1;
-            dropTooltip.text = $"[{InputAdapter.drop.GetBindingDisplayString()}] {PlayerObjectHolder.Instance.DropActionName}";
+            dropTooltip.text = $"[{InputAdapter.drop.GetBindingDisplayString(group: "Keyboard&Mouse")}] {PlayerObjectHolder.Instance.DropActionName}";
         }
         else
         {
