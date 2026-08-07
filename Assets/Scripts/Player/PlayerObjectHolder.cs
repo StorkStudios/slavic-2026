@@ -7,6 +7,8 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
     [SerializeField]
     private SerializedDictionary<string, Transform> objectHoldLocations;
 
+    public string DropActionName => $"drop {currentObject.ObjectType}";
+
     public bool IsHoldingObject => currentObject != null;
 
     private PickupableObject currentObject;

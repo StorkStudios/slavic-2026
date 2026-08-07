@@ -1,8 +1,8 @@
-using System.Linq;
+using StorkStudios.CoreNest;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInteractor : MonoBehaviour
+public class PlayerInteractor : Singleton<PlayerInteractor>
 {
     [SerializeField]
     private float interactionRange;
