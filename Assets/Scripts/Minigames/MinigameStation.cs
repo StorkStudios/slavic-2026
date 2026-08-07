@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Minigame))]
-public class MinigameStation : MonoBehaviour
+public class MinigameStation : MonoBehaviour, IInteractable
 {
     private Minigame minigame;
 
@@ -10,7 +10,7 @@ public class MinigameStation : MonoBehaviour
         minigame = GetComponent<Minigame>();
     }
 
-    public void Interact()
+    public void Interact(GameObject playerObject)
     {
         minigame.StartMinigame();
     }

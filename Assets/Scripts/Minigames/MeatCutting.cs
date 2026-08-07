@@ -15,6 +15,12 @@ public class MeatCutting : Minigame
     private Transform meatTransform;
     private MeatCuttingMarker currentMarker;
 
+    private void Start()
+    {
+        canvas.enabled = false;
+        cinemachineCamera.enabled = false;
+    }
+
     public override void StartMinigame()
     {
         //meatTransform = Instantiate(meatPrefab, meatSpawnPoint.position, meatSpawnPoint.rotation).transform;
