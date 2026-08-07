@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.storkstudios.corenest": {
+      "version": "https://github.com/StorkStudios/CoreNest.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "cdf47551ee9c82aba6cb2ecf601fdc5d6f015037"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.10",
       "depth": 0,
