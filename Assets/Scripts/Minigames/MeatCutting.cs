@@ -15,23 +15,18 @@ public class MeatCutting : Minigame
     private Transform meatTransform;
     private MeatCuttingMarker currentMarker;
 
-    private void Start()
-    {
-        canvas.enabled = false;
-        cinemachineCamera.enabled = false;
-    }
-
     public override void StartMinigame()
     {
         base.StartMinigame();
+        
         //meatTransform = Instantiate(meatPrefab, meatSpawnPoint.position, meatSpawnPoint.rotation).transform;
-        canvas.enabled = true;
         ShowNextMarker();
     }
 
     public override void EndMinigame()
     {
         base.EndMinigame();
+
         if (meatTransform != null)
         {
             Destroy(meatTransform.gameObject);
@@ -40,7 +35,6 @@ public class MeatCutting : Minigame
         {
             Destroy(currentMarker.gameObject);
         }
-        canvas.enabled = false;
     }
 
     private void ShowNextMarker()
