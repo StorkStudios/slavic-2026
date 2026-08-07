@@ -10,6 +10,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
     public bool IsHoldingObject => currentObject != null;
 
     private PickupableObject currentObject;
+    public PickupableObject CurrentObject => currentObject;
 
     public void Start()
     {

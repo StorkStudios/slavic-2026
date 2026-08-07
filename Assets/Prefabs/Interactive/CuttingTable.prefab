@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &467086235283297919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4357051568136155175}
+  m_Layer: 0
+  m_Name: MeatLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4357051568136155175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467086235283297919}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.18345267, z: -0, w: 0.9830286}
+  m_LocalPosition: {x: -0.13, y: 1.87, z: -0.16}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4546872122882546905}
+  m_LocalEulerAnglesHint: {x: 0, y: 21.142, z: 0}
 --- !u!1 &1072552603212533791
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +365,7 @@ Transform:
   - {fileID: 7016456542737398902}
   - {fileID: 5774029765952225098}
   - {fileID: 1576245347948644959}
+  - {fileID: 4357051568136155175}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &8535054616401662718
@@ -362,9 +394,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeatCutting
   canvas: {fileID: 141234507506818454}
   cinemachineCamera: {fileID: 8570150966434139023}
-  meatPrefab: {fileID: 0}
+  itemLocation: {fileID: 4357051568136155175}
+  itemType: meat
+  itemAnimtionDuration: 1
   markerPrefab: {fileID: 817641675700985779, guid: dd35dbb9831d41ce18769bf76974cc8e, type: 3}
-  meatSpawnPoint: {fileID: 7016456542737398902}
+  numberOfMarkers: 2
 --- !u!65 &5825605237658938645
 BoxCollider:
   m_ObjectHideFlags: 0

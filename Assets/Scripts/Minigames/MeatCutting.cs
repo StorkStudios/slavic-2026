@@ -4,13 +4,7 @@ public class MeatCutting : Minigame
 {
     [Header("Prefabs")]
     [SerializeField]
-    private GameObject meatPrefab;
-    [SerializeField]
     private GameObject markerPrefab;
-
-    [Header("References")]
-    [SerializeField]
-    private Transform meatSpawnPoint;
 
     [Header("Settings")]
     [SerializeField]
@@ -24,7 +18,6 @@ public class MeatCutting : Minigame
     {
         base.StartMinigame();
 
-        //meatTransform = Instantiate(meatPrefab, meatSpawnPoint.position, meatSpawnPoint.rotation).transform;
         ShowNextMarker();
     }
 
@@ -39,7 +32,7 @@ public class MeatCutting : Minigame
         }
         else
         {
-            EndMinigame();
+            EndMinigame(true);
         }
     }
 
@@ -58,9 +51,9 @@ public class MeatCutting : Minigame
         ShowNextMarker();
     }
 
-    public override void EndMinigame()
+    public override void EndMinigame(bool win)
     {
-        base.EndMinigame();
+        base.EndMinigame(win);
 
         if (meatTransform != null)
         {
