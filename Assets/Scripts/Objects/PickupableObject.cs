@@ -12,6 +12,9 @@ public class PickupableObject : MonoBehaviour, IInteractable
     [SerializeField]
     private string objectType;
 
+    public string ObjectType => objectType;
+    string IInteractable.ActionName => "pick up " + ObjectType;
+
     public bool CanInteract()
     {
         return !PlayerObjectHolder.Instance.IsHoldingObject;
@@ -28,7 +31,7 @@ public class PickupableObject : MonoBehaviour, IInteractable
     {
         animationCameraTarget.enabled = false;
         PlayerObjectHolder objectHolder = PlayerObjectHolder.Instance;
-        objectHolder.HoldObject(gameObject);
+        objectHolder.HoldObject(this);
         Transform holdLocation = objectHolder.GetHoldLocation(objectType);
         transform.DOMove(holdLocation.position, pickupHalfDuration);
         transform.DORotate(holdLocation.eulerAngles, pickupHalfDuration);

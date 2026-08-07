@@ -9,7 +9,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 
     public bool IsHoldingObject => currentObject != null;
 
-    private GameObject currentObject;
+    private PickupableObject currentObject;
 
     public void Start()
     {
@@ -35,7 +35,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         return holdLocation;
     }
 
-    public void HoldObject(GameObject obj)
+    public void HoldObject(PickupableObject obj)
     {
         if (currentObject != null)
         {
@@ -49,9 +49,9 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         currentObject = obj;
     }
 
-    public GameObject DropObject()
+    public PickupableObject DropObject()
     {
-        GameObject obj = currentObject;
+        PickupableObject obj = currentObject;
         currentObject = null;
         obj.transform.parent = null;
         if (obj.TryGetComponent(out Rigidbody rigidbody))
