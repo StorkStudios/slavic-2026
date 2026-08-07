@@ -14,6 +14,12 @@ public class PickupableObject : MonoBehaviour, IInteractable
 
     public string ObjectType => objectType;
     string IInteractable.ActionName => "pick up " + ObjectType;
+    private Collider[] colliders;
+
+    private void Start()
+    {
+        colliders = GetComponentsInChildren<Collider>();
+    }
 
     public bool CanInteract()
     {
@@ -27,6 +33,14 @@ public class PickupableObject : MonoBehaviour, IInteractable
         this.CallDelayed(pickupHalfDuration, OnPickupBack);
     }
 
+    public void OnDrop()
+    {
+        foreach(Collider collider in colliders)
+        {
+            collider.gameObject.layer = Layer.Default.GetLayerIndex();
+        }
+    }
+
     private void OnPickupBack()
     {
         animationCameraTarget.enabled = false;
@@ -37,5 +51,9 @@ public class PickupableObject : MonoBehaviour, IInteractable
         transform.DORotate(holdLocation.eulerAngles, pickupHalfDuration);
         transform.DOScale(holdLocation.lossyScale, pickupHalfDuration);
         this.CallDelayed(pickupHalfDuration, () => PlayerController.Instance.active = true);
+        foreach(Collider collider in colliders)
+        {
+            collider.gameObject.layer = Layer.HeldItems.GetLayerIndex();
+        }
     }
 }

@@ -153,6 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
   interactionRange: 3
   camera: {fileID: 3845495660007619244}
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
 --- !u!114 &7010013754845259417
 MonoBehaviour:
   m_ObjectHideFlags: 0

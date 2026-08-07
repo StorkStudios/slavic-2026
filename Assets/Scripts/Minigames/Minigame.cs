@@ -28,6 +28,7 @@ public abstract class Minigame : MonoBehaviour
 
     private CursorLockMode lastLockMode;
     private bool started = false;
+    protected bool Started => started;
     private PickupableObject currentItem;
     private bool animatingItem = false;
 
@@ -38,7 +39,7 @@ public abstract class Minigame : MonoBehaviour
         InputAdapter.cancel.performed += OnCancel;
     }
 
-    private void Oestroy()
+    private void OnDestroy()
     {
         InputAdapter.cancel.performed -= OnCancel;
     }

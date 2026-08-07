@@ -8,6 +8,8 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
     private float interactionRange;
     [SerializeField]
     private Transform camera;
+    [SerializeField]
+    private LayerMask interactableLayerMask;
 
     public bool CanInteract => interactable != null && interactable.CanInteract();
     public IInteractable Interactable => interactable;
@@ -29,7 +31,7 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
 
     private void Update()
     {
-        if (Physics.Raycast(camera.position, camera.forward, out RaycastHit hitInfo, interactionRange) &&
+        if (Physics.Raycast(camera.position, camera.forward, out RaycastHit hitInfo, interactionRange, interactableLayerMask) &&
             hitInfo.transform.TryGetComponent(out IInteractable newInteractable))
         {
             interactable = newInteractable;

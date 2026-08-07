@@ -21,6 +21,22 @@ public class MeatCutting : Minigame
         ShowNextMarker();
     }
 
+    public override void EndMinigame(bool win)
+    {
+        base.EndMinigame(win);
+
+        if (meatTransform != null)
+        {
+            Destroy(meatTransform.gameObject);
+        }
+        if (currentMarker != null)
+        {
+            Destroy(currentMarker.gameObject);
+        }
+
+        markersCut = 0;
+    }
+
     private void OnMarkerCut()
     {
         CleanupMarker();
@@ -49,22 +65,6 @@ public class MeatCutting : Minigame
         CleanupMarker();
         Debug.Log("Marker missed");
         ShowNextMarker();
-    }
-
-    public override void EndMinigame(bool win)
-    {
-        base.EndMinigame(win);
-
-        if (meatTransform != null)
-        {
-            Destroy(meatTransform.gameObject);
-        }
-        if (currentMarker != null)
-        {
-            Destroy(currentMarker.gameObject);
-        }
-
-        markersCut = 0;
     }
 
     private void ShowNextMarker()

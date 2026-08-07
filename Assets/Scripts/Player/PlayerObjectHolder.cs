@@ -57,6 +57,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         PickupableObject obj = currentObject;
         currentObject = null;
         obj.transform.parent = null;
+        obj.OnDrop();
         if (obj.TryGetComponent(out Rigidbody rigidbody))
         {
             rigidbody.isKinematic = false;
