@@ -14,6 +14,8 @@ public class MeatCutting : Minigame
     private MeatCuttingMarker currentMarker;
     private int markersCut = 0;
 
+    public override string Name => "Chop";
+
     public override void StartMinigame()
     {
         base.StartMinigame();

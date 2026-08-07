@@ -32,6 +32,8 @@ public abstract class Minigame : MonoBehaviour
     private PickupableObject currentItem;
     private bool animatingItem = false;
 
+    public abstract string Name { get; }
+
     private void Start()
     {
         cinemachineCamera.enabled = false;

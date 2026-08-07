@@ -8,6 +8,8 @@ public class MeatGrinding : Minigame
     [SerializeField]
     private float grindAngle;
 
+    public override string Name => "Grind";
+
     private float currentAngle = 0f;
 
     public override void StartMinigame()

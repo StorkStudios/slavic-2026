@@ -5,7 +5,7 @@ public class MinigameStation : MonoBehaviour, IInteractable
 {
     private Minigame minigame;
 
-    string IInteractable.ActionName => "play " + minigame.GetType().Name;
+    string IInteractable.ActionName => minigame.Name;
 
     private void Start()
     {
