@@ -9,10 +9,15 @@ public class Cactus : MonoBehaviour, IInteractable
     private float petCooldown;
     [SerializeField]
     private float hotinReduceAmount;
+    [SerializeField]
+    private string actionName = "Pet";
+    [SerializeField]
+    private string interactSound;
 
     private bool canPet = true;
 
-    public string ActionName => "Pet";
+    public string InteractSound => interactSound;
+    public string ActionName => actionName;
 
     public bool CanInteract()
     {

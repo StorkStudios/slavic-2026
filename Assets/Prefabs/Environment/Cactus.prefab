@@ -74,6 +74,8 @@ MonoBehaviour:
   particles: {fileID: 2548208750119445537}
   petCooldown: 2
   hotinReduceAmount: 1
+  actionName: Pet
+  interactSound: female_scream
 --- !u!1 &5520021420420362255
 GameObject:
   m_ObjectHideFlags: 0

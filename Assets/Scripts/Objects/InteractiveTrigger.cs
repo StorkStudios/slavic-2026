@@ -6,8 +6,11 @@ public class InteractiveTrigger : SceneTrigger, IInteractable
 {
     [SerializeField]
     private string actionName;
+    [SerializeField]
+    private string interactSound;
 
     public string ActionName => actionName;
+    public string InteractSound => interactSound;
 
     public bool CanInteract()
     {

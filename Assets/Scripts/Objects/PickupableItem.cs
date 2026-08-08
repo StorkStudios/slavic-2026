@@ -9,7 +9,10 @@ public abstract class PickupableItem : MonoBehaviour, IInteractable, IPickupable
     private float pickupDuration;
     [SerializeField]
     private string objectType;
+    [SerializeField]
+    private string interactSound;
 
+    public string InteractSound => interactSound;
     string IInteractable.ActionName => $"pick up {ObjectType}";
     public string ObjectType => objectType;
 

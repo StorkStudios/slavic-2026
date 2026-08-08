@@ -3,8 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(Minigame))]
 public class MinigameStation : MonoBehaviour, IInteractable
 {
+    [SerializeField]
+    private string interactSound;
+
     private Minigame minigame;
 
+    public string InteractSound => interactSound;
     string IInteractable.ActionName => minigame.Name;
 
     private void Start()

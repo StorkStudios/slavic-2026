@@ -9,8 +9,13 @@ public class ShowablePicture : MonoBehaviour, IInteractable
     private string cancelActionName;
     [SerializeField]
     private string pictureToShow;
+    [SerializeField]
+    private string showSound;
+    [SerializeField]
+    private string hideSound;
 
     public string ActionName => IsShowing ? cancelActionName : actionName;
+    public string InteractSound => IsShowing ? hideSound : showSound;
 
     private bool IsShowing => UIPicturesController.Instance.CurrentPicture == pictureToShow;
 

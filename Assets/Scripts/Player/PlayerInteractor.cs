@@ -32,6 +32,10 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
         if (CanInteract)
         {
             interactable?.Interact();
+            if (!string.IsNullOrEmpty(interactable?.InteractSound))
+            {
+                CommonSoundManager.Instance.PlaySound(interactable.InteractSound);
+            }
         }
         else if (PlayerObjectHolder.Instance.CurrentObject is PickupableItem item && item.CanUse())
         {
