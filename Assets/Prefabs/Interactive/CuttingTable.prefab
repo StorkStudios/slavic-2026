@@ -106,6 +106,132 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!1 &1260173709763800553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8291663096278559277}
+  - component: {fileID: 3853845558840167361}
+  - component: {fileID: 6440660524042962764}
+  m_Layer: 6
+  m_Name: ItemsDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8291663096278559277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260173709763800553}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.44, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4546872122882546905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3853845558840167361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260173709763800553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.993689, y: 2, z: 1.9661124}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6440660524042962764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260173709763800553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f3f81e4a0cd394386930966871fec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: StorkStudios.CoreNest::StorkStudios.CoreNest.ColliderEvents
+  collisionEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionStayed:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionExited:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEntered2D:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionStayed2D:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionExited2D:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2823749574814867712}
+        m_TargetAssemblyTypeName: MeatCutting, Assembly-CSharp
+        m_MethodName: OnTableTriggerEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerStayed:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2823749574814867712}
+        m_TargetAssemblyTypeName: MeatCutting, Assembly-CSharp
+        m_MethodName: OnTableTriggerExit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerEntered2D:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerStayed2D:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExited2D:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2425325074287057218
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +590,7 @@ Transform:
   - {fileID: 1576245347948644959}
   - {fileID: 4357051568136155175}
   - {fileID: 8686342599201029803}
+  - {fileID: 8291663096278559277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8535054616401662718
@@ -501,6 +628,8 @@ MonoBehaviour:
   - {fileID: 2514487859581452447}
   - {fileID: 5636020274507231562}
   - {fileID: 5131077567419491465}
+  objectsOnTable:
+    list: []
   markerPrefab: {fileID: 817641675700985779, guid: dd35dbb9831d41ce18769bf76974cc8e, type: 3}
   numberOfMarkers: 3
 --- !u!65 &5825605237658938645
