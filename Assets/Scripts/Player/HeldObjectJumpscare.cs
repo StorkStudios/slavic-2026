@@ -18,6 +18,12 @@ public class HeldObjectJumpscare : MonoBehaviour
     private float jumpscareDuration;
     [SerializeField]
     private AudioSource jumpscareSound;
+    [SerializeField]
+    private float shakeStrength;
+    [SerializeField]
+    private int shakeVibrato;
+    [SerializeField]
+    private float shakeRandomness;
 
     private float nextCheckTimestamp;
 
@@ -53,7 +59,7 @@ public class HeldObjectJumpscare : MonoBehaviour
         obj.locked = true;
         Vector3 playerForward = PlayerController.Instance.transform.forward;
         jumpscareSound.Play();
-        obj.transform.DOShakeRotation(jumpscareDuration, fadeOut: false);
+        obj.transform.DOShakeRotation(jumpscareDuration, shakeStrength, shakeVibrato, shakeRandomness, false);
         obj.transform.DOBlendableMoveBy(Vector3.up + playerForward, jumpscareDuration);
         this.CallDelayed(jumpscareDuration, () =>
         {

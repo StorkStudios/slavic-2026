@@ -180,6 +180,9 @@ MonoBehaviour:
   jumpscareChance: 0.1
   jumpscareDuration: 2
   jumpscareSound: {fileID: 4806099479567837799}
+  shakeStrength: 90
+  shakeVibrato: 10
+  shakeRandomness: 90
 --- !u!1 &203672659453472857
 GameObject:
   m_ObjectHideFlags: 0
