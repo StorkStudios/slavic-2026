@@ -3,7 +3,7 @@ using StorkStudios.CoreNest;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class PickupableObject : MonoBehaviour, IInteractable
+public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
 {
     [SerializeField]
     private CinemachineCamera animationCameraTarget;

@@ -11,8 +11,8 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 
     public bool IsHoldingObject => currentObject != null;
 
-    private PickupableObject currentObject;
-    public PickupableObject CurrentObject => currentObject;
+    private IPickupable currentObject;
+    public IPickupable CurrentObject => currentObject;
 
     public void Start()
     {
@@ -46,27 +46,27 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         return holdLocation;
     }
 
-    public void HoldObject(PickupableObject obj)
+    public void HoldObject(IPickupable obj)
     {
         if (currentObject != null)
         {
             DropObject();
         }
         obj.transform.parent = transform;
-        if (obj.TryGetComponent(out Rigidbody rigidbody))
+        if (obj.transform.TryGetComponent(out Rigidbody rigidbody))
         {
             rigidbody.isKinematic = true;
         }
         currentObject = obj;
     }
 
-    public PickupableObject DropObject()
+    public IPickupable DropObject()
     {
-        PickupableObject obj = currentObject;
+        IPickupable obj = currentObject;
         currentObject = null;
         obj.transform.parent = null;
         obj.OnDrop();
-        if (obj.TryGetComponent(out Rigidbody rigidbody))
+        if (obj.transform.TryGetComponent(out Rigidbody rigidbody))
         {
             rigidbody.isKinematic = false;
         }
