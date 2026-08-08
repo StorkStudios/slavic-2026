@@ -5,6 +5,6 @@ public class GameManager : Singleton<GameManager>
 {
     private void Start()
     {
-        Hotin.Instance.HotinValue.Value = 0;
+        Hotin.Instance.Reset();
     }
 }

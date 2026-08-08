@@ -8,6 +8,6 @@ public class tmpHotiinUI : MonoBehaviour
 
     private void Update()
     {
-        text.text = $"hotin{Hotin.Instance.HotinValue.Value}";
+        text.text = $"hotin{Hotin.Instance.Value}";
     }
 }
