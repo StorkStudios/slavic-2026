@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8874672205740321213}
   - component: {fileID: 4454751254563540330}
   - component: {fileID: 1896598624405770869}
+  - component: {fileID: 1216611163200721891}
   m_Layer: 0
   m_Name: MeatCutted
   m_TagString: Untagged
@@ -79,6 +80,61 @@ MonoBehaviour:
   pickupHalfDuration: 1
   objectType: meat piece
   hotinGainSpeed: 2
+--- !u!114 &1216611163200721891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738406399447128749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4966ca67c2852c5408d379d86c1c95ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
+  hotinRange:
+    Min: 10
+    Max: 100
+  rangeEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8472440287520958718}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: b5ae7bc44cf339542bedc031bc6e9ae0, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+  rangeStay:
+    m_PersistentCalls:
+      m_Calls: []
+    delay: 0
+    printDebugMessages: 0
+  stayTriggerCooldown: 0
+  rangeExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8472440287520958718}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: e94820cb71f88e549a3f16cacf35526a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
 --- !u!1 &2669991775725619647
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,5 +386,10 @@ PrefabInstance:
 --- !u!4 &7340598363822936977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1ad44dd93262a04a864ae8ec2750be3, type: 3}
+  m_PrefabInstance: {fileID: 7085765493550199930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8472440287520958718 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: a1ad44dd93262a04a864ae8ec2750be3, type: 3}
   m_PrefabInstance: {fileID: 7085765493550199930}
   m_PrefabAsset: {fileID: 0}
