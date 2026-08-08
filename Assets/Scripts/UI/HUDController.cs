@@ -30,6 +30,11 @@ public class HUDController : Singleton<HUDController>
             interactAlfa = 1;
             interactTooltip.text = $"[{InputAdapter.interact.GetBindingDisplayString(group: "Keyboard&Mouse")}] {PlayerInteractor.Instance.Interactable.ActionName}";
         }
+        else if (PlayerObjectHolder.Instance.CurrentObject is PickupableItem item && item.CanUse())
+        {
+            interactAlfa = 1;
+            interactTooltip.text = $"[{InputAdapter.interact.GetBindingDisplayString(group: "Keyboard&Mouse")}] {item.UseName}";
+        }
         else
         {
             interactAlfa = 0;

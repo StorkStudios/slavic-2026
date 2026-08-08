@@ -27,6 +27,10 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
         {
             interactable?.Interact();
         }
+        else if (PlayerObjectHolder.Instance.CurrentObject is PickupableItem item && item.CanUse())
+        {
+            item.Use();
+        }
     }
 
     private void Update()

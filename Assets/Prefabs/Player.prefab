@@ -130,6 +130,9 @@ MonoBehaviour:
     - Key:
         item: packed meat
       Value: {fileID: 1925168377053710791}
+    - Key:
+        item: dart
+      Value: {fileID: 7284379494867327215}
 --- !u!114 &3930135579987603650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +240,37 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2130494596061717423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7284379494867327215}
+  m_Layer: 0
+  m_Name: DartHoldLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7284379494867327215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130494596061717423}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.052335896, y: 0, z: 0, w: 0.9986295}
+  m_LocalPosition: {x: 0, y: -0.294, z: 0.775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3845495660007619244}
+  m_LocalEulerAnglesHint: {x: -6, y: 0, z: 0}
 --- !u!1 &2731101892535228685
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +558,7 @@ GameObject:
   - component: {fileID: 1398230350656980922}
   - component: {fileID: 9043497842129353451}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: PlayerCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +576,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7284379494867327215}
   m_Father: {fileID: 7213035797809302005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1398230350656980922
