@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c2b1600539c4627974967d19421833, type: 3}
   m_Name: PackageManager
   m_EditorClassIdentifier: Assembly-CSharp::PackageManager
-  readyPackages: 0
-  packagesRequired: 10
+  readyPackages:
+    pairs: []
+  packagesRequired: 1

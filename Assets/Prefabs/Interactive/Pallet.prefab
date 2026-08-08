@@ -104,7 +104,19 @@ MonoBehaviour:
       m_Calls: []
   triggerExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4269384352991121149}
+        m_TargetAssemblyTypeName: Pallet, Assembly-CSharp
+        m_MethodName: OnPalletTriggerExit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerEntered2D:
     m_PersistentCalls:
       m_Calls: []
@@ -272,3 +284,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554a7bc345aa2b6be84f6a1a7ab12eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pallet
+  packedMeatObjectType: packed meat

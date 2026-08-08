@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using StorkStudios.CoreNest;
 using UnityEngine;
 
@@ -7,36 +8,38 @@ public class PackageManager : ScriptableObjectSingleton<PackageManager>
 {
     [SerializeField]
     [ReadOnly]
-    private int readyPackages;
-    
-    public event ObservableVariable<int>.ValueChangedDelegate ValueChanged;
-    public event Action AllPackagesReadyEvent;
+    private SerializedDictionary<PickupableObject, int> readyPackages;
 
-    public int ReadyPackages
-    {
-        get => readyPackages;
-        set
-        {
-            if (value != readyPackages)
-            {
-                int oldValue = readyPackages;
-                readyPackages = value;
-                ValueChanged?.Invoke(readyPackages, value);
-                if (packagesRequired == readyPackages)
-                {
-                    AllPackagesReadyEvent?.Invoke();
-                }
-            }
-        }
-    }
-
-    public bool AllPackagesReady => readyPackages >= packagesRequired;
-    
     [SerializeField]
     private int packagesRequired;
+    
+    public event ObservableVariable<int>.ValueChangedDelegate CountChanged;
+    public event Action AllPackagesReadyEvent;
+
+    public int ReadyPackagesCount => readyPackages.Count;
+
+    public bool AllPackagesReady => ReadyPackagesCount >= packagesRequired;
 
     public void ResetNoUpdate()
     {
-        readyPackages = 0;
+        readyPackages.Clear();
+    }
+
+    public void AddPackage(PickupableObject obj)
+    {
+        readyPackages[obj] = readyPackages.GetValueOrDefault(obj, 0) + 1;
+        if (AllPackagesReady)
+        {
+            AllPackagesReadyEvent?.Invoke();
+        }
+    }
+
+    public void RemovePackage(PickupableObject obj)
+    {
+        readyPackages[obj] = readyPackages.GetValueOrDefault(obj, 1) - 1;
+        if (readyPackages[obj] <= 0)
+        {
+            readyPackages.Remove(obj);
+        }
     }
 }
