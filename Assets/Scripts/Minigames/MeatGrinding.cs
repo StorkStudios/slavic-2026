@@ -25,6 +25,8 @@ public class MeatGrinding : Minigame
     private Transform finalMeatLocation;
     [SerializeField]
     private Transform initialProductLocation;
+    [SerializeField]
+    private GameObject fakeMeatPrefab;
 
     [Header("Events")]
     [SerializeField]
@@ -53,7 +55,7 @@ public class MeatGrinding : Minigame
         InputAdapter.interact.started += OnMousePress;
         InputAdapter.interact.canceled += OnMouseRelease;
 
-        fakeProduct = Instantiate(productPrefab, initialProductLocation.position, initialProductLocation.rotation);
+        fakeProduct = Instantiate(fakeMeatPrefab, initialProductLocation.position, initialProductLocation.rotation);
     }
 
     public override void EndMinigame(bool win)
@@ -63,6 +65,7 @@ public class MeatGrinding : Minigame
         if (win)
         {
             Destroy(fakeProduct);
+            rotatedAngle = 0f;
         }
 
         InputAdapter.interact.started -= OnMousePress;
