@@ -6,6 +6,8 @@ public class Dart : PickupableItem
 {
     [SerializeField]
     private float throwForce;
+    [SerializeField]
+    private float boardHitHodinReduceValue;
 
     public override string UseName => "throw Dart";
 
@@ -34,5 +36,28 @@ public class Dart : PickupableItem
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.isKinematic = true;
         used = false;
+
+        if (isInDartBoard)
+        {
+            Hotin.Instance.Value -= boardHitHodinReduceValue;
+        }
+    }
+
+    private bool isInDartBoard = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(Tag.Dartboard.GetTagString()))
+        {
+            isInDartBoard = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag(Tag.Dartboard.GetTagString()))
+        {
+            isInDartBoard = false;
+        }
     }
 }

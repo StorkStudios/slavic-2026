@@ -25,6 +25,9 @@ namespace StorkStudios.CoreNest
 		[StringValue(@"GameController")]
 		GameController,
 		
+		[StringValue(@"Dartboard")]
+		Dartboard,
+		
 	}
 	
 	public static class TagExtensions

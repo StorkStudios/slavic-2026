@@ -188,3 +188,4 @@ MonoBehaviour:
   pickupDuration: 0.5
   objectType: dart
   throwForce: 10
+  boardHitHodinReduceValue: 10
