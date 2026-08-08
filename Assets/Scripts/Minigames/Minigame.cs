@@ -125,7 +125,7 @@ public abstract class Minigame : MonoBehaviour
     public virtual bool CanStart()
     {
         return !started &&
-            ((currentItem != null && PlayerObjectHolder.Instance.CurrentObject == null) || (PlayerObjectHolder.Instance.CurrentObject != null && PlayerObjectHolder.Instance.CurrentObject.ObjectType == itemType)) &&
+            ((currentItem != null && PlayerObjectHolder.Instance.CurrentObject == null) || (PlayerObjectHolder.Instance.CurrentObject != null && PlayerObjectHolder.Instance.CurrentObject.ObjectType == itemType && currentItem == null)) &&
             collidingObjects.Count == 0;
     }
 
