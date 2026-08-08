@@ -129,10 +129,6 @@ GameObject:
   - component: {fileID: 5629416368177963605}
   - component: {fileID: 8485851340859376311}
   - component: {fileID: 1710522511444091201}
-  - component: {fileID: 4152858362531471508}
-  - component: {fileID: 9045202415313862772}
-  - component: {fileID: 6920832591833060935}
-  - component: {fileID: 4609487874158103847}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Player
@@ -212,85 +208,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!143 &4152858362531471508
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828820672732831786}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9045202415313862772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828820672732831786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa5246e41647df4983f1f36ae67e14e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  camera: {fileID: 0}
-  speed: 5
-  sprintSpeed: 7
-  sensitivity: {x: 0.2, y: 0.1}
-  active: 1
---- !u!114 &6920832591833060935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828820672732831786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207d202dc985757439975cf4fd933104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
-  interactionRange: 3
-  camera: {fileID: 0}
-  interactableLayerMask:
-    serializedVersion: 2
-    m_Bits: 55
---- !u!114 &4609487874158103847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1828820672732831786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb4dfb173802494396b69df45e36339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerObjectHolder
-  objectHoldLocations:
-    pairs:
-    - Key:
-        item: meat
-      Value: {fileID: 0}
-    - Key:
-        item: meat piece
-      Value: {fileID: 0}
 --- !u!1 &4603371539887369878
 GameObject:
   m_ObjectHideFlags: 0
