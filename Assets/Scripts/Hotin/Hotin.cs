@@ -14,6 +14,8 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
 
     public float Max => hotinRange.Max;
 
+    public float currentGainMultiplier = 1;
+
     public float Value
     {
         get => hotinValue;
@@ -42,7 +44,7 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
 
     public void Add(float value)
     {
-        Value += value;
+        Value += value * currentGainMultiplier;
     }
 
     private float ClampValue(float value)

@@ -24,6 +24,7 @@ public class GameManager : Singleton<GameManager>
     private void InitShift(ShiftDays.ShiftDay shiftDay)
     {
         Hotin.Instance.ResetNoUpdate();
+        Hotin.Instance.currentGainMultiplier = shiftDay.hotinGainMultiplier;
         OnShiftInit?.Invoke(shiftDay);
     }
 

@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81933339d1651b41911ff52ee930519, type: 3}
   m_Name: ShiftDays
   m_EditorClassIdentifier: Assembly-CSharp::ShiftDays
-  shiftDays: []
+  shiftDays:
+  - hotinGainMultiplier: 1
+  - hotinGainMultiplier: 1
+  - hotinGainMultiplier: 1
+  - hotinGainMultiplier: 1
+  - hotinGainMultiplier: 1
