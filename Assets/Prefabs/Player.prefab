@@ -133,6 +133,9 @@ MonoBehaviour:
     - Key:
         item: dart
       Value: {fileID: 7284379494867327215}
+    - Key:
+        item: kiep
+      Value: {fileID: 8114863952701560746}
 --- !u!114 &3930135579987603650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +274,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3845495660007619244}
   m_LocalEulerAnglesHint: {x: -6, y: 0, z: 0}
+--- !u!1 &2354959222931142549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8114863952701560746}
+  m_Layer: 0
+  m_Name: KiepHoldLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8114863952701560746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354959222931142549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.15114754, y: 0.136691, z: 0.021108275, w: 0.97878724}
+  m_LocalPosition: {x: 0.218, y: -0.328, z: 0.599}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3845495660007619244}
+  m_LocalEulerAnglesHint: {x: -17.557, y: 15.9, z: 0}
 --- !u!1 &2731101892535228685
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +612,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7284379494867327215}
+  - {fileID: 8114863952701560746}
   m_Father: {fileID: 7213035797809302005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1398230350656980922

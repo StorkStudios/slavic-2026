@@ -20,7 +20,7 @@ public abstract class PickupableItem : MonoBehaviour, IInteractable, IPickupable
     public event Action<IPickupable> PickedUp;
     public event Action<IPickupable> Dropped;
 
-    private void Start()
+    protected virtual void Start()
     {
         colliders = GetComponentsInChildren<Collider>();
     }
@@ -45,7 +45,7 @@ public abstract class PickupableItem : MonoBehaviour, IInteractable, IPickupable
         PickedUp?.Invoke(this);
     }
 
-    public void OnDrop()
+    public virtual void OnDrop()
     {
         foreach (Collider collider in colliders)
         {
