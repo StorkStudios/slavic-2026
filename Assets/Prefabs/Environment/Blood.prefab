@@ -69,6 +69,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  bloodWalk: {fileID: 8300000, guid: 8b72f77cc0b7bb24a98cf085104d4aaf, type: 3}
+  bloodRun: {fileID: 8300000, guid: 808ba1eff9ad1ba4ba56d16befdcfc5b, type: 3}
 --- !u!1 &8956705623405924855
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +198,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ZoneTrigger
   enterTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6055507609034111336}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SwapSounds
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     delay: 0
     printDebugMessages: 0
   stayTrigger:
@@ -206,6 +220,18 @@ MonoBehaviour:
     printDebugMessages: 0
   leaveTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6055507609034111336}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SwapSounds
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     delay: 0
     printDebugMessages: 0

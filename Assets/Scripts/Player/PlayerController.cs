@@ -28,6 +28,9 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField]
     private AudioSource sprintSound;
 
+    public AudioSource WalkSound => walkSound;
+    public AudioSource SprintSound => sprintSound;
+
     [HideInInspector]
     public bool active = true;
 
@@ -109,6 +112,8 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (!active)
         {
+            walkSound.Stop();
+            sprintSound.Stop();
             return;
         }
 

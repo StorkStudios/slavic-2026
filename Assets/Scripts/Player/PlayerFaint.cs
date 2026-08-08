@@ -46,7 +46,7 @@ public class PlayerFaint : MonoBehaviour
         Debug.Log("I've become so numb");
 
         cinemachineCamera.enabled = true;
-        PlayerController.Instance.enabled = false;
+        PlayerController.Instance.active = false;
         HUDController.Instance.CameraFadeGroup.DOFade(1, faintAnimationDuration);
 
         this.CallDelayed(faintAnimationDuration + faintDuration, UnFaint);
@@ -57,7 +57,7 @@ public class PlayerFaint : MonoBehaviour
         Hotin.Instance.Value -= hotinReduceValue;
         GameManager.Instance.shiftTime += shiftTimeAddOnFaint;
         cinemachineCamera.enabled = false;
-        PlayerController.Instance.enabled = true;
+        PlayerController.Instance.active = true;
         HUDController.Instance.CameraFadeGroup.DOFade(0, faintAnimationDuration);
     }
 }
