@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1233149941 &-9130992031502316598
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pig-sound-2_{-9130992031502316598}
-  m_AudioClip: {fileID: 8300000, guid: e793c490bed92814db85ebf0f838f888, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-5659485996642757519
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pig-sound-4_{-5659485996642757519}
-  m_AudioClip: {fileID: 8300000, guid: a4099c500d4c30b4ebf358d60b9c8c46, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &3000822331895684914
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pig-sound-3_{3000822331895684914}
-  m_AudioClip: {fileID: 8300000, guid: 720072c891e8fca41aaf6a82c09f9c20, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
 --- !u!1233149941 &4589896997924465594
 AudioContainerElement:
   m_ObjectHideFlags: 1
@@ -57,9 +27,6 @@ AudioRandomContainer:
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
   - {fileID: 4589896997924465594}
-  - {fileID: -9130992031502316598}
-  - {fileID: 3000822331895684914}
-  - {fileID: -5659485996642757519}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 2
   m_TriggerMode: 0
