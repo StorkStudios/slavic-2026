@@ -95,7 +95,7 @@ MonoBehaviour:
   cameraShakeRandomness: 45
   walkSound: {fileID: 911528489456628370}
   sprintSound: {fileID: 5079154011281260139}
-  animator: {fileID: 0}
+  animator: {fileID: 6775587036987120591}
   active: 1
 --- !u!114 &223170661142555968
 MonoBehaviour:
@@ -146,6 +146,10 @@ MonoBehaviour:
     - Key:
         item: kiep
       Value: {fileID: 8114863952701560746}
+  objectHoldAnimations:
+    pairs: []
+  animator: {fileID: 6775587036987120591}
+  defaultObjectHoldAnimation: CarryItem
 --- !u!114 &3930135579987603650
 MonoBehaviour:
   m_ObjectHideFlags: 0

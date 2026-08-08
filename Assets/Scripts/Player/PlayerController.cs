@@ -49,6 +49,7 @@ public class PlayerController : Singleton<PlayerController>
 
     bool isSprinting = false;
     private bool movedLastFame;
+    public bool MovedLastFrame => movedLastFame;
     private bool sprintedLastFrame;
 
     private void Start()
@@ -146,6 +147,10 @@ public class PlayerController : Singleton<PlayerController>
                 if (!sprintSound.isPlaying)
                 {
                     sprintSound.Play();
+                    if (PlayerObjectHolder.Instance.CurrentObject == null)
+                    {
+                        animator.CrossFade("Run", 0.5f);
+                    }
                 }
 
                 if (walkSound.isPlaying)
@@ -159,6 +164,10 @@ public class PlayerController : Singleton<PlayerController>
                 if (!walkSound.isPlaying)
                 {
                     walkSound.Play();
+                    if (PlayerObjectHolder.Instance.CurrentObject == null)
+                    {
+                        animator.CrossFade("Run", 0.5f);
+                    }
                 }
 
                 if (sprintSound.isPlaying)
@@ -171,6 +180,10 @@ public class PlayerController : Singleton<PlayerController>
         {
             walkSound.Stop();
             sprintSound.Stop();
+            if (PlayerObjectHolder.Instance.CurrentObject == null)
+            {   
+                animator.CrossFade("Idle", 0.5f);
+            }
         }
         movedLastFame = moving;
         sprintedLastFrame = moving && isSprinting;

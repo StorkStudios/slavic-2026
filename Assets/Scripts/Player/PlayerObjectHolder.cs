@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using StorkStudios.CoreNest;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,6 +7,14 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 {
     [SerializeField]
     private SerializedDictionary<string, Transform> objectHoldLocations;
+
+    [SerializeField]
+    private SerializedDictionary<string, string> objectHoldAnimations;
+    
+    [SerializeField]
+    private Animator animator;
+    [SerializeField]
+    private string defaultObjectHoldAnimation;
 
     public string DropActionName => $"drop {currentObject.ObjectType}";
 
@@ -67,6 +76,15 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
             rigidbody.isKinematic = true;
         }
         currentObject = obj;
+        
+        if (objectHoldAnimations.ContainsKey(obj.ObjectType))
+        {
+            animator.CrossFade(objectHoldAnimations[obj.ObjectType], 0.5f);
+        }
+        else
+        {
+            animator.CrossFade(defaultObjectHoldAnimation, 0.5f);
+        }
     }
 
     public IPickupable DropObject()
@@ -79,6 +97,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         {
             rigidbody.isKinematic = false;
         }
+        animator.CrossFade(PlayerController.Instance.MovedLastFrame ? "Run" : "Idle", 0.5f);
         return obj;
     }
 }
