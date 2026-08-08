@@ -46,7 +46,8 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
     private void Update()
     {
         if (Physics.Raycast(camera.position, camera.forward, out RaycastHit hitInfo, interactionRange, interactableLayerMask) &&
-            hitInfo.transform.TryGetComponent(out IInteractable newInteractable))
+            (hitInfo.transform.TryGetComponent(out IInteractable newInteractable) ||
+            (hitInfo.rigidbody != null && hitInfo.rigidbody.TryGetComponent(out newInteractable))))
         {
             interactable = newInteractable;
         }

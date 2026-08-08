@@ -41,6 +41,7 @@ Transform:
   - {fileID: 1102000537545867622}
   - {fileID: 4910254794328993237}
   - {fileID: 1925168377053710791}
+  - {fileID: 4551525462533973551}
   - {fileID: 3180316709915567784}
   - {fileID: 6101921871909207398}
   - {fileID: 3166392083962591572}
@@ -114,7 +115,7 @@ MonoBehaviour:
   camera: {fileID: 7213035797809302005}
   interactableLayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 51
 --- !u!114 &7010013754845259417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +148,9 @@ MonoBehaviour:
     - Key:
         item: kiep
       Value: {fileID: 8114863952701560746}
+    - Key:
+        item: crate
+      Value: {fileID: 4551525462533973551}
   objectHoldAnimations:
     pairs: []
   animator: {fileID: 6775587036987120591}
@@ -1176,6 +1180,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &7142538454631447731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4551525462533973551}
+  m_Layer: 0
+  m_Name: CrateHoldLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4551525462533973551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7142538454631447731}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4727451400308799275}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7259555100485093848
 GameObject:
   m_ObjectHideFlags: 0
