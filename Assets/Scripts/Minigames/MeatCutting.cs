@@ -18,7 +18,6 @@ public class MeatCutting : Minigame
     [Header("Events")]
     [SerializeField]
     private int hotinEventThreshold;
-    [SerializeField]
     public Trigger cutHotinEvent;
 
     private MeatCuttingMarker currentMarker;

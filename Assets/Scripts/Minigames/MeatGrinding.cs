@@ -1,4 +1,5 @@
 using System;
+using StorkStudios.CoreNest;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,13 @@ public class MeatGrinding : Minigame
     [SerializeField]
     private ParticleSystem particles;
 
+    [Header("Events")]
+    [SerializeField]
+    private int hotinEventThreshold;
+    [SerializeField]
+    private float grindEventTimeout;
+    public Trigger grindHotinEvent;
+
     public override string Name => "Grind";
 
     private float rotatedAngle = 0f;
@@ -23,6 +31,7 @@ public class MeatGrinding : Minigame
     private float lastAngle;
     private Vector2 screenHalf;
     private float lastParticleTime = 0f;
+    private float lastEventTimestamp;
 
     public override void StartMinigame()
     {
@@ -63,6 +72,16 @@ public class MeatGrinding : Minigame
                 }
                 lastParticleTime = Time.time;
             }
+
+            if (Hotin.Instance.Value > hotinEventThreshold)
+            {
+                if (lastEventTimestamp + grindEventTimeout < Time.time)
+                {
+                    grindHotinEvent.Invoke();
+                    lastEventTimestamp = Time.time + grindEventTimeout;
+                }
+            }
+
             handle.localRotation = Quaternion.Euler(0f, 0f, 360f - angle);
             rotatedAngle += diff;
             if (rotatedAngle >= grindAngle)
