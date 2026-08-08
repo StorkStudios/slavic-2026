@@ -12,7 +12,7 @@ public class MeatHook : MonoBehaviour
 
     public bool IsLocked { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         IsLocked = true;
         meat.locked = true;
