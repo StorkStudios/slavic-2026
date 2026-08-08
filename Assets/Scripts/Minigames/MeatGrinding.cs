@@ -21,6 +21,10 @@ public class MeatGrinding : Minigame
     private ParticleSystem particles;
     [SerializeField]
     private AudioSource grindingAudioSource;
+    [SerializeField]
+    private Transform finalMeatLocation;
+    [SerializeField]
+    private Transform initialProductLocation;
 
     [Header("Events")]
     [SerializeField]
@@ -39,6 +43,7 @@ public class MeatGrinding : Minigame
     private float grindStopTimestamp = 0f;
     private float lastEventTimestamp;
     private bool grindingLastFrame;
+    private GameObject fakeProduct;
 
     public override void StartMinigame()
     {
@@ -47,15 +52,24 @@ public class MeatGrinding : Minigame
 
         InputAdapter.interact.started += OnMousePress;
         InputAdapter.interact.canceled += OnMouseRelease;
+
+        fakeProduct = Instantiate(productPrefab, initialProductLocation.position, initialProductLocation.rotation);
     }
 
     public override void EndMinigame(bool win)
     {
+        Destroy(fakeProduct);
+        
         base.EndMinigame(win);
 
         InputAdapter.interact.started -= OnMousePress;
         InputAdapter.interact.canceled -= OnMouseRelease;
         rotatedAngle = 0f;
+
+        if (!win)
+        {
+            CurrentItem.transform.position = Vector3.Lerp(itemLocation.position, finalMeatLocation.position, rotatedAngle / grindAngle);
+        }
 
         if (particles != null && particles.isPlaying)
         {
@@ -109,6 +123,9 @@ public class MeatGrinding : Minigame
                 EndMinigame(true);
             }
         }
+
+        CurrentItem.transform.position = Vector3.Lerp(itemLocation.position, finalMeatLocation.position, rotatedAngle / grindAngle);
+        fakeProduct.transform.position = Vector3.Lerp(initialProductLocation.position, productLocations[0].position, rotatedAngle / grindAngle);
 
         if (grindingLastFrame && !grinding)
         {

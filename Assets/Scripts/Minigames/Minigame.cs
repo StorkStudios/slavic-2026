@@ -14,7 +14,7 @@ public abstract class Minigame : MonoBehaviour
 
     [Header("Item")]
     [SerializeField]
-    private Transform itemLocation;
+    protected Transform itemLocation;
     [SerializeField]
     private string itemType;
     [SerializeField]
@@ -22,14 +22,15 @@ public abstract class Minigame : MonoBehaviour
 
     [Header("Product")]
     [SerializeField]
-    private GameObject productPrefab;
+    protected GameObject productPrefab;
     [SerializeField]
-    private Transform[] productLocations;
+    protected Transform[] productLocations;
 
     private CursorLockMode lastLockMode;
     private bool started = false;
     protected bool Started => started;
     private PickupableObject currentItem;
+    protected PickupableObject CurrentItem => currentItem;
     private bool animatingItem = false;
 
     public abstract string Name { get; }
