@@ -7,6 +7,14 @@ public class MeatGrinding : Minigame
     [Header("Settings")]
     [SerializeField]
     private float grindAngle;
+    [SerializeField]
+    private float particlesTimeout;
+
+    [Header("References")]
+    [SerializeField]
+    private Transform handle;
+    [SerializeField]
+    private ParticleSystem particles;
 
     public override string Name => "Grind";
 
@@ -14,6 +22,7 @@ public class MeatGrinding : Minigame
     private bool pressed = false;
     private float lastAngle;
     private Vector2 screenHalf;
+    private float lastParticleTime = 0f;
 
     public override void StartMinigame()
     {
@@ -33,6 +42,11 @@ public class MeatGrinding : Minigame
         InputAdapter.interact.started -= OnMousePress;
         InputAdapter.interact.canceled -= OnMouseRelease;
         rotatedAngle = 0f;
+
+        if (particles != null && particles.isPlaying)
+        {
+            particles.Stop();
+        }
     }
 
     private void OnMouseMove(InputAction.CallbackContext context)
@@ -41,14 +55,30 @@ public class MeatGrinding : Minigame
         float diff = GetAngleDelta(angle, lastAngle);
         if (pressed)
         {
+            if (particles != null)
+            {
+                if (!particles.isPlaying)
+                {
+                    particles.Play();
+                }
+                lastParticleTime = Time.time;
+            }
+            handle.localRotation = Quaternion.Euler(0f, 0f, 360f - angle);
             rotatedAngle += diff;
-            Debug.Log(rotatedAngle);
             if (rotatedAngle >= grindAngle)
             {
                 EndMinigame(true);
             }
         }
         lastAngle = angle;
+    }
+
+    private void Update()
+    {
+        if (particles != null && particles.isPlaying && Time.time - lastParticleTime > particlesTimeout)
+        {
+            particles.Stop();
+        }
     }
 
     private float GetAngleDelta(float currentAngle, float lastAngle)
