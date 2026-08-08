@@ -39,7 +39,10 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         {
             return;
         }
-
+        if (!string.IsNullOrEmpty(currentObject.DropSound))
+        {
+            CommonSoundManager.Instance.PlaySound(currentObject.DropSound);
+        }
         DropObject();
     }
 

@@ -11,8 +11,11 @@ public abstract class PickupableItem : MonoBehaviour, IInteractable, IPickupable
     private string objectType;
     [SerializeField]
     private string interactSound;
+    [SerializeField]
+    private string dropSound;
 
     public string InteractSound => interactSound;
+    public string DropSound => dropSound;
     string IInteractable.ActionName => $"pick up {ObjectType}";
     public string ObjectType => objectType;
 

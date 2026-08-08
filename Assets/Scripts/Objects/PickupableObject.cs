@@ -15,10 +15,13 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
     private float hotinGainSpeed;
     [SerializeField]
     private string interactSound;
+    [SerializeField]
+    private string dropSound;
 
     public string ObjectType => objectType;
     string IInteractable.ActionName => "pick up " + ObjectType;
     public string InteractSound => interactSound;
+    public string DropSound => dropSound;
     private Collider[] colliders;
 
     public event System.Action<IPickupable> PickedUp;
