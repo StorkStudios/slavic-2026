@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7891434940775248679}
   - component: {fileID: 3620659952262060355}
   - component: {fileID: 3759846905685107804}
+  - component: {fileID: 1666893322612268801}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -61,6 +62,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   shiftDuration: 300
   shiftTime: 0
+--- !u!114 &1666893322612268801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321727963064836613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0365d46cf667b4748925b3edb83134da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeatPicker
+  hooks: []
+  meatCount: 3
+  nextMeatTime: 60
 --- !u!1 &8378380337494130590
 GameObject:
   m_ObjectHideFlags: 0
