@@ -8,7 +8,7 @@ public class ShiftDays : ScriptableObjectSingleton<ShiftDays>
     [System.Serializable]
     public class ShiftDay
     {
-
+        public float hotinGainMultiplier;
     }
 
     [SerializeField]
