@@ -11,6 +11,8 @@ public class Kiep : PickupableItem
     private float hotinReduceSpeed;
     [SerializeField]
     private float kiepDuration;
+    [SerializeField]
+    private float maxKiepDuration;
 
     public override string UseName => "take a puff";
 
@@ -68,9 +70,21 @@ public class Kiep : PickupableItem
             kiepDuration -= Time.deltaTime;
             if (kiepDuration < 0)
             {
+                SetZScale(0);
                 PlayerObjectHolder.Instance.DropObject();
                 Destroy(gameObject);
             }
+            else
+            {
+                SetZScale(kiepDuration / maxKiepDuration);
+            }
         }
+    }
+
+    private void SetZScale(float z)
+    {
+        Vector3 scale = transform.localScale;
+        scale.z = z;
+        transform.localScale = scale;
     }
 }

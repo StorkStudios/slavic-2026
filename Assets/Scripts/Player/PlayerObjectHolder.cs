@@ -35,7 +35,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 
     private void OnDrop(InputAction.CallbackContext obj)
     {
-        if (!IsHoldingObject)
+        if (!IsHoldingObject || UIPicturesController.Instance.CurrentPicture != null)
         {
             return;
         }

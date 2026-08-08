@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 606589708142787581}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -191,6 +191,7 @@ MonoBehaviour:
   smoke: {fileID: 1212369925958401668}
   hotinReduceSpeed: 5
   kiepDuration: 10
+  maxKiepDuration: 10
 --- !u!1001 &8592700161907374348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6439092396289875820, guid: 0e27ca2fe89334e43a63660b6b281730, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.205
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6439092396289875820, guid: 0e27ca2fe89334e43a63660b6b281730, type: 3}
       propertyPath: m_LocalRotation.w

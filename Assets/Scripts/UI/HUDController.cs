@@ -40,7 +40,7 @@ public class HUDController : Singleton<HUDController>
             interactAlfa = 0;
         }
 
-        if (PlayerObjectHolder.Instance.IsHoldingObject)
+        if (PlayerObjectHolder.Instance.IsHoldingObject && UIPicturesController.Instance.CurrentPicture == null)
         {
             dropAlfa = 1;
             dropTooltip.text = $"[{InputAdapter.drop.GetBindingDisplayString(group: "Keyboard&Mouse")}] {PlayerObjectHolder.Instance.DropActionName}";
