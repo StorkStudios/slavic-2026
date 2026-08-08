@@ -848,6 +848,8 @@ MonoBehaviour:
   productPrefab: {fileID: 1738406399447128749, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
   productLocations:
   - {fileID: 172253347491814754}
+  collidingObjects:
+    list: []
   grindAngle: 1800
   particlesTimeout: 1
   soundTimeout: 1
@@ -857,6 +859,8 @@ MonoBehaviour:
   finalMeatLocation: {fileID: 6938781884661082031}
   initialProductLocation: {fileID: 528939302538370800}
   fakeMeatPrefab: {fileID: 1738406399447128749, guid: bd395e984cceaa0e2900ebfafb3257da, type: 3}
+  cursorSpriteOpen: {fileID: 21300000, guid: 055e44ae07fc33348b0381bbf2c0d1f7, type: 3}
+  cursorSpriteClosed: {fileID: 21300000, guid: 71f2098bed9f3c147815fff13f2defdf, type: 3}
   hotinEventThreshold: 20
   grindEventTimeout: 1
   grindHotinEvent:
@@ -909,6 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d7061919d8550a983c6ef9d9e0c7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameStation
+  interactSound: 
 --- !u!114 &4479588961209286030
 MonoBehaviour:
   m_ObjectHideFlags: 0

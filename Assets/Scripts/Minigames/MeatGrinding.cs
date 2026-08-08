@@ -27,6 +27,10 @@ public class MeatGrinding : Minigame
     private Transform initialProductLocation;
     [SerializeField]
     private GameObject fakeMeatPrefab;
+    [SerializeField]
+    private Sprite cursorSpriteOpen;
+    [SerializeField]
+    private Sprite cursorSpriteClosed;
 
     [Header("Events")]
     [SerializeField]
@@ -47,9 +51,27 @@ public class MeatGrinding : Minigame
     private bool grindingLastFrame;
     private GameObject fakeProduct;
 
+    private static Texture2D scaledCursorOpen;
+    private static Texture2D scaledCursorClosed;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        if (scaledCursorOpen == null)
+        {
+            scaledCursorOpen = ScaleTexture(cursorSpriteOpen.texture, 32, 32);
+        }
+        if (scaledCursorClosed == null)
+        {
+            scaledCursorClosed = ScaleTexture(cursorSpriteClosed.texture, 32, 32);
+        }
+    }
+
     public override void StartMinigame()
     {
         base.StartMinigame();
+
         screenHalf = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
         InputAdapter.interact.started += OnMousePress;
@@ -59,6 +81,8 @@ public class MeatGrinding : Minigame
         {
             fakeProduct = Instantiate(fakeMeatPrefab, initialProductLocation.position, initialProductLocation.rotation);
         }
+
+        Cursor.SetCursor(scaledCursorOpen, Vector2.zero, CursorMode.Auto);
     }
 
     public override void EndMinigame(bool win)
@@ -81,6 +105,8 @@ public class MeatGrinding : Minigame
         }
 
         grindingAudioSource.Stop();
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     private void Update()
@@ -169,12 +195,14 @@ public class MeatGrinding : Minigame
     private void OnMouseRelease(InputAction.CallbackContext context)
     {
         pressed = false;
+        Cursor.SetCursor(scaledCursorOpen, Vector2.zero, CursorMode.Auto);
     }
 
     private void OnMousePress(InputAction.CallbackContext context)
     {
         pressed = true;
         lastAngle = GetMouseAngle();
+        Cursor.SetCursor(scaledCursorClosed, Vector2.zero, CursorMode.Auto);
     }
 
     private float GetMouseAngle()
