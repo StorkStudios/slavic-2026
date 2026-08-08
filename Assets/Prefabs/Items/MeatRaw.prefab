@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1521714262481238720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8037073595384686730}
+  - component: {fileID: 3049368062283642728}
+  m_Layer: 0
+  m_Name: LoudWhisperDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8037073595384686730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521714262481238720}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8230904337693735234}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3049368062283642728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521714262481238720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4966ca67c2852c5408d379d86c1c95ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
+  hotinRange:
+    Min: 70
+    Max: 100
+  rangeEnter:
+    m_PersistentCalls:
+      m_Calls: []
+    delay: 0
+    printDebugMessages: 0
+  rangeStay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3480162253811317852}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+  stayTriggerCooldown: 1.5
+  rangeExit:
+    m_PersistentCalls:
+      m_Calls: []
+    delay: 0
+    printDebugMessages: 0
 --- !u!1 &1738406399447128749
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +111,8 @@ Transform:
   - {fileID: 6891505353840210707}
   - {fileID: 2438939258790305491}
   - {fileID: 1760173454876405216}
+  - {fileID: 9052657884177167770}
+  - {fileID: 5541188828881812622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4454751254563540330
@@ -92,7 +169,7 @@ GameObject:
   - component: {fileID: 8899707264041620928}
   - component: {fileID: 5793111416382295649}
   m_Layer: 0
-  m_Name: Whisper1
+  m_Name: WhisperQuiet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,17 +202,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
-  setSuccessChance: 0.001
+  setSuccessChance: 0.004
   trigger:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1738155495612646584}
         m_TargetAssemblyTypeName: 
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 8ad08f32899a1b5418422fd3fffb6462, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -229,7 +306,7 @@ GameObject:
   - component: {fileID: 5577112349864657534}
   - component: {fileID: 4055691855338984491}
   m_Layer: 0
-  m_Name: WhisperDetector
+  m_Name: QuietWhisperDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
   hotinRange:
     Min: 20
-    Max: 100
+    Max: 45
   rangeEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -285,33 +362,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1579027373559959252}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Set
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3480162253811317852}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Set
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     delay: 0
     printDebugMessages: 0
-  stayTriggerCooldown: 2
+  stayTriggerCooldown: 1.5
   rangeExit:
     m_PersistentCalls:
       m_Calls: []
@@ -411,11 +464,142 @@ Transform:
   - {fileID: 5979202848065158259}
   - {fileID: 2766279038641942720}
   - {fileID: 5577112349864657534}
+  - {fileID: 8262133851880876609}
+  - {fileID: 8037073595384686730}
   - {fileID: 8899707264041620928}
   - {fileID: 8139576753993775288}
   - {fileID: 4095260644714677313}
   m_Father: {fileID: 8874672205740321213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3715132787174782369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9052657884177167770}
+  - component: {fileID: 3937118049098700745}
+  m_Layer: 0
+  m_Name: WhisperMedium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9052657884177167770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715132787174782369}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -0.75526, z: -0.55596}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8874672205740321213}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3937118049098700745
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715132787174782369}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 6418180475301049370, guid: 56b7949c6956c054fa226cd9b827299e, type: 2}
+  m_PlayOnAwake: 0
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.027777778
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4549541494378935960
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +611,7 @@ GameObject:
   - component: {fileID: 8139576753993775288}
   - component: {fileID: 1579027373559959252}
   m_Layer: 0
-  m_Name: Whisper2
+  m_Name: WhisperMedium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,16 +644,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
-  setSuccessChance: 0.001
+  setSuccessChance: 0.008
   trigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1738155495612646584}
+      - m_Target: {fileID: 3937118049098700745}
         m_TargetAssemblyTypeName: 
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: d8375e87f3508674a9c089bf434f21ee, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3b3883640e208d94dbb8af4902db2056, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -565,6 +749,81 @@ MonoBehaviour:
         m_CallState: 2
     delay: 0
     printDebugMessages: 0
+--- !u!1 &5735390606463267380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8262133851880876609}
+  - component: {fileID: 4510986002252473195}
+  m_Layer: 0
+  m_Name: MediumWhisperDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8262133851880876609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735390606463267380}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8230904337693735234}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4510986002252473195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735390606463267380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4966ca67c2852c5408d379d86c1c95ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
+  hotinRange:
+    Min: 45
+    Max: 70
+  rangeEnter:
+    m_PersistentCalls:
+      m_Calls: []
+    delay: 0
+    printDebugMessages: 0
+  rangeStay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1579027373559959252}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+  stayTriggerCooldown: 1.5
+  rangeExit:
+    m_PersistentCalls:
+      m_Calls: []
+    delay: 0
+    printDebugMessages: 0
 --- !u!1 &6442367181503380929
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +835,7 @@ GameObject:
   - component: {fileID: 4095260644714677313}
   - component: {fileID: 3480162253811317852}
   m_Layer: 0
-  m_Name: Whisper3
+  m_Name: WhisperLoud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,16 +868,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
-  setSuccessChance: 0.001
+  setSuccessChance: 0.012
   trigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1738155495612646584}
+      - m_Target: {fileID: 2530879270596895342}
         m_TargetAssemblyTypeName: 
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: aaea8a5e447c9464c8decff28f8bf872, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 729d2ed6fdcc95643a81af40d217944f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -638,7 +897,7 @@ GameObject:
   - component: {fileID: 1760173454876405216}
   - component: {fileID: 1738155495612646584}
   m_Layer: 0
-  m_Name: AudioSource
+  m_Name: WhisperQuiet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -670,9 +929,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 6418180475301049370, guid: 56b7949c6956c054fa226cd9b827299e, type: 2}
   m_PlayOnAwake: 0
-  m_Volume: 0.15
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -716,7 +975,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -731,7 +990,136 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
+      value: 0.027777778
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &7042521284214217141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5541188828881812622}
+  - component: {fileID: 2530879270596895342}
+  m_Layer: 0
+  m_Name: WhisperLoud
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5541188828881812622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042521284214217141}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -0.75526, z: -0.55596}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8874672205740321213}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2530879270596895342
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042521284214217141}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 6418180475301049370, guid: 56b7949c6956c054fa226cd9b827299e, type: 2}
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
       value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.027777778
       inSlope: 0
       outSlope: 0
       tangentMode: 0

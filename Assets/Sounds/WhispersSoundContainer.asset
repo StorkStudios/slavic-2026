@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-5315632208769213821
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound3_{-5315632208769213821}
+  m_AudioClip: {fileID: 8300000, guid: 729d2ed6fdcc95643a81af40d217944f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3902104588930898299
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound5_{-3902104588930898299}
+  m_AudioClip: {fileID: 8300000, guid: a1d0a15dbb3fb0f4ab8dd44f6869b0de, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2048021530363574694
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound1_{-2048021530363574694}
+  m_AudioClip: {fileID: 8300000, guid: 5def7c6a573a2de4e8d2d3759fd5fe7d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &296413302130709746
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound7_{296413302130709746}
+  m_AudioClip: {fileID: 8300000, guid: 6f7572f47290e9c47ae6e98a8c7fc464, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3509220524254414869
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound4_{3509220524254414869}
+  m_AudioClip: {fileID: 8300000, guid: 46749039b74d6bd4c9fb21e064f75cc5, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6268057175755634978
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound6_{6268057175755634978}
+  m_AudioClip: {fileID: 8300000, guid: ef0400251f7dea34bb5173b26d3b8eea, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WhispersSoundContainer
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: -20, y: 0}
+  m_PitchRandomizationRange: {x: -80, y: 80}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -2048021530363574694}
+  - {fileID: 6532369647553389036}
+  - {fileID: -5315632208769213821}
+  - {fileID: 3509220524254414869}
+  - {fileID: -3902104588930898299}
+  - {fileID: 6268057175755634978}
+  - {fileID: 296413302130709746}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6532369647553389036
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EvilDemonVoiceSound2_{6532369647553389036}
+  m_AudioClip: {fileID: 8300000, guid: 3b3883640e208d94dbb8af4902db2056, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
