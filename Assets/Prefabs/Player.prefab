@@ -123,6 +123,9 @@ MonoBehaviour:
     - Key:
         item: grinded meat
       Value: {fileID: 1925168377053710791}
+    - Key:
+        item: packed meat
+      Value: {fileID: 1925168377053710791}
 --- !u!114 &3930135579987603650
 MonoBehaviour:
   m_ObjectHideFlags: 0
