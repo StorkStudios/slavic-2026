@@ -1,3 +1,4 @@
+using StorkStudios.CoreNest;
 using UnityEngine;
 
 public class MeatCutting : Minigame
@@ -13,6 +14,12 @@ public class MeatCutting : Minigame
     [Header("References")]
     [SerializeField]
     private AudioSource cutAudioSource;
+
+    [Header("Events")]
+    [SerializeField]
+    private int hotinEventThreshold;
+    [SerializeField]
+    public Trigger cutHotinEvent;
 
     private MeatCuttingMarker currentMarker;
     private int markersCut = 0;
@@ -46,6 +53,10 @@ public class MeatCutting : Minigame
         if (cutAudioSource != null)
         {
             cutAudioSource.Play();
+        }
+        if (Hotin.Instance.Value > hotinEventThreshold)
+        {
+            cutHotinEvent.Invoke();
         }
         if (markersCut < numberOfMarkers)
         {

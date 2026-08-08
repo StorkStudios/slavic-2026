@@ -564,6 +564,8 @@ GameObject:
   - component: {fileID: 2823749574814867712}
   - component: {fileID: 5825605237658938645}
   - component: {fileID: 8933831107863101708}
+  - component: {fileID: 4629984127028751800}
+  - component: {fileID: 5995466292178207361}
   m_Layer: 0
   m_Name: CuttingTable
   m_TagString: Untagged
@@ -632,6 +634,24 @@ MonoBehaviour:
   markerPrefab: {fileID: 817641675700985779, guid: dd35dbb9831d41ce18769bf76974cc8e, type: 3}
   numberOfMarkers: 3
   cutAudioSource: {fileID: 8933831107863101708}
+  hotinEventThreshold: 20
+  cutHotinEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4629984127028751800}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
 --- !u!65 &5825605237658938645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -750,6 +770,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4629984127028751800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618340584681493179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
+  setSuccessChance: 0.2
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5995466292178207361}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: PlayCommonSound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: scream
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+--- !u!114 &5995466292178207361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7618340584681493179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d535a081097bbe7ac5b71a93c2806b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundPlayerTriggerHelper
 --- !u!1 &7704901414111438294
 GameObject:
   m_ObjectHideFlags: 0
