@@ -1,5 +1,6 @@
 using DG.Tweening;
 using StorkStudios.CoreNest;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,6 +28,10 @@ public class PlayerController : Singleton<PlayerController>
     private AudioSource walkSound;
     [SerializeField]
     private AudioSource sprintSound;
+
+    [Header("Animations")]
+    [SerializeField]
+    private Animator animator;
 
     public AudioSource WalkSound => walkSound;
     public AudioSource SprintSound => sprintSound;
@@ -131,7 +136,7 @@ public class PlayerController : Singleton<PlayerController>
         velocity = (transform.forward * input.y + transform.right * input.x) * (isSprinting ? sprintSpeed : speed);
         velocity.y += ySpeed;
 
-        var flags = characterController.Move(Time.deltaTime * velocity);
+        characterController.Move(Time.deltaTime * velocity);
 
         bool moving = Mathf.Abs(input.x) > 0 || Mathf.Abs(input.y) > 0;
         if (moving)
