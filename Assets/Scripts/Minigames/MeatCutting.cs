@@ -14,6 +14,8 @@ public class MeatCutting : Minigame
     [Header("References")]
     [SerializeField]
     private AudioSource cutAudioSource;
+    [SerializeField]
+    private Sprite cursorSprite;
 
     [Header("Events")]
     [SerializeField]
@@ -25,11 +27,25 @@ public class MeatCutting : Minigame
 
     public override string Name => "Chop";
 
+    private static Texture2D scaledCursor;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        if (scaledCursor == null)
+        {
+            scaledCursor = ScaleTexture(cursorSprite.texture, 32, 32);
+        }
+    }
+
     public override void StartMinigame()
     {
         base.StartMinigame();
 
         ShowNextMarker();
+
+        Cursor.SetCursor(scaledCursor, Vector2.zero, CursorMode.Auto);
     }
 
     public override void EndMinigame(bool win)
@@ -40,6 +56,8 @@ public class MeatCutting : Minigame
         {
             Destroy(currentMarker.gameObject);
         }
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
         markersCut = 0;
     }

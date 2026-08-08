@@ -608,6 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d7061919d8550a983c6ef9d9e0c7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameStation
+  interactSound: 
 --- !u!114 &2823749574814867712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,9 +632,12 @@ MonoBehaviour:
   - {fileID: 2514487859581452447}
   - {fileID: 5636020274507231562}
   - {fileID: 5131077567419491465}
+  collidingObjects:
+    list: []
   markerPrefab: {fileID: 817641675700985779, guid: dd35dbb9831d41ce18769bf76974cc8e, type: 3}
   numberOfMarkers: 3
   cutAudioSource: {fileID: 8933831107863101708}
+  cursorSprite: {fileID: 21300000, guid: 66ec44035e1601c41bb8682ed38ddee5, type: 3}
   hotinEventThreshold: 20
   cutHotinEvent:
     m_PersistentCalls:

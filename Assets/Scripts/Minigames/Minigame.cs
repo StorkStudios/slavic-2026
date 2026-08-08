@@ -196,4 +196,29 @@ public abstract class Minigame : MonoBehaviour
             EndMinigame(false);
         }
     }
+
+    protected Texture2D ScaleTexture(Texture2D source, int targetWidth, int targetHeight, bool pointFilter = false)
+    {
+        RenderTexture rt = RenderTexture.GetTemporary(targetWidth, targetHeight);
+        rt.filterMode = pointFilter ? FilterMode.Point : FilterMode.Bilinear;
+
+        // Set source texture's filter mode too — it affects the blit sampling
+        FilterMode originalFilter = source.filterMode;
+        source.filterMode = pointFilter ? FilterMode.Point : FilterMode.Bilinear;
+
+        RenderTexture previous = RenderTexture.active;
+        RenderTexture.active = rt;
+
+        Graphics.Blit(source, rt);
+
+        Texture2D result = new Texture2D(targetWidth, targetHeight, TextureFormat.RGBA32, false);
+        result.ReadPixels(new Rect(0, 0, targetWidth, targetHeight), 0, 0);
+        result.Apply();
+
+        RenderTexture.active = previous;
+        RenderTexture.ReleaseTemporary(rt);
+        source.filterMode = originalFilter;
+
+        return result;
+    }
 }
