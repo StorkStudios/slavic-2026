@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using StorkStudios.CoreNest;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,12 +11,16 @@ public class MeatGrinding : Minigame
     private float grindAngle;
     [SerializeField]
     private float particlesTimeout;
+    [SerializeField]
+    private float soundTimeout;
 
     [Header("References")]
     [SerializeField]
     private Transform handle;
     [SerializeField]
     private ParticleSystem particles;
+    [SerializeField]
+    private AudioSource grindingAudioSource;
 
     [Header("Events")]
     [SerializeField]
@@ -31,14 +36,15 @@ public class MeatGrinding : Minigame
     private float lastAngle;
     private Vector2 screenHalf;
     private float lastParticleTime = 0f;
+    private float grindStopTimestamp = 0f;
     private float lastEventTimestamp;
+    private bool grindingLastFrame;
 
     public override void StartMinigame()
     {
         base.StartMinigame();
         screenHalf = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
-        InputAdapter.look.performed += OnMouseMove;
         InputAdapter.interact.started += OnMousePress;
         InputAdapter.interact.canceled += OnMouseRelease;
     }
@@ -47,7 +53,6 @@ public class MeatGrinding : Minigame
     {
         base.EndMinigame(win);
 
-        InputAdapter.look.performed -= OnMouseMove;
         InputAdapter.interact.started -= OnMousePress;
         InputAdapter.interact.canceled -= OnMouseRelease;
         rotatedAngle = 0f;
@@ -56,14 +61,23 @@ public class MeatGrinding : Minigame
         {
             particles.Stop();
         }
+
+        grindingAudioSource.Stop();
     }
 
-    private void OnMouseMove(InputAction.CallbackContext context)
+    private void Update()
     {
+        if (!Started)
+        {
+            return;
+        }
+
         float angle = GetMouseAngle();
-        float diff = GetAngleDelta(angle, lastAngle);
+        bool grinding = false;
+
         if (pressed)
         {
+            float diff = GetAngleDelta(angle, lastAngle);
             if (particles != null)
             {
                 if (!particles.isPlaying)
@@ -82,6 +96,12 @@ public class MeatGrinding : Minigame
                 }
             }
 
+            grinding = diff > 0;
+            if (!grindingAudioSource.isPlaying && grinding)
+            {
+                grindingAudioSource.Play();
+            }
+
             handle.localRotation = Quaternion.Euler(0f, 0f, 360f - angle);
             rotatedAngle += diff;
             if (rotatedAngle >= grindAngle)
@@ -89,11 +109,20 @@ public class MeatGrinding : Minigame
                 EndMinigame(true);
             }
         }
-        lastAngle = angle;
-    }
 
-    private void Update()
-    {
+        if (grindingLastFrame && !grinding)
+        {
+            grindStopTimestamp = Time.time;
+        }
+
+        if (!grinding && grindStopTimestamp + soundTimeout > Time.time)
+        {
+            grindingAudioSource.Stop();
+        }
+
+        grindingLastFrame = grinding;
+        lastAngle = angle;
+
         if (particles != null && particles.isPlaying && Time.time - lastParticleTime > particlesTimeout)
         {
             particles.Stop();
