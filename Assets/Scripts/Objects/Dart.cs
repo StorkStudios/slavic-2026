@@ -8,6 +8,12 @@ public class Dart : PickupableItem
     private float throwForce;
     [SerializeField]
     private float boardHitHodinReduceValue;
+    [SerializeField]
+    private string throwSound;
+    [SerializeField]
+    private AudioSource hitSound;
+    [SerializeField]
+    private AudioSource hitTargetSound;
 
     public override string UseName => "throw Dart";
 
@@ -24,6 +30,11 @@ public class Dart : PickupableItem
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(transform.forward * throwForce, ForceMode.VelocityChange);
         used = true;
+
+        if (!string.IsNullOrEmpty(throwSound))
+        {
+            CommonSoundManager.Instance.PlaySound(throwSound);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -40,6 +51,11 @@ public class Dart : PickupableItem
         if (isInDartBoard)
         {
             Hotin.Instance.Value -= boardHitHodinReduceValue;
+            hitTargetSound.Play();
+        }
+        else
+        {
+            hitSound.Play();
         }
     }
 

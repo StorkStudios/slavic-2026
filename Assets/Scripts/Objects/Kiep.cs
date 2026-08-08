@@ -13,6 +13,10 @@ public class Kiep : PickupableItem
     private float kiepDuration;
     [SerializeField]
     private float maxKiepDuration;
+    [SerializeField]
+    private AudioSource smokeSound;
+    [SerializeField]
+    private string stopKiepingSound;
 
     public override string UseName => "take a puff";
 
@@ -48,6 +52,7 @@ public class Kiep : PickupableItem
     {
         isUsing = true;
         smoke.Play();
+        smokeSound.Play();
     }
 
     public override void OnDrop()
@@ -60,6 +65,11 @@ public class Kiep : PickupableItem
     {
         isUsing = false;
         smoke.Stop();
+        smokeSound.Stop();
+        if (!string.IsNullOrEmpty(stopKiepingSound))
+        {
+            CommonSoundManager.Instance.PlaySound(stopKiepingSound);
+        }
     }
 
     private void Update()
