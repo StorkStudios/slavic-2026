@@ -9798,7 +9798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2353821239564926858}
   m_Layer: 0
-  m_Name: Blood_Effect_Particle_System
+  m_Name: BloodEffectParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
