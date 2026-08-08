@@ -12,6 +12,8 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
 
     public event ObservableVariable<float>.ValueChangedDelegate ValueChanged;
 
+    public float Max => hotinRange.Max;
+
     public float Value
     {
         get => hotinValue;
@@ -27,7 +29,7 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
         }
     }
 
-    public void Reset()
+    public void ResetNoUpdate()
     {
         hotinValue = hotinRange.Min;
     }
