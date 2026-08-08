@@ -50,11 +50,6 @@ public class MeatPacking : Minigame
         InputAdapter.interact.canceled -= OnMouseRelease;
 
         Reset();
-
-        // if (particles != null && particles.isPlaying)
-        // {
-        //     particles.Stop();
-        // }
     }
 
     private void OnMouseMove(InputAction.CallbackContext context)
@@ -76,7 +71,7 @@ public class MeatPacking : Minigame
                 }
 
                 float distance = DistanceToLineRenderer(hitInLocalSpace, targetLine, out Vector3 _, out Vector3 vertex);
-                Debug.Log($"Distance to line: {distance}, position: {hitInLocalSpace}, closestVertex: {vertex}");
+                //Debug.Log($"Distance to line: {distance}, position: {hitInLocalSpace}, closestVertex: {vertex}");
                 if (distance > maxDistanceFromTargetSqr)
                 {
                     Reset();
