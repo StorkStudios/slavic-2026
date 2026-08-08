@@ -5,13 +5,14 @@ public class MeatCutting : Minigame
     [Header("Prefabs")]
     [SerializeField]
     private GameObject markerPrefab;
-    //TODO
-    //[SerializeField]
-    //private GameObject particlePrefab;
 
     [Header("Settings")]
     [SerializeField]
     private int numberOfMarkers = 2;
+
+    [Header("References")]
+    [SerializeField]
+    private AudioSource cutAudioSource;
 
     private MeatCuttingMarker currentMarker;
     private int markersCut = 0;
@@ -42,6 +43,10 @@ public class MeatCutting : Minigame
         CleanupMarker();
         markersCut++;
         Debug.Log("Marker cut");
+        if (cutAudioSource != null)
+        {
+            cutAudioSource.Play();
+        }
         if (markersCut < numberOfMarkers)
         {
             ShowNextMarker();
