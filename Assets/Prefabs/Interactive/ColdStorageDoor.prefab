@@ -85,10 +85,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: StorkStudios.CoreNest::StorkStudios.CoreNest.MovingEnvironmentElement
   target: {fileID: 2671810337062590313}
   pointA:
-    localPosition: {x: 0.5, y: 1, z: 0}
+    localPosition: {x: 0.5, y: 1.25, z: 0}
     localEuler: {x: 0, y: 0, z: 0}
   pointB:
-    localPosition: {x: 1.4, y: 1, z: 0}
+    localPosition: {x: 1.4, y: 1.25, z: 0}
     localEuler: {x: 0, y: 0, z: 0}
   movementTime: 2
   defaultState: 2
@@ -345,10 +345,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: StorkStudios.CoreNest::StorkStudios.CoreNest.MovingEnvironmentElement
   target: {fileID: 2412321996939545670}
   pointA:
-    localPosition: {x: -0.5, y: 1, z: 0}
+    localPosition: {x: -0.5, y: 1.25, z: 0}
     localEuler: {x: 0, y: 0, z: 0}
   pointB:
-    localPosition: {x: -1.4, y: 1, z: 0}
+    localPosition: {x: -1.4, y: 1.25, z: 0}
     localEuler: {x: 0, y: 0, z: 0}
   movementTime: 2
   defaultState: 2
