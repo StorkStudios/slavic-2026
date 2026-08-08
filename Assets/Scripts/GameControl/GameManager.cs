@@ -26,6 +26,13 @@ public class GameManager : Singleton<GameManager>
         Hotin.Instance.ResetNoUpdate();
         Hotin.Instance.currentGainMultiplier = shiftDay.hotinGainMultiplier;
         OnShiftInit?.Invoke(shiftDay);
+        PackageManager.Instance.AllPackagesReadyEvent += OnAllPackagesReady;
+        PackageManager.Instance.ResetNoUpdate();
+    }
+
+    private void OnAllPackagesReady()
+    {
+        EndShift();
     }
 
     private void StartShift()
@@ -53,6 +60,6 @@ public class GameManager : Singleton<GameManager>
 
     private bool CheckWin()
     {
-        return true;
+        return PackageManager.Instance.AllPackagesReady;
     }
 }
