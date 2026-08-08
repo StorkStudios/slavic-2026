@@ -10,7 +10,7 @@ public class MaterialChanger : MonoBehaviour
 
     private MeshRenderer renderer;
 
-    private void Start()
+    private void Awake()
     {
         renderer = GetComponent<MeshRenderer>();
     }
