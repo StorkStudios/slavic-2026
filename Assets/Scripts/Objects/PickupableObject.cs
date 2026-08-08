@@ -18,6 +18,9 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
     string IInteractable.ActionName => "pick up " + ObjectType;
     private Collider[] colliders;
 
+    public event System.Action<IPickupable> PickedUp;
+    public event System.Action<IPickupable> Dropped;
+
     private void Start()
     {
         colliders = GetComponentsInChildren<Collider>();
@@ -43,6 +46,7 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
         {
             collider.gameObject.layer = Layer.Default.GetLayerIndex();
         }
+        Dropped?.Invoke(this);
     }
 
     private void OnPickupBack()
@@ -59,5 +63,6 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
         {
             collider.gameObject.layer = Layer.HeldItems.GetLayerIndex();
         }
+        PickedUp?.Invoke(this);
     }
 }
