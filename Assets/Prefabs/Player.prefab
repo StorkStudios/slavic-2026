@@ -145,7 +145,7 @@ MonoBehaviour:
   faintAnimationDuration: 1
   faintDuration: 2
   shiftTimeAddOnFaint: 60
-  hotinReduceValue: 100
+  hotinReduceValue: 75
   cinemachineCamera: {fileID: 3599128690849985385}
 --- !u!1 &1828820672732831786
 GameObject:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
   hotinRange:
-    Min: 20
+    Min: 40
     Max: 100
   rangeEnter:
     m_PersistentCalls:
@@ -307,7 +307,7 @@ MonoBehaviour:
         m_CallState: 2
     delay: 0
     printDebugMessages: 0
-  stayTriggerCooldown: 5
+  stayTriggerCooldown: 3
   rangeExit:
     m_PersistentCalls:
       m_Calls: []
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
-  setSuccessChance: 0.1
+  setSuccessChance: 0.5
   trigger:
     m_PersistentCalls:
       m_Calls:
