@@ -21,6 +21,9 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
     public event System.Action<IPickupable> PickedUp;
     public event System.Action<IPickupable> Dropped;
 
+    [HideInInspector]
+    public bool locked = false;
+
     private void Start()
     {
         colliders = GetComponentsInChildren<Collider>();
@@ -30,7 +33,7 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
 
     public bool CanInteract()
     {
-        return !PlayerObjectHolder.Instance.IsHoldingObject;
+        return !locked && !PlayerObjectHolder.Instance.IsHoldingObject;
     }
 
     public void Interact()

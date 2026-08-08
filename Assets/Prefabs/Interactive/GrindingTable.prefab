@@ -856,6 +856,7 @@ MonoBehaviour:
   grindingAudioSource: {fileID: 119164450513058052}
   finalMeatLocation: {fileID: 6938781884661082031}
   initialProductLocation: {fileID: 528939302538370800}
+  fakeMeatPrefab: {fileID: 1738406399447128749, guid: bd395e984cceaa0e2900ebfafb3257da, type: 3}
   hotinEventThreshold: 20
   grindEventTimeout: 1
   grindHotinEvent:
