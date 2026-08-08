@@ -80,7 +80,7 @@ MonoBehaviour:
   animationCameraTarget: {fileID: 4363047259447710850}
   pickupHalfDuration: 1
   objectType: packed meat
-  hotinGainSpeed: 1
+  hotinGainSpeed: 0
 --- !u!114 &897624658555499161
 MonoBehaviour:
   m_ObjectHideFlags: 0
