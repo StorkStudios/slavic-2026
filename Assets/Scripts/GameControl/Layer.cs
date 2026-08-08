@@ -10,6 +10,7 @@ namespace StorkStudios.CoreNest
 		Water = 4,
 		UI = 5,
 		HeldItems = 6,
+		Minigame = 7,
 	}
 	
 	public static class LayerExtensions

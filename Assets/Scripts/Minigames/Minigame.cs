@@ -37,10 +37,13 @@ public abstract class Minigame : MonoBehaviour
     private static Minigame currentMinigame;
     public static Minigame CurrentMinigame => currentMinigame;
 
-    private void Start()
+    protected virtual void Start()
     {
         cinemachineCamera.enabled = false;
-        canvas.gameObject.SetActive(false);
+        if (canvas != null)
+        {
+            canvas.gameObject.SetActive(false);
+        }
         InputAdapter.cancel.performed += OnCancel;
     }
 
@@ -53,7 +56,10 @@ public abstract class Minigame : MonoBehaviour
     {
         currentMinigame = this;
         cinemachineCamera.enabled = true;
-        canvas.gameObject.SetActive(true);
+        if (canvas != null)
+        {
+            canvas.gameObject.SetActive(true);
+        }
         lastLockMode = Cursor.lockState;
         CursorManager.Instance.UnlockCursor();
         PlayerController.Instance.active = false;
@@ -76,7 +82,10 @@ public abstract class Minigame : MonoBehaviour
     {
         currentMinigame = null;
         cinemachineCamera.enabled = false;
-        canvas.gameObject.SetActive(false);
+        if (canvas != null)
+        {
+            canvas.gameObject.SetActive(false);
+        }
         if (lastLockMode == CursorLockMode.Locked)
         {
             CursorManager.Instance.LockCursor();

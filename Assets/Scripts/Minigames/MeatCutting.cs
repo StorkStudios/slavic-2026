@@ -13,7 +13,6 @@ public class MeatCutting : Minigame
     [SerializeField]
     private int numberOfMarkers = 2;
 
-    private Transform meatTransform;
     private MeatCuttingMarker currentMarker;
     private int markersCut = 0;
 
@@ -30,10 +29,6 @@ public class MeatCutting : Minigame
     {
         base.EndMinigame(win);
 
-        if (meatTransform != null)
-        {
-            Destroy(meatTransform.gameObject);
-        }
         if (currentMarker != null)
         {
             Destroy(currentMarker.gameObject);
