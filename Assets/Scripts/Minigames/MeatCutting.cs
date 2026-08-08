@@ -5,6 +5,9 @@ public class MeatCutting : Minigame
     [Header("Prefabs")]
     [SerializeField]
     private GameObject markerPrefab;
+    //TODO
+    //[SerializeField]
+    //private GameObject particlePrefab;
 
     [Header("Settings")]
     [SerializeField]
