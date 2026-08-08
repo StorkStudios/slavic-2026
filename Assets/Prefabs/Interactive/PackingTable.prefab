@@ -132,7 +132,7 @@ Transform:
   m_GameObject: {fileID: 1114983103840192862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.433, z: 0}
+  m_LocalPosition: {x: 0, y: 1.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -243,10 +243,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Positions:
-  - {x: 0.4, y: -0.08, z: 0}
-  - {x: 0.4, y: -0.08, z: 0.6}
-  - {x: -0.4, y: -0.08, z: 0.6}
-  - {x: -0.4, y: -0.08, z: 0}
+  - {x: 0.2, y: -0.08, z: -0.21569744}
+  - {x: 0.2, y: -0.08, z: 0.18430257}
+  - {x: -0.2, y: -0.08, z: 0.18430257}
+  - {x: -0.2, y: -0.08, z: -0.21569744}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -624,6 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d7061919d8550a983c6ef9d9e0c7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameStation
+  interactSound: 
 --- !u!65 &5825605237658938645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -665,6 +666,8 @@ MonoBehaviour:
   productPrefab: {fileID: 1738406399447128749, guid: c6c6ff2a5f5a1e12cb3f192bf56ba143, type: 3}
   productLocations:
   - {fileID: 4357051568136155175}
+  collidingObjects:
+    list: []
   line: {fileID: 3902019500352764853}
   targetLine: {fileID: 4991896966696293132}
   canvasLayerMask:

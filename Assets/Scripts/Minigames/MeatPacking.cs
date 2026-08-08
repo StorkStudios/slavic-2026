@@ -28,6 +28,8 @@ public class MeatPacking : Minigame
         base.Start();
         
         Reset();
+        targetLine.gameObject.SetActive(false);
+        line.gameObject.SetActive(false);
     }
 
     public override void StartMinigame()
@@ -37,6 +39,9 @@ public class MeatPacking : Minigame
         InputAdapter.look.performed += OnMouseMove;
         InputAdapter.interact.started += OnMousePress;
         InputAdapter.interact.canceled += OnMouseRelease;
+
+        targetLine.gameObject.SetActive(true);
+        line.gameObject.SetActive(true);
 
         Reset();
     }
@@ -50,6 +55,9 @@ public class MeatPacking : Minigame
         InputAdapter.interact.canceled -= OnMouseRelease;
 
         Reset();
+
+        targetLine.gameObject.SetActive(false);
+        line.gameObject.SetActive(false);
     }
 
     private void OnMouseMove(InputAction.CallbackContext context)
