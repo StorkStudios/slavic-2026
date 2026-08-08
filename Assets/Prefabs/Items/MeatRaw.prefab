@@ -158,7 +158,7 @@ MonoBehaviour:
   animationCameraTarget: {fileID: 4363047259447710850}
   pickupHalfDuration: 1
   objectType: meat
-  hotinGainSpeed: 3
+  hotinGainSpeed: 1.5
   interactSound: 
   dropSound: 
   locked: 0
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 2766279038641942720}
   - component: {fileID: 2941603943263247311}
   m_Layer: 0
-  m_Name: MaterialChange
+  m_Name: MaterialChangeWeird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
-  setSuccessChance: 0.35
+  setSuccessChance: 0.6
   trigger:
     m_PersistentCalls:
       m_Calls:
@@ -443,7 +443,7 @@ MonoBehaviour:
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: e468e5942c1d89d4e8341c2eb5f90e41, type: 2}
+          m_ObjectArgument: {fileID: 2100000, guid: 9e2cff95765aa1e4aaac6342ac80a8c4, type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -483,6 +483,7 @@ Transform:
   m_Children:
   - {fileID: 5979202848065158259}
   - {fileID: 2766279038641942720}
+  - {fileID: 7615147368727531246}
   - {fileID: 5577112349864657534}
   - {fileID: 8262133851880876609}
   - {fileID: 8037073595384686730}
@@ -692,6 +693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5979202848065158259}
   - component: {fileID: 3954754016149385278}
+  - component: {fileID: 6828459134277143084}
   m_Layer: 0
   m_Name: MaterialChangeDetector
   m_TagString: Untagged
@@ -733,6 +735,61 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2941603943263247311}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+  rangeStay:
+    m_PersistentCalls:
+      m_Calls: []
+    delay: 0
+    printDebugMessages: 0
+  stayTriggerCooldown: 0
+  rangeExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4466902893208547909}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: e94820cb71f88e549a3f16cacf35526a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+--- !u!114 &6828459134277143084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228801682323695398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4966ca67c2852c5408d379d86c1c95ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
+  hotinRange:
+    Min: 50
+    Max: 100
+  rangeEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4923971547755917608}
         m_TargetAssemblyTypeName: 
         m_MethodName: Set
         m_Mode: 1
@@ -899,6 +956,68 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 729d2ed6fdcc95643a81af40d217944f, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+--- !u!1 &6908343483449980199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7615147368727531246}
+  - component: {fileID: 4923971547755917608}
+  m_Layer: 0
+  m_Name: MaterialChangeEvil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7615147368727531246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908343483449980199}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8230904337693735234}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4923971547755917608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908343483449980199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
+  setSuccessChance: 0.35
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4466902893208547909}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: e468e5942c1d89d4e8341c2eb5f90e41, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

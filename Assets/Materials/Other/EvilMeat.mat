@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WeirdMeat
+  m_Name: EvilMeat
   m_Shader: {fileID: -6465566751694194690, guid: 5d003903b2935af4fb8ad6d0e0665f32, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Albedo2:
-        m_Texture: {fileID: 2800000, guid: 510078ecb6c57de4db73c9f27c541a82, type: 3}
+        m_Texture: {fileID: 2800000, guid: 30193e2263e124b4e9ee6114a406d4a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
