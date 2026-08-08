@@ -854,14 +854,14 @@ MonoBehaviour:
   particlesTimeout: 1
   soundTimeout: 1
   handle: {fileID: 592032197582641442}
-  particles: {fileID: 0}
+  particles: {fileID: 1877211471993644594}
   grindingAudioSource: {fileID: 119164450513058052}
   finalMeatLocation: {fileID: 6938781884661082031}
   initialProductLocation: {fileID: 528939302538370800}
   fakeMeatPrefab: {fileID: 1738406399447128749, guid: bd395e984cceaa0e2900ebfafb3257da, type: 3}
   cursorSpriteOpen: {fileID: 21300000, guid: 055e44ae07fc33348b0381bbf2c0d1f7, type: 3}
   cursorSpriteClosed: {fileID: 21300000, guid: 71f2098bed9f3c147815fff13f2defdf, type: 3}
-  hotinEventThreshold: 20
+  hotinEventThreshold: 40
   grindEventTimeout: 1
   grindHotinEvent:
     m_PersistentCalls:
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
-  setSuccessChance: 0.2
+  setSuccessChance: 0.1
   trigger:
     m_PersistentCalls:
       m_Calls:
@@ -1049,6 +1049,11 @@ PrefabInstance:
 --- !u!4 &592032197582641442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1755054347305588576, guid: a6cb5d20e8a6e414da8cc1190e8e543b, type: 3}
+  m_PrefabInstance: {fileID: 1183433523309465154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1877211471993644594 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 747975116106655856, guid: a6cb5d20e8a6e414da8cc1190e8e543b, type: 3}
   m_PrefabInstance: {fileID: 1183433523309465154}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3243770650203953320 stripped
