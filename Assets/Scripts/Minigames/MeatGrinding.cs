@@ -55,7 +55,10 @@ public class MeatGrinding : Minigame
         InputAdapter.interact.started += OnMousePress;
         InputAdapter.interact.canceled += OnMouseRelease;
 
-        fakeProduct = Instantiate(fakeMeatPrefab, initialProductLocation.position, initialProductLocation.rotation);
+        if (fakeProduct == null)
+        {
+            fakeProduct = Instantiate(fakeMeatPrefab, initialProductLocation.position, initialProductLocation.rotation);
+        }
     }
 
     public override void EndMinigame(bool win)
@@ -65,6 +68,7 @@ public class MeatGrinding : Minigame
         if (win)
         {
             Destroy(fakeProduct);
+            fakeProduct = null;
             rotatedAngle = 0f;
         }
 

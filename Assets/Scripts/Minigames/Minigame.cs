@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
+using StorkStudios.CoreNest;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -37,6 +39,12 @@ public abstract class Minigame : MonoBehaviour
 
     private static Minigame currentMinigame;
     public static Minigame CurrentMinigame => currentMinigame;
+
+    [SerializeField]
+    [ReadOnly]
+    private SerializedSet<GameObject> collidingObjects = new();
+
+    private PickupableObject objectHeldByPlayerOnTable;
 
     protected virtual void Start()
     {
@@ -76,6 +84,8 @@ public abstract class Minigame : MonoBehaviour
             {
                 animatingItem = false;
             });
+
+            collidingObjects.Remove(currentItem.gameObject);
         }
     }
 
@@ -104,18 +114,79 @@ public abstract class Minigame : MonoBehaviour
                 {
                     rb.isKinematic = false;
                 }
+                if (obj.TryGetComponent(out PickupableObject _))
+                {
+                    collidingObjects.Add(obj);
+                }
             }
         }
     }
 
     public virtual bool CanStart()
     {
-        return !started && ((currentItem != null && PlayerObjectHolder.Instance.CurrentObject == null) || (PlayerObjectHolder.Instance.CurrentObject != null && PlayerObjectHolder.Instance.CurrentObject.ObjectType == itemType));
+        return !started &&
+            ((currentItem != null && PlayerObjectHolder.Instance.CurrentObject == null) || (PlayerObjectHolder.Instance.CurrentObject != null && PlayerObjectHolder.Instance.CurrentObject.ObjectType == itemType)) &&
+            collidingObjects.Count == 0;
     }
 
     public virtual bool CanExit()
     {
         return started && !animatingItem;
+    }
+
+    public void OnTableTriggerEnter(Collider other)
+    {
+        if (other.attachedRigidbody == null)
+        {
+            return;
+        }
+
+        if (!other.attachedRigidbody.TryGetComponent(out PickupableObject obj))
+        {
+            return;
+        }
+
+        if (animatingItem)
+        {
+            return;
+        }
+
+        if ((IPickupable)obj == PlayerObjectHolder.Instance.CurrentObject)
+        {
+            objectHeldByPlayerOnTable = obj;
+            objectHeldByPlayerOnTable.Dropped += OnObjectDroppedOnTable;
+        }
+        else
+        {
+            collidingObjects.Add(other.attachedRigidbody.gameObject);
+        }
+    }
+
+    public void OnTableTriggerExit(Collider other)
+    {
+        if (other.attachedRigidbody == null)
+        {
+            return;
+        }
+
+        if (!other.attachedRigidbody.TryGetComponent(out PickupableObject obj))
+        {
+            return;
+        }
+        
+        if (obj == objectHeldByPlayerOnTable)
+        {
+            objectHeldByPlayerOnTable.Dropped -= OnObjectDroppedOnTable;
+            objectHeldByPlayerOnTable = null;
+        }
+        collidingObjects.Remove(other.attachedRigidbody.gameObject);
+    }
+
+    private void OnObjectDroppedOnTable(IPickupable pickupable)
+    {
+        collidingObjects.Add(objectHeldByPlayerOnTable.gameObject);
+        objectHeldByPlayerOnTable.Dropped -= OnObjectDroppedOnTable;
+        objectHeldByPlayerOnTable = null;
     }
 
     private void OnCancel(InputAction.CallbackContext context)
