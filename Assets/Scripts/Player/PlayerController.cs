@@ -1,3 +1,4 @@
+using DG.Tweening;
 using StorkStudios.CoreNest;
 using System.Collections;
 using UnityEngine;
@@ -14,6 +15,12 @@ public class PlayerController : Singleton<PlayerController>
     private float sprintSpeed;
     [SerializeField]
     private Vector2 sensitivity;
+    [SerializeField]
+    private float cameraShakeStrength;
+    [SerializeField]
+    private int cameraShakeVibrato;
+    [SerializeField]
+    private float cameraShakeRandomness;
 
     [HideInInspector]
     public bool active = true;
@@ -109,5 +116,10 @@ public class PlayerController : Singleton<PlayerController>
         velocity.y += ySpeed;
 
         characterController.Move(Time.deltaTime * velocity);
+    }
+
+    public void ShakeCamera(float duration)
+    {
+        camera.GetChild(0).DOShakeRotation(duration, cameraShakeStrength, cameraShakeVibrato, cameraShakeRandomness);
     }
 }

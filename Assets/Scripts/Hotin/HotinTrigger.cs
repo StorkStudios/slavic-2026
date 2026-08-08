@@ -11,9 +11,12 @@ public class HotinTrigger : MonoBehaviour
     [SerializeField]
     private Trigger rangeStay;
     [SerializeField]
+    private float stayTriggerCooldown;
+    [SerializeField]
     private Trigger rangeExit;
 
     private bool isInRange = false;
+    private float stayTriggerCounter = 0;
 
     private void Start()
     {
@@ -26,6 +29,7 @@ public class HotinTrigger : MonoBehaviour
         if (isInRange)
         {
             rangeEnter.Set($"{gameObject.name}.HotinEnter");
+            stayTriggerCounter = 0;
         }
         else
         {
@@ -41,8 +45,9 @@ public class HotinTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isInRange)
+        if (isInRange && (stayTriggerCounter += Time.deltaTime) >= stayTriggerCooldown)
         {
+            stayTriggerCounter = 0;
             rangeStay.Set($"{gameObject.name}.HotinStay");
         }
     }
