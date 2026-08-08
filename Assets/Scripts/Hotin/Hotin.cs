@@ -27,7 +27,7 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
         }
     }
 
-    public void Reset()
+    public void ResetNoUpdate()
     {
         hotinValue = hotinRange.Min;
     }
