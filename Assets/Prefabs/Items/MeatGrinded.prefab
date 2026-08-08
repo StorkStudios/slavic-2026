@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4454751254563540330}
   - component: {fileID: 1896598624405770869}
   - component: {fileID: 6585085434774258884}
+  - component: {fileID: 9163051372735020510}
   m_Layer: 0
   m_Name: MeatGrinded
   m_TagString: Untagged
@@ -98,13 +99,13 @@ MonoBehaviour:
   rangeEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8671827611113435125}
+      - m_Target: {fileID: 9163051372735020510}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_material
-        m_Mode: 2
+        m_MethodName: Set
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: b5ae7bc44cf339542bedc031bc6e9ae0, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -127,6 +128,36 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2100000, guid: e94820cb71f88e549a3f16cacf35526a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    delay: 0
+    printDebugMessages: 0
+--- !u!114 &9163051372735020510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738406399447128749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00da336c3a34922419a9063721df35b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StochasticTrigger
+  setSuccessChance: 0.35
+  trigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8671827611113435125}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_material
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2100000, guid: e468e5942c1d89d4e8341c2eb5f90e41, type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
