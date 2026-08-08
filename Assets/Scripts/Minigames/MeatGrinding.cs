@@ -58,18 +58,15 @@ public class MeatGrinding : Minigame
 
     public override void EndMinigame(bool win)
     {
-        Destroy(fakeProduct);
-        
         base.EndMinigame(win);
+
+        if (win)
+        {
+            Destroy(fakeProduct);
+        }
 
         InputAdapter.interact.started -= OnMousePress;
         InputAdapter.interact.canceled -= OnMouseRelease;
-        rotatedAngle = 0f;
-
-        if (!win)
-        {
-            CurrentItem.transform.position = Vector3.Lerp(itemLocation.position, finalMeatLocation.position, rotatedAngle / grindAngle);
-        }
 
         if (particles != null && particles.isPlaying)
         {
@@ -124,8 +121,11 @@ public class MeatGrinding : Minigame
             }
         }
 
-        CurrentItem.transform.position = Vector3.Lerp(itemLocation.position, finalMeatLocation.position, rotatedAngle / grindAngle);
-        fakeProduct.transform.position = Vector3.Lerp(initialProductLocation.position, productLocations[0].position, rotatedAngle / grindAngle);
+        if (Started) //May be false after end minigame
+        {
+            CurrentItem.transform.position = Vector3.Lerp(itemLocation.position, finalMeatLocation.position, rotatedAngle / grindAngle);
+            fakeProduct.transform.position = Vector3.Lerp(initialProductLocation.position, productLocations[0].position, rotatedAngle / grindAngle);
+        }
 
         if (grindingLastFrame && !grinding)
         {

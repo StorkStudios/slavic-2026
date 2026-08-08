@@ -99,7 +99,11 @@ public abstract class Minigame : MonoBehaviour
             currentItem = null;
             foreach (Transform productLocation in productLocations)
             {
-                Instantiate(productPrefab, productLocation.position, productLocation.rotation);
+                GameObject obj = Instantiate(productPrefab, productLocation.position, productLocation.rotation);
+                if (obj.TryGetComponent(out Rigidbody rb))
+                {
+                    rb.isKinematic = false;
+                }
             }
         }
     }

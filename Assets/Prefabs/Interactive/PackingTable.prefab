@@ -643,8 +643,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 1.4, z: 2}
-  m_Center: {x: 0, y: 0.7, z: 0}
+  m_Size: {x: 3, y: 0.9455151, z: 2}
+  m_Center: {x: 0, y: 0.47275755, z: 0}
 --- !u!114 &7578078930454584013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,8 +665,6 @@ MonoBehaviour:
   productPrefab: {fileID: 1738406399447128749, guid: c6c6ff2a5f5a1e12cb3f192bf56ba143, type: 3}
   productLocations:
   - {fileID: 4357051568136155175}
-  objectsOnTable:
-    list: []
   line: {fileID: 3902019500352764853}
   targetLine: {fileID: 4991896966696293132}
   canvasLayerMask:
