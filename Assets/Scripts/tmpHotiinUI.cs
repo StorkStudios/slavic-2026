@@ -8,6 +8,6 @@ public class tmpHotiinUI : MonoBehaviour
 
     private void Update()
     {
-        text.text = $"hotin{Hotin.Instance.Value}";
+        text.text = $"hotin{Hotin.Instance.Value}\nshift{GameManager.Instance.shiftTime}";
     }
 }

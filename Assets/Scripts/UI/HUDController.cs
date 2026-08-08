@@ -1,8 +1,9 @@
+using StorkStudios.CoreNest;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HUDController : MonoBehaviour
+public class HUDController : Singleton<HUDController>
 {
     [SerializeField]
     private TextMeshProUGUI interactTooltip;
@@ -14,6 +15,10 @@ public class HUDController : MonoBehaviour
     private CanvasGroup dropCanvasGroup;
     [SerializeField]
     private float showDuration;
+    [SerializeField]
+    private CanvasGroup cameraFadeGroup;
+
+    public CanvasGroup CameraFadeGroup => cameraFadeGroup;
 
     private float interactAlfa = 0;
     private float dropAlfa = 0;
