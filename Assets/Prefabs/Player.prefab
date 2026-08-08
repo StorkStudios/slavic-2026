@@ -118,6 +118,9 @@ MonoBehaviour:
     - Key:
         item: meat piece
       Value: {fileID: 1925168377053710791}
+    - Key:
+        item: grinded meat
+      Value: {fileID: 1925168377053710791}
 --- !u!1 &1828820672732831786
 GameObject:
   m_ObjectHideFlags: 0
