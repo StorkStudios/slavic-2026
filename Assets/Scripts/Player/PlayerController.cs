@@ -22,6 +22,12 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField]
     private float cameraShakeRandomness;
 
+    [Header("Sounds")]
+    [SerializeField]
+    private AudioSource walkSound;
+    [SerializeField]
+    private AudioSource sprintSound;
+
     [HideInInspector]
     public bool active = true;
 
@@ -34,6 +40,8 @@ public class PlayerController : Singleton<PlayerController>
     private float cameraXAngle;
 
     bool isSprinting = false;
+    private bool movedLastFame;
+    private bool sprintedLastFrame;
 
     private void Start()
     {
@@ -118,7 +126,44 @@ public class PlayerController : Singleton<PlayerController>
         velocity = (transform.forward * input.y + transform.right * input.x) * (isSprinting ? sprintSpeed : speed);
         velocity.y += ySpeed;
 
-        characterController.Move(Time.deltaTime * velocity);
+        var flags = characterController.Move(Time.deltaTime * velocity);
+
+        bool moving = Mathf.Abs(input.x) > 0 || Mathf.Abs(input.y) > 0;
+        if (moving)
+        {
+            if (isSprinting && !sprintedLastFrame)
+            {
+                if (!sprintSound.isPlaying)
+                {
+                    sprintSound.Play();
+                }
+
+                if (walkSound.isPlaying)
+                {
+                    walkSound.Stop();
+                }
+            }
+            
+            if (!isSprinting)
+            {
+                if (!walkSound.isPlaying)
+                {
+                    walkSound.Play();
+                }
+
+                if (sprintSound.isPlaying)
+                {
+                    sprintSound.Stop();
+                }
+            }
+        }
+        else if (movedLastFame)
+        {
+            walkSound.Stop();
+            sprintSound.Stop();
+        }
+        movedLastFame = moving;
+        sprintedLastFrame = moving && isSprinting;
     }
 
     public void ShakeCamera(float duration)

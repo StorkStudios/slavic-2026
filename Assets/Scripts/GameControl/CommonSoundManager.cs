@@ -16,5 +16,5 @@ public class CommonSoundManager : Singleton<CommonSoundManager>
         {
             Debug.LogWarning($"Sound not found in {gameObject.name}. Key: {name}");
         }
-    } 
+    }
 }
