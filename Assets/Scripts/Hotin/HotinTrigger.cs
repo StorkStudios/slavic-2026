@@ -25,7 +25,13 @@ public class HotinTrigger : MonoBehaviour
 
     private void OnHotinChange(float oldValue, float newValue)
     {
-        isInRange = hotinRange.Contains(newValue, BoundariesType.IncludeMin);
+        bool newIsInRange = hotinRange.Contains(newValue, BoundariesType.IncludeMin);
+        if (newIsInRange == isInRange)
+        {
+            return;
+        }
+
+        isInRange = newIsInRange;
         if (isInRange)
         {
             rangeEnter.Set($"{gameObject.name}.HotinEnter");
