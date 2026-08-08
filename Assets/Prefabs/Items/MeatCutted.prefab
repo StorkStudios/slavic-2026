@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4454751254563540330}
   - component: {fileID: 1896598624405770869}
   m_Layer: 0
-  m_Name: Meat
+  m_Name: MeatCutted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1738406399447128749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -76,8 +76,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupableObject
   animationCameraTarget: {fileID: 4363047259447710850}
   pickupHalfDuration: 1
-  objectType: meat
-  hotinGainSpeed: 3
+  objectType: meat piece
+  hotinGainSpeed: 2
 --- !u!1 &2669991775725619647
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,13 +103,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2669991775725619647}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.092269346, y: 0.9626563, z: -0.2533564, w: 0.024283879}
-  m_LocalPosition: {x: 0.92, y: 0, z: 0.37}
+  m_LocalRotation: {x: 0.09284979, y: 0.7304212, z: -0.6762999, w: -0.021960279}
+  m_LocalPosition: {x: 0.18, y: 1.17, z: 0.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8874672205740321213}
-  m_LocalEulerAnglesHint: {x: 29.49, y: 180, z: 10.95}
+  m_LocalEulerAnglesHint: {x: 79.701, y: 241.876, z: 67.646}
 --- !u!114 &4363047259447710850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,13 +180,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8785434081306478237}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.13052596, y: -0, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8874672205740321213}
-  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6890511409743605785
 MeshFilter:
   m_ObjectHideFlags: 0

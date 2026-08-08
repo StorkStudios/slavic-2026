@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4454751254563540330}
   - component: {fileID: 1896598624405770869}
   m_Layer: 0
-  m_Name: GrindedMeat
+  m_Name: MeatGrinded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +220,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e4664635f469874db03d1c86dd86c77, type: 2}
+  - {fileID: 2100000, guid: 3657c45ff79b9f24ebd7e670568c827b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
