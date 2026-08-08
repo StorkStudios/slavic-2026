@@ -53,7 +53,7 @@ MonoBehaviour:
   timeIndicator: {fileID: 4782767323676381986}
   animationStartScale: 5
   endScale: 0.8
-  startSpeed: 1
+  startSpeed: 4
   correctScaleRange: 0.2
 --- !u!1 &1440496335069772365
 GameObject:

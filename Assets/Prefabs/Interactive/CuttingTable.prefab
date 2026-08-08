@@ -502,7 +502,7 @@ MonoBehaviour:
   - {fileID: 5636020274507231562}
   - {fileID: 5131077567419491465}
   markerPrefab: {fileID: 817641675700985779, guid: dd35dbb9831d41ce18769bf76974cc8e, type: 3}
-  numberOfMarkers: 2
+  numberOfMarkers: 3
 --- !u!65 &5825605237658938645
 BoxCollider:
   m_ObjectHideFlags: 0
