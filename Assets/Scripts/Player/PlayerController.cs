@@ -70,6 +70,9 @@ public class PlayerController : Singleton<PlayerController>
         InputAdapter.move.canceled -= OnMove;
 
         InputAdapter.look.performed -= OnLook;
+
+        InputAdapter.sprint.performed -= OnSprintStart;
+        InputAdapter.sprint.canceled -= OnSprintStop;
     }
 
     private void OnMove(InputAction.CallbackContext context)

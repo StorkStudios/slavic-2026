@@ -21,6 +21,12 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
         InputAdapter.interact.performed += OnInteract;
     }
 
+    protected override void OnDestroy()
+    {
+        InputAdapter.interact.performed -= OnInteract;
+        base.OnDestroy();
+    }
+
     private void OnInteract(InputAction.CallbackContext context)
     {
         if (CanInteract)

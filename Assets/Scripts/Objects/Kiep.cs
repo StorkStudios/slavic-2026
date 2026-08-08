@@ -22,6 +22,11 @@ public class Kiep : PickupableItem
         InputAdapter.interact.canceled += OnInteractCanceled;
     }
 
+    private void OnDestroy()
+    {
+        InputAdapter.interact.canceled -= OnInteractCanceled;
+    }
+
     private void OnInteractCanceled(InputAction.CallbackContext obj)
     {
         if (!isUsing)
