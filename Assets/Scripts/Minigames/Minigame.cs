@@ -34,6 +34,9 @@ public abstract class Minigame : MonoBehaviour
 
     public abstract string Name { get; }
 
+    private static Minigame currentMinigame;
+    public static Minigame CurrentMinigame => currentMinigame;
+
     private void Start()
     {
         cinemachineCamera.enabled = false;
@@ -48,6 +51,7 @@ public abstract class Minigame : MonoBehaviour
 
     public virtual void StartMinigame()
     {
+        currentMinigame = this;
         cinemachineCamera.enabled = true;
         canvas.gameObject.SetActive(true);
         lastLockMode = Cursor.lockState;
@@ -70,6 +74,7 @@ public abstract class Minigame : MonoBehaviour
 
     public virtual void EndMinigame(bool win)
     {
+        currentMinigame = null;
         cinemachineCamera.enabled = false;
         canvas.gameObject.SetActive(false);
         if (lastLockMode == CursorLockMode.Locked)
