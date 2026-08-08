@@ -9,6 +9,7 @@ public static class InputAdapter
     public static readonly InputAction sprint;
     public static readonly InputAction drop;
     public static readonly InputAction cancel;
+    public static readonly InputAction checkTime;
 
     static InputAdapter()
     {
@@ -18,5 +19,6 @@ public static class InputAdapter
         sprint = InputSystem.actions.FindAction("Sprint");
         drop = InputSystem.actions.FindAction("Drop");
         cancel = InputSystem.actions.FindAction("Cancel");
+        checkTime = InputSystem.actions.FindAction("CheckTime");
     }
 }

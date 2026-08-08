@@ -147,7 +147,8 @@ public class PlayerController : Singleton<PlayerController>
                 if (!sprintSound.isPlaying)
                 {
                     sprintSound.Play();
-                    if (PlayerObjectHolder.Instance.CurrentObject == null)
+                    if (PlayerObjectHolder.Instance.CurrentObject == null && 
+                        PlayerWatchWatcher.Instance.Watching == false)
                     {
                         animator.CrossFade("Run", 0.5f);
                     }
@@ -164,7 +165,8 @@ public class PlayerController : Singleton<PlayerController>
                 if (!walkSound.isPlaying)
                 {
                     walkSound.Play();
-                    if (PlayerObjectHolder.Instance.CurrentObject == null)
+                    if (PlayerObjectHolder.Instance.CurrentObject == null && 
+                        PlayerWatchWatcher.Instance.Watching == false)
                     {
                         animator.CrossFade("Run", 0.5f);
                     }
@@ -180,7 +182,8 @@ public class PlayerController : Singleton<PlayerController>
         {
             walkSound.Stop();
             sprintSound.Stop();
-            if (PlayerObjectHolder.Instance.CurrentObject == null)
+            if (PlayerObjectHolder.Instance.CurrentObject == null && 
+                    PlayerWatchWatcher.Instance.Watching == false)
             {   
                 animator.CrossFade("Idle", 0.5f);
             }
