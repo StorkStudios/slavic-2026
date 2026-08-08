@@ -19,6 +19,12 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         InputAdapter.drop.performed += OnDrop;
     }
 
+    protected override void OnDestroy()
+    {
+        InputAdapter.drop.performed -= OnDrop;
+        base.OnDestroy();
+    }
+
     public void Update()
     {
         if (IsHoldingObject && CurrentObject.HotinGainSpeed > 0)
