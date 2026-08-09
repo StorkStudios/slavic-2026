@@ -19,9 +19,15 @@ public class MeatPacking : Minigame
     private float maxDistanceFromTargetSqr;
     [SerializeField]
     private float maxDistanceFromVertexSqr;
+    [SerializeField]
+    private Sprite cursorSprite;
+    [SerializeField]
+    private Vector2 cursorHotspot;
 
     private bool pressed = false;
     private HashSet<Vector3> completedVertices = new HashSet<Vector3>();
+
+    private static Texture2D scaledCursor;
 
     protected override void Start()
     {
@@ -30,6 +36,11 @@ public class MeatPacking : Minigame
         Reset();
         targetLine.gameObject.SetActive(false);
         line.gameObject.SetActive(false);
+
+        if (scaledCursor == null)
+        {
+            scaledCursor = ScaleTexture(cursorSprite.texture, 32, 32);
+        }
     }
 
     public override void StartMinigame()
@@ -44,6 +55,8 @@ public class MeatPacking : Minigame
         line.gameObject.SetActive(true);
 
         Reset();
+
+        Cursor.SetCursor(scaledCursor, cursorHotspot, CursorMode.Auto);
     }
 
     public override void EndMinigame(bool win)
@@ -58,6 +71,8 @@ public class MeatPacking : Minigame
 
         targetLine.gameObject.SetActive(false);
         line.gameObject.SetActive(false);
+
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
     private void OnMouseMove(InputAction.CallbackContext context)

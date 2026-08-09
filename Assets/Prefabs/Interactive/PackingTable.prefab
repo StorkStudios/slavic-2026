@@ -187,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 5067967783564955899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
+  m_LocalPosition: {x: 0, y: -0.06, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -676,6 +676,8 @@ MonoBehaviour:
   minLineSegmentLengthSqr: 0.0005
   maxDistanceFromTargetSqr: 0.005
   maxDistanceFromVertexSqr: 0.01
+  cursorSprite: {fileID: 21300000, guid: fa1a89bab5737aa40a8aed91b5f219aa, type: 3}
+  cursorHotspot: {x: 8, y: 8}
 --- !u!1001 &3780093255553007566
 PrefabInstance:
   m_ObjectHideFlags: 0
