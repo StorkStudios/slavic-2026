@@ -67,7 +67,7 @@ public class PlayerWatchHandler : Singleton<PlayerWatchHandler>
     private void Update()
     {
         float shiftNormlizedTime = GameManager.Instance.shiftTime / GameManager.Instance.ShiftDuration;
-        int watchTime = (int)(shiftNormlizedTime * 8f * 60f) + 22 * 60;
+        int watchTime = (int)((1 - shiftNormlizedTime) * 8f * 60f);
         hour = watchTime / 60 % 24;
         minute = watchTime % 60;
         text.text = $"{hour.ToString().PadLeft(2, '0')}\n{minute.ToString().PadLeft(2, '0')}";
@@ -86,7 +86,7 @@ public class PlayerWatchHandler : Singleton<PlayerWatchHandler>
             return;
         }
 
-        if (alarmsEnumerator.Current.Hour <= hour && alarmsEnumerator.Current.Minute <= minute)
+        if (hour <= alarmsEnumerator.Current.Hour && minute <= alarmsEnumerator.Current.Minute)
         {
             checkAlarms = alarmsEnumerator.MoveNext();
 
