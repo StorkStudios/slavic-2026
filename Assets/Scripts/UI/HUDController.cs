@@ -14,6 +14,10 @@ public class HUDController : Singleton<HUDController>
     [SerializeField]
     private CanvasGroup dropCanvasGroup;
     [SerializeField]
+    private TextMeshProUGUI exitTooltip;
+    [SerializeField]
+    private CanvasGroup exitCanvasGroup;
+    [SerializeField]
     private float showDuration;
     [SerializeField]
     private CanvasGroup cameraFadeGroup;
@@ -22,6 +26,7 @@ public class HUDController : Singleton<HUDController>
 
     private float interactAlfa = 0;
     private float dropAlfa = 0;
+    private float exitAlfa = 0;
 
     private void Update()
     {
@@ -50,10 +55,18 @@ public class HUDController : Singleton<HUDController>
             dropAlfa = 0;
         }
 
+        if (Minigame.CurrentMinigame != null)
+        {
+            exitAlfa = 1;
+            exitTooltip.text = $"[{InputAdapter.cancel.GetBindingDisplayString(group: "Keyboard&Mouse")}] Cancel";
+        }
+        else
+        {
+            exitAlfa = 0;
+        }
+
         interactCanvasGroup.alpha = Mathf.MoveTowards(interactCanvasGroup.alpha, interactAlfa, 1 / showDuration);
         dropCanvasGroup.alpha = Mathf.MoveTowards(dropCanvasGroup.alpha, dropAlfa, 1 / showDuration);
-
-        interactCanvasGroup.gameObject.SetActive(interactCanvasGroup.alpha > 0);
-        dropCanvasGroup.gameObject.SetActive(dropCanvasGroup.alpha > 0);
+        exitCanvasGroup.alpha = Mathf.MoveTowards(exitCanvasGroup.alpha, exitAlfa, 1 / showDuration);
     }
 }
