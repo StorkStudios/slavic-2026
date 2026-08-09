@@ -18,6 +18,13 @@ public class Dart : PickupableItem
     public override string UseName => "throw Dart";
 
     private bool used = false;
+    private Rigidbody rigidbody;
+
+    protected override void Start()
+    {
+        base.Start();
+        rigidbody = GetComponent<Rigidbody>();
+    }
 
     public override bool CanUse()
     {
@@ -27,13 +34,20 @@ public class Dart : PickupableItem
     public override void Use()
     {
         PlayerObjectHolder.Instance.DropObject();
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(transform.forward * throwForce, ForceMode.VelocityChange);
         used = true;
 
         if (!string.IsNullOrEmpty(throwSound))
         {
             CommonSoundManager.Instance.PlaySound(throwSound);
+        }
+    }
+
+    private void Update()
+    {
+        if (used && rigidbody.linearVelocity.magnitude > 0.01f)
+        {
+            transform.forward = rigidbody.linearVelocity;
         }
     }
 
@@ -44,7 +58,6 @@ public class Dart : PickupableItem
             return;
         }
 
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.isKinematic = true;
         used = false;
 
