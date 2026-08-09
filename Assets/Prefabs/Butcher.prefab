@@ -233,6 +233,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7235764192721918809, guid: 3e29d90f430c23f4496d8150711e1e6b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b97873e3f928d843bc13ee18cd87927, type: 2}
+    - target: {fileID: -4889067040192059325, guid: 3e29d90f430c23f4496d8150711e1e6b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f20310da15336214dba6360db4fe964d, type: 2}
+    - target: {fileID: -2468990378600390920, guid: 3e29d90f430c23f4496d8150711e1e6b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f20310da15336214dba6360db4fe964d, type: 2}
     - target: {fileID: 919132149155446097, guid: 3e29d90f430c23f4496d8150711e1e6b, type: 3}
       propertyPath: m_Name
       value: ButcherEnemie
