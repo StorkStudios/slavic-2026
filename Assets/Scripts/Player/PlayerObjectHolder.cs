@@ -19,7 +19,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
     [SerializeField]
     private CinemachineCamera pickupCamera;
 
-    public string DropActionName => $"drop {currentObject.ObjectType}";
+    public string DropActionName => $"Drop {currentObject.ObjectType}";
 
     public bool IsHoldingObject => currentObject != null;
 
