@@ -56,6 +56,11 @@ public class GameManager : Singleton<GameManager>
         if (CheckWin())
         {
             ShiftDays.Instance.NextDay();
+            MainMenuController.Win = true;
+        }
+        else
+        {
+            MainMenuController.Win = false;
         }
         SceneManager.LoadScene(SceneEnum.MainMenu.GetBuildIndex());
     }

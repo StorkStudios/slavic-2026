@@ -2,6 +2,7 @@ using StorkStudios.CoreNest;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,13 +21,34 @@ public class MainMenuController : MonoBehaviour
     [SerializeField]
     private RangeBoundariesFloat scaryDuration;
 
+    [SerializeField]
+    private GameObject defeatScreen;
+    [SerializeField]
+    private GameObject victoryScreen;
+
+    public static bool? Win = null;
+
     private void Start()
     {
-        continueLabels.ForEach(label => label.text = $"Continue: Day {ShiftDays.Instance.CurrentDayNumber}");
+        continueLabels.ForEach(label => label.text = $"Continue");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
         StartCoroutine(MenuCoroutine());
+
+        defeatScreen.SetActive(false);
+        victoryScreen.SetActive(false);
+        if (Win.HasValue)
+        {
+            if (Win.Value)
+            {
+                victoryScreen.SetActive(true);
+            }
+            else
+            {
+                defeatScreen.SetActive(true);
+            }
+        }
     }
 
     private IEnumerator MenuCoroutine()
