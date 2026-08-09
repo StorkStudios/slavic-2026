@@ -143,7 +143,10 @@ MonoBehaviour:
         item: crate
       Value: {fileID: 4551525462533973551}
   objectHoldAnimations:
-    pairs: []
+    pairs:
+    - Key:
+        item: meat
+      Value: CarryBigMeat
   animator: {fileID: 6775587036987120591}
   defaultObjectHoldAnimation: CarryItem
 --- !u!114 &3930135579987603650
