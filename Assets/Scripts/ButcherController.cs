@@ -28,7 +28,7 @@ public class ButcherController : MonoBehaviour
         }
         else
         {
-            if (agent.remainingDistance < 0.5f || (PlayerController.Instance.transform.position - path.corners.Last()).sqrMagnitude < 0.25f)
+            if (path.corners.Length < 2 || agent.remainingDistance < 0.5f || (PlayerController.Instance.transform.position - path.corners.Last()).sqrMagnitude < 0.25f)
             {
                 moving = false;
             }
