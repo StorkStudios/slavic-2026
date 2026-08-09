@@ -8,6 +8,8 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
     private float shiftDuration;
+    public float ShiftDuration => shiftDuration;
+
     [ReadOnly]
     public float shiftTime;
 
