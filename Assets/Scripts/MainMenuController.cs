@@ -67,8 +67,15 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    public void HideGameOverScreens()
+    {
+        defeatScreen.SetActive(false);
+        victoryScreen.SetActive(false);
+    }
+
     public void LoadGameScene()
     {
         SceneManager.LoadScene(SceneEnum.SampleScene.GetBuildIndex());
+        Win = null;
     }
 }
