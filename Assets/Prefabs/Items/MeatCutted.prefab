@@ -285,8 +285,8 @@ MonoBehaviour:
   pickupHalfDuration: 1
   objectType: meat piece
   hotinGainSpeed: 1
-  interactSound: 
-  dropSound: 
+  interactSound: meat_pickup
+  dropSound: meat_drop
   locked: 0
 --- !u!1 &2477888292813879591
 GameObject:

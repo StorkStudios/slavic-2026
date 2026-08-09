@@ -159,8 +159,8 @@ MonoBehaviour:
   pickupHalfDuration: 1
   objectType: meat
   hotinGainSpeed: 1.5
-  interactSound: 
-  dropSound: 
+  interactSound: meat_pickup
+  dropSound: meat_drop
   locked: 0
 --- !u!208 &4411433297077162645
 NavMeshObstacle:
