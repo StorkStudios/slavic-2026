@@ -635,6 +635,7 @@ MonoBehaviour:
   collidingObjects:
     list: []
   markerPrefab: {fileID: 817641675700985779, guid: dd35dbb9831d41ce18769bf76974cc8e, type: 3}
+  cutAnimationPrefab: {fileID: 8463602533883305920, guid: b5831e2112c08850794fe8f8e683b77d, type: 3}
   numberOfMarkers: 3
   cutAudioSource: {fileID: 8933831107863101708}
   cursorSprite: {fileID: 21300000, guid: 66ec44035e1601c41bb8682ed38ddee5, type: 3}

@@ -6,6 +6,8 @@ public class MeatCutting : Minigame
     [Header("Prefabs")]
     [SerializeField]
     private GameObject markerPrefab;
+    [SerializeField]
+    private GameObject cutAnimationPrefab;
 
     [Header("Settings")]
     [SerializeField]
@@ -64,6 +66,9 @@ public class MeatCutting : Minigame
 
     private void OnMarkerCut()
     {
+        Vector2 pos = currentMarker.GetComponent<RectTransform>().anchoredPosition;
+        ShowCutAnimation(pos);
+
         CleanupMarker();
         markersCut++;
         Debug.Log("Marker cut");
@@ -75,6 +80,7 @@ public class MeatCutting : Minigame
         {
             cutHotinEvent.Invoke();
         }
+
         if (markersCut < numberOfMarkers)
         {
             ShowNextMarker();
@@ -83,6 +89,13 @@ public class MeatCutting : Minigame
         {
             EndMinigame(true);
         }
+    }
+
+    private void ShowCutAnimation(Vector2 position)
+    {
+        RectTransform animation = Instantiate(cutAnimationPrefab, canvas.transform).GetComponent<RectTransform>();
+        animation.anchoredPosition = position;
+        this.CallDelayed(2f, () => Destroy(animation.gameObject));
     }
 
     private void CleanupMarker()
