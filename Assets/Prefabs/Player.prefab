@@ -1334,7 +1334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3171918565777707261}
   - component: {fileID: 3288931492102452758}
-  - component: {fileID: 8820881308117053392}
+  - component: {fileID: 8670858882613715656}
   - component: {fileID: 4863819583820378328}
   m_Layer: 0
   m_Name: PickupCamera
@@ -1382,7 +1382,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 1
   Lens:
-    FieldOfView: 30
+    FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -1401,7 +1401,7 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &8820881308117053392
+--- !u!114 &8670858882613715656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1410,10 +1410,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4470770204375779852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d1163fa822e8b418a0a603ec078d5c, type: 3}
+  m_Script: {fileID: 11500000, guid: ac68d761e707c5e4482a6b3122d5b077, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineHardLockToTarget
+  m_EditorClassIdentifier: Assembly-CSharp::CinemachinePositionBetween
   Damping: 0
+  distanceFromLookAt: 1
 --- !u!114 &4863819583820378328
 MonoBehaviour:
   m_ObjectHideFlags: 0
