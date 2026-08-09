@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: PackageManager
   m_EditorClassIdentifier: Assembly-CSharp::PackageManager
   readyPackages:
-    pairs: []
+    pairs:
+    - Key:
+        item: {fileID: 0}
+      Value: 1
   packagesRequired: 12
