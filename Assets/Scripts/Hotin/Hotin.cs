@@ -10,6 +10,9 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
     [SerializeField]
     private float hotinValue;
 
+    [HideInInspector]
+    public bool canDie = false;
+
     public event ObservableVariable<float>.ValueChangedDelegate ValueChanged;
 
     public float Max => hotinRange.Max;
@@ -49,6 +52,6 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
 
     private float ClampValue(float value)
     {
-        return Mathf.Clamp(value, hotinRange.Min, hotinRange.Max);
+        return Mathf.Clamp(value, hotinRange.Min, hotinRange.Max * (canDie ? 1 : 0.99f));
     }
 }

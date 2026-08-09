@@ -24,6 +24,8 @@ public class HeldObjectJumpscare : MonoBehaviour
     private int shakeVibrato;
     [SerializeField]
     private float shakeRandomness;
+    [SerializeField]
+    private float hotinAmount;
 
     private float nextCheckTimestamp;
 
@@ -51,6 +53,9 @@ public class HeldObjectJumpscare : MonoBehaviour
 
     private void Jumpscare()
     {
+        Hotin.Instance.canDie = true;
+        Hotin.Instance.Add(hotinAmount);
+        Hotin.Instance.canDie = false;
         PickupableObject obj = (PickupableObject) PlayerObjectHolder.Instance.DropObject();
         if (obj.transform.TryGetComponent(out Rigidbody rigidbody))
         {

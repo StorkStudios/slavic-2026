@@ -39,7 +39,9 @@ public class ButcherController : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController _))
         {
-            Hotin.Instance.Value = 999999f;
+            Hotin.Instance.canDie = true;
+            Hotin.Instance.Add(Hotin.Instance.Max);
+            Hotin.Instance.canDie = false;
             Destroy(gameObject);
         }
     }
