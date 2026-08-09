@@ -919,7 +919,7 @@ MonoBehaviour:
   onPickup:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3972780880366658971}
+      - m_Target: {fileID: 8787033707766158242}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetMaterials
         m_Mode: 5
