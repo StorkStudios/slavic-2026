@@ -13,10 +13,10 @@ public class PlayerWatchWatcher : Singleton<PlayerWatchWatcher>
 
     private void Start()
     {
-        InputAdapter.checkTime.performed += OnTimeCheck;
+        InputAdapter.checkTime.performed += OnTimeCheckInput;
     }
 
-    private void OnTimeCheck(InputAction.CallbackContext context)
+    public void CheckTime()
     {
         if (PlayerObjectHolder.Instance.CurrentObject != null)
         {
@@ -32,5 +32,10 @@ public class PlayerWatchWatcher : Singleton<PlayerWatchWatcher>
         {
             animator.CrossFade(PlayerController.Instance.MovedLastFrame ? "Run" : "Idle", 0.5f);
         }
+    }
+
+    private void OnTimeCheckInput(InputAction.CallbackContext context)
+    {
+        CheckTime();
     }
 }
