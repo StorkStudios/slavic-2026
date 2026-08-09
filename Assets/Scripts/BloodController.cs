@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class BloodController : MonoBehaviour
@@ -8,6 +9,8 @@ public class BloodController : MonoBehaviour
     private AudioClip bloodWalk;
     [SerializeField]
     private AudioClip bloodRun;
+    [SerializeField]
+    private Transform blood;
 
     private AudioSource walkSource;
     private AudioSource runSource;
@@ -44,6 +47,18 @@ public class BloodController : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.y = y;
         transform.localScale = scale;
+    }
+
+    private bool wasInBlood = false;
+
+    private void Update()
+    {
+        bool playerInBlood = Physics.OverlapBox(blood.position, blood.lossyScale / 2, blood.rotation).Count(collider => collider.TryGetComponent(out PlayerController _)) > 0;
+        if (playerInBlood != wasInBlood)
+        {
+            SwapSounds(playerInBlood);
+            wasInBlood = playerInBlood;
+        }
     }
 
     public void SwapSounds(bool blood)
