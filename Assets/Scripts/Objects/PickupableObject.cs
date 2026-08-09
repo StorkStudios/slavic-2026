@@ -6,8 +6,6 @@ using UnityEngine;
 public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
 {
     [SerializeField]
-    private CinemachineCamera animationCameraTarget;
-    [SerializeField]
     private float pickupHalfDuration;
     [SerializeField]
     private string objectType;
@@ -44,7 +42,7 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
 
     public void Interact()
     {
-        animationCameraTarget.enabled = true;
+        PlayerObjectHolder.Instance.LookAt(transform);
         PlayerController.Instance.active = false;
         this.CallDelayed(pickupHalfDuration, OnPickupBack);
     }
@@ -60,8 +58,8 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
 
     private void OnPickupBack()
     {
-        animationCameraTarget.enabled = false;
         PlayerObjectHolder objectHolder = PlayerObjectHolder.Instance;
+        objectHolder.LookAt(null);
         objectHolder.HoldObject(this);
         Transform holdLocation = objectHolder.GetHoldLocation(objectType);
         transform.DOMove(holdLocation.position, pickupHalfDuration);

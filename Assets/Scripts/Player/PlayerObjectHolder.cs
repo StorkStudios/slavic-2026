@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using StorkStudios.CoreNest;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,8 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
     private Animator animator;
     [SerializeField]
     private string defaultObjectHoldAnimation;
+    [SerializeField]
+    private CinemachineCamera pickupCamera;
 
     public string DropActionName => $"drop {currentObject.ObjectType}";
 
@@ -99,5 +102,11 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         }
         animator.CrossFade(PlayerController.Instance.MovedLastFrame ? "Run" : "Idle", 0.5f);
         return obj;
+    }
+
+    public void LookAt(Transform transform)
+    {
+        pickupCamera.Target.TrackingTarget = transform;
+        pickupCamera.enabled = transform != null;
     }
 }
