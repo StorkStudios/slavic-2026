@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3930135579987603650}
   - component: {fileID: 443233048865775715}
   - component: {fileID: 6805340932260971000}
+  - component: {fileID: 6119633937429973185}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -210,6 +211,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWatchWatcher
   animator: {fileID: 6775587036987120591}
+--- !u!114 &6119633937429973185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34050895700071304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c866afb7323ccc89a8af2d3112c6ab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerModelHider
+  playerModel: {fileID: 4255561946626414757}
 --- !u!1 &160699948551568978
 GameObject:
   m_ObjectHideFlags: 0
