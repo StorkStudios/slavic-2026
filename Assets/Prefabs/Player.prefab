@@ -409,9 +409,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWatchHandler
   alarms:
   - Hour: 7
-    Minute: 55
-  - Hour: 7
-    Minute: 48
+    Minute: 0
+  - Hour: 4
+    Minute: 0
+  - Hour: 2
+    Minute: 0
+  - Hour: 1
+    Minute: 0
+  - Hour: 0
+    Minute: 15
   alarmTextFadeTime: 0.5
   alarmDisableDelay: 4
 --- !u!82 &937180308151721347
@@ -425,7 +431,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3dcd9b9b9b4ac664b9e83dfeb05081ee, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3c06033bc28a9554e8bdc5c2fa914359, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
