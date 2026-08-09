@@ -18,22 +18,22 @@ public class PlayerWatchHandler : Singleton<PlayerWatchHandler>
         {
             if (a.Hour > b.Hour)
             {
-                return 1;
+                return -1;
             }
 
             if (b.Hour > a.Hour)
             {
-                return -1;
+                return 1;
             }
 
             if (a.Minute > b.Minute)
             {
-                return 1;
+                return -1;
             }
 
             if (b.Minute > a.Minute)
             {
-                return -1;
+                return 1;
             }
             return 0;
         }
@@ -76,7 +76,10 @@ public class PlayerWatchHandler : Singleton<PlayerWatchHandler>
         {
             if (PlayerObjectHolder.Instance.CurrentObject == null)
             {
-                PlayerWatchWatcher.Instance.CheckTime();
+                if (!PlayerWatchWatcher.Instance.Watching)
+                {
+                    PlayerWatchWatcher.Instance.CheckTime();
+                }
                 DisableAlarm();
             }
         }
