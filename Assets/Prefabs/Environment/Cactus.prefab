@@ -75,7 +75,7 @@ MonoBehaviour:
   petCooldown: 2
   hotinReduceAmount: 1
   actionName: Pet
-  interactSound: female_scream
+  interactSound: female_ouch
 --- !u!1 &5520021420420362255
 GameObject:
   m_ObjectHideFlags: 0
