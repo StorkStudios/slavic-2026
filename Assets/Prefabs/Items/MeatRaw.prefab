@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupableObject
   pickupHalfDuration: 1
   objectType: meat
-  hotinGainSpeed: 1.5
+  hotinGainSpeed: 1.2
   interactSound: meat_pickup
   dropSound: meat_drop
   locked: 0

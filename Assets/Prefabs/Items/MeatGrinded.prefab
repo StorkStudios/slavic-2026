@@ -344,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupableObject
   pickupHalfDuration: 1
   objectType: grinded meat
-  hotinGainSpeed: 1
+  hotinGainSpeed: 0.8
   interactSound: meat_pickup
   dropSound: meat_drop
   locked: 0
