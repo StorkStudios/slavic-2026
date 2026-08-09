@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   camera: {fileID: 7213035797809302005}
   speed: 5
-  sprintSpeed: 7
+  sprintSpeed: 8
   sensitivity: {x: 0.2, y: 0.1}
   cameraShakeStrength: 2.5
   cameraShakeVibrato: 5
@@ -194,6 +194,7 @@ MonoBehaviour:
   shakeStrength: 90
   shakeVibrato: 10
   shakeRandomness: 90
+  hotinAmount: 0
 --- !u!114 &6805340932260971000
 MonoBehaviour:
   m_ObjectHideFlags: 0
