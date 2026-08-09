@@ -25,6 +25,8 @@ public class HUDController : Singleton<HUDController>
     private float showDuration;
     [SerializeField]
     private CanvasGroup cameraFadeGroup;
+    [SerializeField]
+    private CanvasGroup corsairGroup;
 
     public CanvasGroup CameraFadeGroup => cameraFadeGroup;
 
@@ -32,6 +34,7 @@ public class HUDController : Singleton<HUDController>
     private float dropAlfa = 0;
     private float exitAlfa = 0;
     private float watchAlfa = 0;
+    private float corsairAlfa = 1;
 
     private void Update()
     {
@@ -80,9 +83,19 @@ public class HUDController : Singleton<HUDController>
             watchAlfa = 0;
         }
 
+        if ((PlayerObjectHolder.Instance.IsHoldingObject && PlayerObjectHolder.Instance.CurrentObject.ObjectType == "dart") || Minigame.CurrentMinigame != null)
+        {
+            corsairAlfa = 0;
+        }
+        else
+        {
+            corsairAlfa = 1;
+        }
+
         interactCanvasGroup.alpha = Mathf.MoveTowards(interactCanvasGroup.alpha, interactAlfa, 1 / showDuration);
         dropCanvasGroup.alpha = Mathf.MoveTowards(dropCanvasGroup.alpha, dropAlfa, 1 / showDuration);
         exitCanvasGroup.alpha = Mathf.MoveTowards(exitCanvasGroup.alpha, exitAlfa, 1 / showDuration);
         watchCanvasGroup.alpha = Mathf.MoveTowards(watchCanvasGroup.alpha, watchAlfa, 1 / showDuration);
+        corsairGroup.alpha = Mathf.MoveTowards(corsairGroup.alpha, corsairAlfa, 1 / showDuration);
     }
 }
