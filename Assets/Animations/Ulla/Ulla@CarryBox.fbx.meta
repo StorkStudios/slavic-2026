@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a53dc48a83a9e64b88a489290759848
+guid: d15baaef1703cbc46866ba7b1a6d8ff1
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -31,7 +31,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: CarryBigMeat
+      name: CarryBox
       takeName: Armature|ArmatureAction
       internalID: 4781951162920444690
       firstFrame: 0
