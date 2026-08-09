@@ -175,15 +175,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393baa9cfd6ce05448d669abe5d8f9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeldObjectJumpscare
-  minHotinValue: 70
-  checkCooldown: 5
-  jumpscareChance: 0.1
+  minHotinValue: 60
+  checkCooldown: 2
+  jumpscareChance: 0.15
   jumpscareDuration: 2
   jumpscareSound: {fileID: 4806099479567837799}
-  shakeStrength: 90
+  shakeStrength: 45
   shakeVibrato: 10
-  shakeRandomness: 90
-  hotinAmount: 0
+  shakeRandomness: 45
+  hotinAmount: 7
 --- !u!114 &6805340932260971000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,7 +1382,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6c5b0ad1150d16d4a927b19da2114903, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
