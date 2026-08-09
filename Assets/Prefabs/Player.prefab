@@ -150,6 +150,12 @@ MonoBehaviour:
     - Key:
         item: crate
       Value: CarryBox
+    - Key:
+        item: kiep
+      Value: HideHands
+    - Key:
+        item: dart
+      Value: HideHands
   animator: {fileID: 6775587036987120591}
   defaultObjectHoldAnimation: CarryItem
 --- !u!114 &3930135579987603650
