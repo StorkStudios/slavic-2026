@@ -18,6 +18,10 @@ public class HUDController : Singleton<HUDController>
     [SerializeField]
     private CanvasGroup exitCanvasGroup;
     [SerializeField]
+    private TextMeshProUGUI watchTooltip;
+    [SerializeField]
+    private CanvasGroup watchCanvasGroup;
+    [SerializeField]
     private float showDuration;
     [SerializeField]
     private CanvasGroup cameraFadeGroup;
@@ -27,6 +31,7 @@ public class HUDController : Singleton<HUDController>
     private float interactAlfa = 0;
     private float dropAlfa = 0;
     private float exitAlfa = 0;
+    private float watchAlfa = 0;
 
     private void Update()
     {
@@ -65,8 +70,19 @@ public class HUDController : Singleton<HUDController>
             exitAlfa = 0;
         }
 
+        if (PlayerWatchWatcher.Instance.CanCheckTime() || PlayerWatchWatcher.Instance.Watching)
+        {
+            watchAlfa = 1;
+            watchTooltip.text = $"[{InputAdapter.checkTime.GetBindingDisplayString(group: "Keyboard&Mouse")}] {(PlayerWatchWatcher.Instance.Watching ? "Hide watch" : "Show watch")}";
+        }
+        else
+        {
+            watchAlfa = 0;
+        }
+
         interactCanvasGroup.alpha = Mathf.MoveTowards(interactCanvasGroup.alpha, interactAlfa, 1 / showDuration);
         dropCanvasGroup.alpha = Mathf.MoveTowards(dropCanvasGroup.alpha, dropAlfa, 1 / showDuration);
         exitCanvasGroup.alpha = Mathf.MoveTowards(exitCanvasGroup.alpha, exitAlfa, 1 / showDuration);
+        watchCanvasGroup.alpha = Mathf.MoveTowards(watchCanvasGroup.alpha, watchAlfa, 1 / showDuration);
     }
 }

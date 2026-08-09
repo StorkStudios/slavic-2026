@@ -74,7 +74,7 @@ public class PlayerWatchHandler : Singleton<PlayerWatchHandler>
 
         if (alarmActive && !alarmDisabling)
         {
-            if (PlayerObjectHolder.Instance.CurrentObject == null)
+            if (PlayerWatchWatcher.Instance.CanCheckTime())
             {
                 if (!PlayerWatchWatcher.Instance.Watching)
                 {

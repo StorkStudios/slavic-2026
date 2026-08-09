@@ -16,9 +16,14 @@ public class PlayerWatchWatcher : Singleton<PlayerWatchWatcher>
         InputAdapter.checkTime.performed += OnTimeCheckInput;
     }
 
+    public bool CanCheckTime()
+    {
+        return PlayerObjectHolder.Instance.CurrentObject == null && Minigame.CurrentMinigame == null;
+    }
+
     public void CheckTime()
     {
-        if (PlayerObjectHolder.Instance.CurrentObject != null)
+        if (!CanCheckTime())
         {
             return;
         }

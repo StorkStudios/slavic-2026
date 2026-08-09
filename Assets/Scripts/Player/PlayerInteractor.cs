@@ -31,6 +31,10 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
     {
         if (CanInteract)
         {
+            if (PlayerWatchWatcher.Instance.Watching)
+            {
+                PlayerWatchWatcher.Instance.CheckTime();
+            }
             interactable?.Interact();
             if (!string.IsNullOrEmpty(interactable?.InteractSound))
             {
@@ -39,6 +43,10 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
         }
         else if (PlayerObjectHolder.Instance.CurrentObject is PickupableItem item && item.CanUse())
         {
+            if (PlayerWatchWatcher.Instance.Watching)
+            {
+                PlayerWatchWatcher.Instance.CheckTime();
+            }
             item.Use();
         }
     }
