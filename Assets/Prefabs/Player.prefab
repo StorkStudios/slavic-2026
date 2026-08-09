@@ -1231,7 +1231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3171918565777707261}
   - component: {fileID: 3288931492102452758}
-  - component: {fileID: 1736601154587696161}
+  - component: {fileID: 8820881308117053392}
   - component: {fileID: 4863819583820378328}
   m_Layer: 0
   m_Name: PickupCamera
@@ -1275,11 +1275,11 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 3845495660007619244}
     LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
+    CustomLookAtTarget: 1
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 30
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -1298,7 +1298,7 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &1736601154587696161
+--- !u!114 &8820881308117053392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1307,28 +1307,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4470770204375779852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Script: {fileID: 11500000, guid: 36d1163fa822e8b418a0a603ec078d5c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePositionComposer
-  CameraDistance: 1
-  DeadZoneDepth: 0
-  Composition:
-    ScreenPosition: {x: 0, y: 0}
-    DeadZone:
-      Enabled: 0
-      Size: {x: 0.2, y: 0.2}
-    HardLimits:
-      Enabled: 0
-      Size: {x: 0.8, y: 0.8}
-      Offset: {x: 0, y: 0}
-  CenterOnActivate: 1
-  TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
-  Lookahead:
-    Enabled: 0
-    Time: 0
-    Smoothing: 0
-    IgnoreY: 0
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineHardLockToTarget
+  Damping: 0
 --- !u!114 &4863819583820378328
 MonoBehaviour:
   m_ObjectHideFlags: 0

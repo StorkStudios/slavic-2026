@@ -106,7 +106,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 
     public void LookAt(Transform transform)
     {
-        pickupCamera.Target.TrackingTarget = transform;
+        pickupCamera.Target.LookAtTarget = transform;
         pickupCamera.enabled = transform != null;
     }
 }
