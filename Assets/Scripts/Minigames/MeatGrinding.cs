@@ -41,7 +41,7 @@ public class MeatGrinding : Minigame
 
     public override string Name => "Grind";
 
-    private float rotatedAngle = 0f;
+    private float totalRotatedAngle = 0f;
     private bool pressed = false;
     private float lastAngle;
     private Vector2 screenHalf;
@@ -93,7 +93,8 @@ public class MeatGrinding : Minigame
         {
             Destroy(fakeProduct);
             fakeProduct = null;
-            rotatedAngle = 0f;
+            totalRotatedAngle = 0f;
+            handle.localRotation = Quaternion.identity;
         }
 
         InputAdapter.interact.started -= OnMousePress;
@@ -122,33 +123,38 @@ public class MeatGrinding : Minigame
         if (pressed)
         {
             float diff = GetAngleDelta(angle, lastAngle);
-            if (particles != null)
-            {
-                if (!particles.isPlaying)
-                {
-                    particles.Play();
-                }
-                lastParticleTime = Time.time;
-            }
-
-            if (Hotin.Instance.Value > hotinEventThreshold)
-            {
-                if (lastEventTimestamp + grindEventTimeout < Time.time)
-                {
-                    grindHotinEvent.Invoke();
-                    lastEventTimestamp = Time.time + grindEventTimeout;
-                }
-            }
-
             grinding = diff > 0;
-            if (!grindingAudioSource.isPlaying && grinding)
+
+            if (grinding)
             {
-                grindingAudioSource.Play();
+                if (Hotin.Instance.Value > hotinEventThreshold)
+                {
+                    if (lastEventTimestamp + grindEventTimeout < Time.time)
+                    {
+                        grindHotinEvent.Invoke();
+                        lastEventTimestamp = Time.time + grindEventTimeout;
+                    }
+                }
+
+                if (!grindingAudioSource.isPlaying)
+                {
+                    grindingAudioSource.Play();
+                }
+
+                if (particles != null)
+                {
+                    if (!particles.isPlaying)
+                    {
+                        particles.Play();
+                    }
+                    lastParticleTime = Time.time;
+                }
+
+                handle.localRotation = Quaternion.Euler(0f, 0f, 360f - angle);
             }
 
-            handle.localRotation = Quaternion.Euler(0f, 0f, 360f - angle);
-            rotatedAngle += diff;
-            if (rotatedAngle >= grindAngle)
+            totalRotatedAngle += diff;
+            if (totalRotatedAngle >= grindAngle)
             {
                 EndMinigame(true);
             }
@@ -156,8 +162,9 @@ public class MeatGrinding : Minigame
 
         if (Started) //May be false after end minigame
         {
-            CurrentItem.transform.position = Vector3.Lerp(itemLocation.position, finalMeatLocation.position, rotatedAngle / grindAngle);
-            fakeProduct.transform.position = Vector3.Lerp(initialProductLocation.position, productLocations[0].position, rotatedAngle / grindAngle);
+            float grindProgress = totalRotatedAngle / grindAngle;
+            CurrentItem.transform.Lerp(itemLocation, finalMeatLocation, grindProgress);
+            fakeProduct.transform.Lerp(initialProductLocation, productLocations[0], grindProgress);
         }
 
         if (grindingLastFrame && !grinding)
