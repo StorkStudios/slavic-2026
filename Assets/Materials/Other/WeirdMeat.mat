@@ -85,7 +85,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Smoothnes2:
-        m_Texture: {fileID: 2800000, guid: 5c7ec35ebbf48584cb790a0b5ff728c3, type: 3}
+        m_Texture: {fileID: 2800000, guid: ac5e2c975a13af5459f41df308b72fc5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
