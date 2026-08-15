@@ -171,13 +171,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368840768439313167}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 21, y: 3, z: 8.25}
+  m_LocalRotation: {x: 0.86525476, y: -0, z: -0, w: 0.5013325}
+  m_LocalPosition: {x: 21, y: 3.33, z: 9.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444151205592884191}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 119.824005, y: 0, z: 0}
 --- !u!108 &4284799329094917043
 Light:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
-  m_Range: 10
+  m_Range: 5
   m_SpotAngle: 100
   m_InnerSpotAngle: 30
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -2326,13 +2326,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5637496106709119071}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 22.5, y: 3, z: 8.25}
+  m_LocalRotation: {x: 0.86525476, y: -0, z: -0, w: 0.5013325}
+  m_LocalPosition: {x: 22.5, y: 3.33, z: 9.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444151205592884191}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 119.824005, y: 0, z: 0}
 --- !u!108 &4920988738945270897
 Light:
   m_ObjectHideFlags: 0
@@ -2345,7 +2345,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
-  m_Range: 10
+  m_Range: 5
   m_SpotAngle: 100
   m_InnerSpotAngle: 30
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -2617,13 +2617,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6190243651136476426}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 24, y: 3, z: 8.25}
+  m_LocalRotation: {x: 0.86525476, y: -0, z: -0, w: 0.5013325}
+  m_LocalPosition: {x: 24, y: 3.33, z: 9.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1444151205592884191}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 119.824005, y: 0, z: 0}
 --- !u!108 &6709548245709731640
 Light:
   m_ObjectHideFlags: 0
@@ -2636,7 +2636,7 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
-  m_Range: 10
+  m_Range: 5
   m_SpotAngle: 100
   m_InnerSpotAngle: 30
   m_CookieSize2D: {x: 0.5, y: 0.5}
