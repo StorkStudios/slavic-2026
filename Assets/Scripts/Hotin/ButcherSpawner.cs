@@ -9,6 +9,8 @@ public class ButcherSpawner : MonoBehaviour
     private GameObject butcherPrefab;
     [SerializeField]
     private List<Transform> spawnpoints;
+    [SerializeField]
+    private AudioSource butcherSpawnAudioSource;
 
     private bool butcherIsAlive = false;
     private ButcherController butcher;
@@ -21,6 +23,7 @@ public class ButcherSpawner : MonoBehaviour
         }
 
         butcher = Instantiate(butcherPrefab, GetSpawnPosition(), Quaternion.identity).GetComponent<ButcherController>();
+        butcherSpawnAudioSource.Play();
     }
 
     public void DespawnButcher()
