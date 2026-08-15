@@ -2,6 +2,9 @@ using StorkStudios.CoreNest;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
+using SceneEnum = StorkStudios.CoreNest.Scene;
 
 public class HUDController : Singleton<HUDController>
 {
@@ -27,6 +30,8 @@ public class HUDController : Singleton<HUDController>
     private CanvasGroup cameraFadeGroup;
     [SerializeField]
     private CanvasGroup corsairGroup;
+    [SerializeField]
+    private GameObject pauseScreen;
 
     public CanvasGroup CameraFadeGroup => cameraFadeGroup;
 
@@ -35,6 +40,61 @@ public class HUDController : Singleton<HUDController>
     private float exitAlfa = 0;
     private float watchAlfa = 0;
     private float corsairAlfa = 1;
+
+    private void Start()
+    {
+        pauseScreen.SetActive(false);
+
+        InputAdapter.cancel.performed += OnCancel;
+    }
+
+    protected override void OnDestroy()
+    {
+        InputAdapter.cancel.performed -= OnCancel;
+        base.OnDestroy();
+    }
+
+    private void OnCancel(InputAction.CallbackContext _)
+    {
+        if (Minigame.CurrentMinigame != null)
+        {
+            return;
+        }
+
+        SwitchPause();
+    }
+
+    public void SwitchPause()
+    {
+        if (pauseScreen.activeSelf)
+        {
+            pauseScreen.SetActive(false);
+            PlayerController.Instance.Active = true;
+            CursorManager.Instance.LockCursor();
+            PauseManager.Instance.StopPause();
+        }
+        else
+        {
+            pauseScreen.SetActive(true);
+            PlayerController.Instance.Active = false;
+            CursorManager.Instance.UnlockCursor();
+            PauseManager.Instance.StartPause();
+        }
+    }
+
+    public void GoToMainMenu()
+    {
+        if (pauseScreen.activeSelf)
+        {
+            pauseScreen.SetActive(false);
+            PlayerController.Instance.Active = true;
+            CursorManager.Instance.LockCursor();
+            PauseManager.Instance.StopPause();
+        }
+
+        MainMenuController.Win = null;
+        SceneManager.LoadScene(SceneEnum.MainMenu.GetBuildIndex());
+    }
 
     private void Update()
     {

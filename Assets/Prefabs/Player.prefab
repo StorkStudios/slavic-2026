@@ -153,7 +153,7 @@ MonoBehaviour:
       Value: {fileID: 2682907478247193340}
     - Key:
         item: dart
-      Value: {fileID: 2682907478247193340}
+      Value: {fileID: 8455303401695521106}
     - Key:
         item: crate
       Value: {fileID: 3650725223803683165}
@@ -185,7 +185,7 @@ MonoBehaviour:
   animator: {fileID: 6775587036987120591}
   defaultObjectHoldAnimation: CarryItem
   pickupCamera: {fileID: 3288931492102452758}
-  dropAnimationDuration: 0.5
+  dropAnimationDuration: 0.2
 --- !u!114 &3930135579987603650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1316,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1514978432266369635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8455303401695521106}
+  m_Layer: 0
+  m_Name: DartDropLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8455303401695521106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514978432266369635}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0.914}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7213035797809302005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130494596061717423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,6 +2737,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2682907478247193340}
+  - {fileID: 8455303401695521106}
   - {fileID: 3845495660007619244}
   m_Father: {fileID: 8233609547631378785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
