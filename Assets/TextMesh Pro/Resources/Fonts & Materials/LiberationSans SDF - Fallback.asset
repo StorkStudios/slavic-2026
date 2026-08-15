@@ -937,7 +937,7 @@ Texture2D:
   m_Name: LiberationSans SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 1abb4859acd6283202181f6573185697
   m_IsAlphaChannelOptional: 0
   serializedVersion: 4
   m_Width: 512
