@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a36f8ddcf6e4cd48a21194c8daeae77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickupableObject
-  pickupHalfDuration: 1
+  pickupHalfDuration: 0.5
   objectType: grinded meat
   hotinGainSpeed: 0.8
   interactSound: meat_pickup
