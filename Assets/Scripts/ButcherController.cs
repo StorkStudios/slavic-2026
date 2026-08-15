@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
@@ -7,7 +8,8 @@ using UnityEngine.AI;
 public class ButcherController : MonoBehaviour
 {
     [SerializeField]
-    private float playerKillCameraRotationVeclocity;
+    private Transform playerLookTarget;
+    public Transform PlayerLookTarget => playerLookTarget;
 
     private NavMeshAgent agent;
     private NavMeshPath path;
@@ -44,35 +46,13 @@ public class ButcherController : MonoBehaviour
         if (other.TryGetComponent(out PlayerController _))
         {
             StartPlayerKillSequence();
+            agent.acceleration = 99999f;
+            agent.isStopped = true;
         }
-    }
-
-    private void KillPlayerAndDestroyButcher()
-    {
-        Hotin.Instance.canDie = true;
-        Hotin.Instance.Add(Hotin.Instance.Max);
-        Hotin.Instance.canDie = false;
-
-        Destroy(gameObject);
     }
 
     private void StartPlayerKillSequence()
     {
-        if (Minigame.CurrentMinigame != null)
-        {
-            Minigame.CurrentMinigame.EndMinigame(false);
-        }
-        if (PlayerObjectHolder.Instance.CurrentObject != null)
-        {
-            PlayerObjectHolder.Instance.DropObject();
-        }
-        PlayerController.Instance.Active = false;
-
-        Transform cameraTransfrom = Camera.main.transform;
-        Vector3 fromPlayerToButcher = transform.position - cameraTransfrom.position;
-        float angle = Vector3.Angle(fromPlayerToButcher, cameraTransfrom.forward);
-        cameraTransfrom.DOLookAt(fromPlayerToButcher, angle / playerKillCameraRotationVeclocity, AxisConstraint.Z, Vector3.up)
-            .SetEase(Ease.OutQuad)
-            .OnComplete(KillPlayerAndDestroyButcher);
+        PlayerButcherDier.Instance.PlayKillSequence(this);
     }
 }

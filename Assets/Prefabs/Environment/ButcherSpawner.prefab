@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HotinTrigger
   hotinRange:
     Min: 90
-    Max: 100
+    Max: 99999
   rangeEnter:
     m_PersistentCalls:
       m_Calls:
