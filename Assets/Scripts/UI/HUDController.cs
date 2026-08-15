@@ -97,5 +97,10 @@ public class HUDController : Singleton<HUDController>
         exitCanvasGroup.alpha = Mathf.MoveTowards(exitCanvasGroup.alpha, exitAlfa, 1 / showDuration);
         watchCanvasGroup.alpha = Mathf.MoveTowards(watchCanvasGroup.alpha, watchAlfa, 1 / showDuration);
         corsairGroup.alpha = Mathf.MoveTowards(corsairGroup.alpha, corsairAlfa, 1 / showDuration);
+
+        interactCanvasGroup.gameObject.SetActive(interactCanvasGroup.alpha > 0);
+        dropCanvasGroup.gameObject.SetActive(dropCanvasGroup.alpha > 0);
+        exitCanvasGroup.gameObject.SetActive(exitCanvasGroup.alpha > 0);
+        watchCanvasGroup.gameObject.SetActive(watchCanvasGroup.alpha > 0);
     }
 }
