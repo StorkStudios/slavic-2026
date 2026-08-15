@@ -370,7 +370,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -615,7 +615,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -1014,7 +1014,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -1141,7 +1141,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -1316,7 +1316,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -1443,7 +1443,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -1570,7 +1570,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -1816,7 +1816,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -2508,7 +2508,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -2828,6 +2828,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8663693415803706239}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6284730709621061518}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 213736969220166740}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2146346938961181225}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     delay: 0
     printDebugMessages: 0
 --- !u!1 &6676236304266316964
@@ -2874,7 +2922,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -3001,7 +3049,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -3317,7 +3365,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -3585,6 +3633,54 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8663693415803706239}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6284730709621061518}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2146346938961181225}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 213736969220166740}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: set_active
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     delay: 0
     printDebugMessages: 0
@@ -3886,7 +3982,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -4013,7 +4109,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -4140,7 +4236,7 @@ Light:
   serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.70619434, g: 0.8254444, b: 0.90188676, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.5
   m_Range: 9
   m_SpotAngle: 179
   m_InnerSpotAngle: 59.147774
@@ -4726,6 +4822,11 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 949638627850756762}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6284730709621061518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 949638627850756762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1266210304833602147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5183,6 +5284,11 @@ Transform:
 --- !u!65 &6971652576029942463 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 4819348933964098772, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 2459402206833921643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8663693415803706239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 2459402206833921643}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &8758183794352634686 stripped
@@ -5729,6 +5835,11 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 5175560867092901693}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2146346938961181225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 5175560867092901693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6481499626512054373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2171193233649948504, guid: 8656169bbd1959343aff06878df160f6, type: 3}
@@ -6021,6 +6132,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+--- !u!1 &213736969220166740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 6407859898629456192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &236322588527883285 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
