@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using DG.Tweening;
 using StorkStudios.CoreNest;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -8,16 +8,23 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
 {
     [SerializeField]
     private SerializedDictionary<string, Transform> objectHoldLocations;
+    [SerializeField]
+    private SerializedDictionary<string, Transform> objectDropLocations;
 
     [SerializeField]
     private SerializedDictionary<string, string> objectHoldAnimations;
-    
+
+    [SerializeField]
+    private SerializedDictionary<string, float> objectThrowForce;
+
     [SerializeField]
     private Animator animator;
     [SerializeField]
     private string defaultObjectHoldAnimation;
     [SerializeField]
     private CinemachineCamera pickupCamera;
+    [SerializeField]
+    private float dropAnimationDuration;
 
     public string DropActionName => $"Drop {currentObject.ObjectType}";
 
@@ -55,7 +62,16 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         {
             CommonSoundManager.Instance.PlaySound(currentObject.DropSound);
         }
-        DropObject();
+        if (objectDropLocations.TryGetValue(CurrentObject.ObjectType, out Transform dropTransform))
+        {
+            CurrentObject.transform.SetParent(dropTransform, true);
+            CurrentObject.transform.DOLocalRotate(Vector3.zero, dropAnimationDuration);
+            CurrentObject.transform.DOLocalMove(Vector3.zero, dropAnimationDuration).OnComplete(() => DropObject());
+        }
+        else
+        {
+            DropObject();
+        }
     }
 
     public Transform GetHoldLocation(string objectType)
@@ -99,6 +115,11 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
         if (obj.transform.TryGetComponent(out Rigidbody rigidbody))
         {
             rigidbody.isKinematic = false;
+            if (objectThrowForce.TryGetValue(obj.ObjectType, out float force))
+            {
+                Vector3 forceVector = PlayerController.Instance.transform.forward * force;
+                rigidbody.AddForce(forceVector, ForceMode.VelocityChange);
+            }
         }
         animator.CrossFade(PlayerController.Instance.MovedLastFrame ? "Run" : "Idle", 0.5f);
         return obj;

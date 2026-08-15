@@ -35,6 +35,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public AudioSource WalkSound => walkSound;
     public AudioSource SprintSound => sprintSound;
+    public Transform CameraTransform => camera;
 
     [HideInInspector]
     public bool active = true;

@@ -40,6 +40,7 @@ Transform:
   - {fileID: 3478216694489809439}
   - {fileID: 8233609547631378785}
   - {fileID: 4045216788953918993}
+  - {fileID: 8283622710325283862}
   - {fileID: 523395666884312186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -143,6 +144,20 @@ MonoBehaviour:
     - Key:
         item: crate
       Value: {fileID: 4551525462533973551}
+  objectDropLocations:
+    pairs:
+    - Key:
+        item: meat
+      Value: {fileID: 3828423420867391554}
+    - Key:
+        item: kiep
+      Value: {fileID: 2682907478247193340}
+    - Key:
+        item: dart
+      Value: {fileID: 2682907478247193340}
+    - Key:
+        item: crate
+      Value: {fileID: 3650725223803683165}
   objectHoldAnimations:
     pairs:
     - Key:
@@ -157,9 +172,21 @@ MonoBehaviour:
     - Key:
         item: dart
       Value: HideHands
+  objectThrowForce:
+    pairs:
+    - Key:
+        item: meat piece
+      Value: 1
+    - Key:
+        item: grinded meat
+      Value: 1
+    - Key:
+        item: packed meat
+      Value: 1
   animator: {fileID: 6775587036987120591}
   defaultObjectHoldAnimation: CarryItem
   pickupCamera: {fileID: 3288931492102452758}
+  dropAnimationDuration: 0.5
 --- !u!114 &3930135579987603650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,6 +1107,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3845495660007619244}
   m_LocalEulerAnglesHint: {x: -17.557, y: 15.9, z: 0}
+--- !u!1 &2647051249911431166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2682907478247193340}
+  m_Layer: 0
+  m_Name: DropLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2682907478247193340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647051249911431166}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7213035797809302005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2731101892535228685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1244,68 @@ MonoBehaviour:
         m_CallState: 2
     delay: 0
     printDebugMessages: 0
+--- !u!1 &2740466313040131914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3650725223803683165}
+  m_Layer: 0
+  m_Name: CrateDropLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3650725223803683165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740466313040131914}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8283622710325283862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3155020510598909590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3828423420867391554}
+  m_Layer: 0
+  m_Name: MeatDropLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3828423420867391554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155020510598909590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 2.2, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8283622710325283862}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &3858252393208012438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1337,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4045216788953918993}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &4042111045049418854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8283622710325283862}
+  m_Layer: 0
+  m_Name: DropLocations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8283622710325283862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042111045049418854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3650725223803683165}
+  - {fileID: 3828423420867391554}
+  m_Father: {fileID: 4727451400308799275}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4249358308605695567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2682907478247193340}
   - {fileID: 3845495660007619244}
   m_Father: {fileID: 8233609547631378785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
