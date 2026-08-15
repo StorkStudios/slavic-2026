@@ -71,7 +71,7 @@ public abstract class Minigame : MonoBehaviour
         }
         lastLockMode = Cursor.lockState;
         CursorManager.Instance.UnlockCursor();
-        PlayerController.Instance.active = false;
+        PlayerController.Instance.Active = false;
         started = true;
         if (currentItem == null)
         {
@@ -101,7 +101,7 @@ public abstract class Minigame : MonoBehaviour
         {
             CursorManager.Instance.LockCursor();
         }
-        PlayerController.Instance.active = true;
+        PlayerController.Instance.Active = true;
         started = false;
         if (win)
         {

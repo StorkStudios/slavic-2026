@@ -18,7 +18,10 @@ public class PlayerWatchWatcher : Singleton<PlayerWatchWatcher>
 
     public bool CanCheckTime()
     {
-        return PlayerObjectHolder.Instance.CurrentObject == null && Minigame.CurrentMinigame == null && UIPicturesController.Instance.CurrentPicture == null;
+        return PlayerObjectHolder.Instance.CurrentObject == null &&
+            Minigame.CurrentMinigame == null &&
+            UIPicturesController.Instance.CurrentPicture == null &&
+            PlayerController.Instance.Active;
     }
 
     public void CheckTime()

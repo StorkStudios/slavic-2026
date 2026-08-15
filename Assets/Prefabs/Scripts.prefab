@@ -141,6 +141,8 @@ GameObject:
   - component: {fileID: 3620659952262060355}
   - component: {fileID: 3759846905685107804}
   - component: {fileID: 1666893322612268801}
+  - component: {fileID: 1807831202827905835}
+  - component: {fileID: 3159268915100765939}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -206,6 +208,47 @@ MonoBehaviour:
   hooks: []
   meatCount: 3
   nextMeatTime: 60
+--- !u!114 &1807831202827905835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321727963064836613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f712a239ce296e14825ec1922fa1720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CommandTerminal.Terminal
+  MaxHeight: 1
+  ToggleSpeed: 0
+  BufferSize: 512
+  ConsoleFont: {fileID: 12800000, guid: d79d1c3fb2a2bb6808a6a34cdcc434f3, type: 3}
+  InputCaret: '>'
+  ShowGUIButtons: 0
+  RightAlignButtons: 0
+  InputContrast: 0
+  InputAlpha: 0.5
+  BackgroundColor: {r: 0, g: 0, b: 0, a: 0.47843137}
+  ForegroundColor: {r: 1, g: 1, b: 1, a: 1}
+  ShellColor: {r: 1, g: 1, b: 1, a: 1}
+  InputColor: {r: 0, g: 1, b: 1, a: 1}
+  WarningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  ErrorColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &3159268915100765939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321727963064836613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7221280082b12dc9b21b58120fc256c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseManager
+  isPaused: 0
+  pauseLock: 0
 --- !u!1 &4305807010781997445
 GameObject:
   m_ObjectHideFlags: 0

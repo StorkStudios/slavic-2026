@@ -37,8 +37,16 @@ public class PlayerController : Singleton<PlayerController>
     public AudioSource SprintSound => sprintSound;
     public Transform CameraTransform => camera;
 
-    [HideInInspector]
-    public bool active = true;
+    public bool Active
+    {
+        get => deactivateCounter == 0;
+        set
+        {
+            deactivateCounter += value ? -1 : 1;
+        }
+    }
+
+    private int deactivateCounter = 0;
 
     private CharacterController characterController;
 
@@ -100,7 +108,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnLook(InputAction.CallbackContext context)
     {
-        if (!active)
+        if (!Active)
         {
             return;
         }
@@ -117,7 +125,7 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Update()
     {
-        if (!active)
+        if (!Active)
         {
             walkSound.Stop();
             sprintSound.Stop();

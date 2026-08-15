@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774473e54d38c3f3294c3640a935face, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButcherController
+  playerKillCameraRotationVeclocity: 100
 --- !u!1 &6761918867683302584
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,12 +29,12 @@ public class ShowablePicture : MonoBehaviour, IInteractable
         if (IsShowing)
         {
             UIPicturesController.Instance.HideCurrent();
-            PlayerController.Instance.active = true;
+            PlayerController.Instance.Active = true;
         }
         else
         {
             UIPicturesController.Instance.ShowPicture(pictureToShow);
-            PlayerController.Instance.active = false;
+            PlayerController.Instance.Active = false;
         }
     }
 }

@@ -10,6 +10,7 @@ public static class InputAdapter
     public static readonly InputAction drop;
     public static readonly InputAction cancel;
     public static readonly InputAction checkTime;
+    public static readonly InputAction toggleConsole;
 
     static InputAdapter()
     {
@@ -20,5 +21,6 @@ public static class InputAdapter
         drop = InputSystem.actions.FindAction("Drop");
         cancel = InputSystem.actions.FindAction("Cancel");
         checkTime = InputSystem.actions.FindAction("CheckTime");
+        toggleConsole = InputSystem.actions.FindAction("ToggleConsole");
     }
 }

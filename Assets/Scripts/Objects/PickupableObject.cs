@@ -43,7 +43,7 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
     public void Interact()
     {
         PlayerObjectHolder.Instance.LookAt(transform);
-        PlayerController.Instance.active = false;
+        PlayerController.Instance.Active = false;
         this.CallDelayed(pickupHalfDuration, OnPickupBack);
     }
 
@@ -65,7 +65,7 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
         transform.DOMove(holdLocation.position, pickupHalfDuration);
         transform.DORotate(holdLocation.eulerAngles, pickupHalfDuration);
         transform.DOScale(holdLocation.lossyScale, pickupHalfDuration);
-        this.CallDelayed(pickupHalfDuration, () => PlayerController.Instance.active = true);
+        this.CallDelayed(pickupHalfDuration, () => PlayerController.Instance.Active = true);
         foreach(Collider collider in colliders)
         {
             collider.gameObject.layer = Layer.HeldItems.GetLayerIndex();
