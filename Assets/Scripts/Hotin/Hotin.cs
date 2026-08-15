@@ -34,6 +34,8 @@ public class Hotin : ScriptableObjectSingleton<Hotin>
         }
     }
 
+    public float NormalizedValue => Value / Max;
+
     public void ResetNoUpdate()
     {
         hotinValue = hotinRange.Min;
