@@ -68,10 +68,7 @@ public class HUDController : Singleton<HUDController>
     {
         if (pauseScreen.activeSelf)
         {
-            pauseScreen.SetActive(false);
-            PlayerController.Instance.Active = true;
-            CursorManager.Instance.LockCursor();
-            PauseManager.Instance.StopPause();
+            Unpause();
         }
         else
         {
@@ -79,17 +76,28 @@ public class HUDController : Singleton<HUDController>
             PlayerController.Instance.Active = false;
             CursorManager.Instance.UnlockCursor();
             PauseManager.Instance.StartPause();
+            InputAdapter.interact.Disable();
+            InputAdapter.checkTime.Disable();
+            InputAdapter.drop.Disable();
         }
+    }
+
+    private void Unpause()
+    {
+        pauseScreen.SetActive(false);
+        PlayerController.Instance.Active = true;
+        CursorManager.Instance.LockCursor();
+        PauseManager.Instance.StopPause();
+        InputAdapter.interact.Enable();
+        InputAdapter.checkTime.Enable();
+        InputAdapter.drop.Enable();
     }
 
     public void GoToMainMenu()
     {
         if (pauseScreen.activeSelf)
         {
-            pauseScreen.SetActive(false);
-            PlayerController.Instance.Active = true;
-            CursorManager.Instance.LockCursor();
-            PauseManager.Instance.StopPause();
+            Unpause();
         }
 
         MainMenuController.Win = null;
