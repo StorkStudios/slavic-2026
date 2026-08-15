@@ -265,6 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerButcherDier
   butcherCamera: {fileID: 6272357197747672925}
   killSequenceDuraton: 1.5
+  butcherKillSound: {fileID: 4320340869188101714}
 --- !u!1 &109172448809772411
 GameObject:
   m_ObjectHideFlags: 0

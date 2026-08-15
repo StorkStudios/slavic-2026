@@ -26,7 +26,7 @@ public class HotinTrigger : MonoBehaviour
     private void OnHotinChange(float oldValue, float newValue)
     {
         bool newIsInRange = hotinRange.Contains(newValue, BoundariesType.IncludeMin);
-        if (newIsInRange == isInRange)
+        if (!enabled || newIsInRange == isInRange)
         {
             return;
         }

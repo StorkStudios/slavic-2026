@@ -9,6 +9,8 @@ public class PlayerButcherDier : Singleton<PlayerButcherDier>
     private CinemachineCamera butcherCamera;
     [SerializeField]
     private float killSequenceDuraton;
+    [SerializeField]
+    private AudioSource butcherKillSound;
 
     public Action KillSequenceEnded;
 
@@ -23,6 +25,8 @@ public class PlayerButcherDier : Singleton<PlayerButcherDier>
             PlayerObjectHolder.Instance.DropObject();
         }
         PlayerController.Instance.Active = false;
+
+        butcherKillSound.Play();
 
         butcherCamera.LookAt = butcher.PlayerLookTarget;
         butcherCamera.enabled = true;

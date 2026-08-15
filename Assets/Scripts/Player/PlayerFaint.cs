@@ -57,13 +57,10 @@ public class PlayerFaint : Singleton<PlayerFaint>
 
     private void UnFaint()
     {
-
-        HUDController.Instance.CameraFadeGroup.DOFade(0, faintAnimationDuration).OnComplete(() =>
-        {
-            Hotin.Instance.Value -= hotinReduceValue;
-            GameManager.Instance.shiftTime += shiftTimeAddOnFaint;
-            cinemachineCamera.enabled = false;
-            PlayerController.Instance.Active = true;
-        });
+        Hotin.Instance.Value -= hotinReduceValue;
+        GameManager.Instance.shiftTime += shiftTimeAddOnFaint;
+        cinemachineCamera.enabled = false;
+        PlayerController.Instance.Active = true;
+        HUDController.Instance.CameraFadeGroup.DOFade(0, faintAnimationDuration);
     }
 }
