@@ -76,6 +76,7 @@ public abstract class Minigame : MonoBehaviour
         if (currentItem == null)
         {
             currentItem = (PickupableObject) PlayerObjectHolder.Instance.DropObject();
+            currentItem.locked = true;
             currentItem.GetComponent<Rigidbody>().isKinematic = true;
             animatingItem = true;
             currentItem.transform.DOMove(itemLocation.position, itemAnimtionDuration);
