@@ -62,6 +62,19 @@ public class PlayerInteractor : Singleton<PlayerInteractor>
         else
         {
             interactable = null;
+            CrosshairManager.Instance.SetCrosshair(CrosshairManager.CrosshairType.Default);
+        }
+
+        if (interactable != null)
+        {
+            if (interactable.CanInteract())
+            {
+                CrosshairManager.Instance.SetCrosshair(CrosshairManager.CrosshairType.Interact);
+            }
+            else
+            {
+                CrosshairManager.Instance.SetCrosshair(CrosshairManager.CrosshairType.Blocked);
+            }
         }
     }
 }
