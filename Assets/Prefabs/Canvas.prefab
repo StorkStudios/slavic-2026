@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -235,7 +235,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 410.24997, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1070061914781736403
 CanvasRenderer:
@@ -385,7 +385,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 410.24997, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &7423125902824312009
 CanvasRenderer:
@@ -535,7 +535,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 410.24997, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &626486879602209748
 CanvasRenderer:
@@ -1309,7 +1309,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 410.24997, y: 50}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &7895517733232683500
 CanvasRenderer:
@@ -1887,11 +1887,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 29001854070375639, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_fontSize
-      value: 47.6
+      value: 24.55
       objectReference: {fileID: 0}
     - target: {fileID: 324898981641538816, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_fontSize
-      value: 47.25
+      value: 24.4
       objectReference: {fileID: 0}
     - target: {fileID: 1453870536396960887, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_Name
@@ -1899,11 +1899,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2614630928487536713, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 39.65
       objectReference: {fileID: 0}
     - target: {fileID: 2658461196526052263, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_fontSize
-      value: 52.75
+      value: 26.45
       objectReference: {fileID: 0}
     - target: {fileID: 2895035732268601900, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_Pivot.x
@@ -1987,11 +1987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5444995154360668097, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_fontSize
-      value: 53.85
+      value: 26.45
       objectReference: {fileID: 0}
     - target: {fileID: 9070986682265164292, guid: d006205a55872574eb2bdc60a5ded6ae, type: 3}
       propertyPath: m_fontSize
-      value: 53.85
+      value: 26.45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

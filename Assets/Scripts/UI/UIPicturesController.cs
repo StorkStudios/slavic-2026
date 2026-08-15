@@ -10,6 +10,8 @@ public class UIPicturesController : Singleton<UIPicturesController>
 
     private string currentPicture = null;
 
+    public event System.Action<string> PictureHid;
+
     private void Start()
     {
         foreach (GameObject picture in pictures.Values)
@@ -34,7 +36,9 @@ public class UIPicturesController : Singleton<UIPicturesController>
         {
             return;
         }
+        string picture = currentPicture;
         pictures[currentPicture].SetActive(false);
         currentPicture = null;
+        PictureHid?.Invoke(picture);
     }
 }
