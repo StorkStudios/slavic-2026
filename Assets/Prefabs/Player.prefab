@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6805340932260971000}
   - component: {fileID: 6119633937429973185}
   - component: {fileID: 8499046968359108401}
+  - component: {fileID: 584365855982346613}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -91,7 +92,7 @@ MonoBehaviour:
   cameraShakeRandomness: 45
   walkSound: {fileID: 911528489456628370}
   sprintSound: {fileID: 5079154011281260139}
-  animator: {fileID: 6775587036987120591}
+  animator: {fileID: 584365855982346613}
 --- !u!114 &223170661142555968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +184,7 @@ MonoBehaviour:
     - Key:
         item: packed meat
       Value: 1
-  animator: {fileID: 6775587036987120591}
+  animator: {fileID: 584365855982346613}
   defaultObjectHoldAnimation: CarryItem
   pickupCamera: {fileID: 3288931492102452758}
   dropAnimationDuration: 0.2
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5cd5568a6ff6accb5cfff686cf82a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWatchWatcher
-  animator: {fileID: 6775587036987120591}
+  animator: {fileID: 584365855982346613}
 --- !u!114 &6119633937429973185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +267,19 @@ MonoBehaviour:
   butcherCamera: {fileID: 6272357197747672925}
   killSequenceDuraton: 1.5
   butcherKillSound: {fileID: 4320340869188101714}
+--- !u!114 &584365855982346613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34050895700071304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b9cc9d300a561cbb60c7e3a8f23edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationController
+  animator: {fileID: 6775587036987120591}
 --- !u!1 &109172448809772411
 GameObject:
   m_ObjectHideFlags: 0

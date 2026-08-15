@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerWatchWatcher : Singleton<PlayerWatchWatcher>
 {
     [SerializeField]
-    private Animator animator;
+    private PlayerAnimationController animator;
 
     private bool watching;
     public bool Watching => watching;
@@ -34,10 +34,11 @@ public class PlayerWatchWatcher : Singleton<PlayerWatchWatcher>
         watching = !watching;
         if (watching)
         {
-            animator.CrossFade("CheckWatch", 0.5f);
+            animator.ShowWatch();
         }
         else
         {
+            animator.HideWatch();
             animator.CrossFade(PlayerController.Instance.MovedLastFrame ? "Run" : "Idle", 0.5f);
         }
     }

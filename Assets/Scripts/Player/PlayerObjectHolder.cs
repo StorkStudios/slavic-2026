@@ -18,7 +18,7 @@ public class PlayerObjectHolder : Singleton<PlayerObjectHolder>
     private SerializedDictionary<string, float> objectThrowForce;
 
     [SerializeField]
-    private Animator animator;
+    private PlayerAnimationController animator;
     [SerializeField]
     private string defaultObjectHoldAnimation;
     [SerializeField]
