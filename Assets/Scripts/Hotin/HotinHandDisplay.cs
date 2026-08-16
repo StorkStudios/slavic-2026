@@ -9,6 +9,8 @@ public class HotinHandDisplay : MonoBehaviour
     private TextMeshPro text;
     [SerializeField]
     private SpriteRenderer heart;
+    [SerializeField]
+    private MeshRenderer ekgMonitor;
 
     [SerializeField]
     private RangeBoundariesFloat prbpmRange;
@@ -44,6 +46,9 @@ public class HotinHandDisplay : MonoBehaviour
         text.text = displayValue.ToString();
 
         Color color = hotinGradient.Evaluate(t);
+        ekgMonitor.material.color = color;
+        ekgMonitor.material.SetFloat("_PRbpm", currentPrbpm);
+
         float speed = currentPrbpm / 30;
         float target = heartFadeIn ? 1 : 0;
         color.a = Mathf.MoveTowards(heart.color.a, target, speed * Time.deltaTime);
