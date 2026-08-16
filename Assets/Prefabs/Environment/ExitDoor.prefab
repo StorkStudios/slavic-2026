@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: baca9b6f356f6164fbe47d3430423f1c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 78331c1529a185746b80bdb7f61f8432, type: 2}
     - target: {fileID: 919132149155446097, guid: baca9b6f356f6164fbe47d3430423f1c, type: 3}
       propertyPath: m_Name
       value: DoorModel
@@ -261,6 +265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 01e36bdd8d586b54bad01dc50fc78385, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 78331c1529a185746b80bdb7f61f8432, type: 2}
     - target: {fileID: 919132149155446097, guid: 01e36bdd8d586b54bad01dc50fc78385, type: 3}
       propertyPath: m_Name
       value: DoorFrameModelDouble
@@ -327,6 +335,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: baca9b6f356f6164fbe47d3430423f1c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 78331c1529a185746b80bdb7f61f8432, type: 2}
     - target: {fileID: 919132149155446097, guid: baca9b6f356f6164fbe47d3430423f1c, type: 3}
       propertyPath: m_Name
       value: DoorModel (1)
