@@ -17,4 +17,10 @@ MonoBehaviour:
     - Key:
         item: {fileID: 0}
       Value: 1
-  packagesRequired: 14
+    - Key:
+        item: {fileID: 0}
+      Value: 1
+    - Key:
+        item: {fileID: 0}
+      Value: 1
+  packagesRequired: 12
