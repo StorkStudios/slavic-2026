@@ -74,7 +74,18 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(SceneEnum.SampleScene.GetBuildIndex());
         Win = null;
+        SceneManager.LoadScene(SceneEnum.SampleScene.GetBuildIndex());
+    }
+
+    public void LoadIntroScene()
+    {
+        Win = null;
+        SceneManager.LoadScene(SceneEnum.Intro.GetBuildIndex());
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
