@@ -10,8 +10,6 @@ using SceneEnum = StorkStudios.CoreNest.Scene;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField]
-    private List<TextMeshProUGUI> continueLabels;
-    [SerializeField]
     private GameObject normalMenu;
     [SerializeField]
     private GameObject scaryMenu;
@@ -29,7 +27,6 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        continueLabels.ForEach(label => label.text = $"Continue");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
