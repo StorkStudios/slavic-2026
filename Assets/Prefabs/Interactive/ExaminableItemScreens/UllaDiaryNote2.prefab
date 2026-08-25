@@ -119,10 +119,6 @@ PrefabInstance:
         in the colony has some important skills, meanwhile I just know how to cut
         someone's hair or paint their nails. Veeery handy during the world crisis."
       objectReference: {fileID: 0}
-    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
-      propertyPath: m_fontSize
-      value: 15.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

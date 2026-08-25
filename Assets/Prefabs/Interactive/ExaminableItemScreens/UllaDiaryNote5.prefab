@@ -118,10 +118,6 @@ PrefabInstance:
         whispering. I started panicking. Good thing StEVEN was there with me to ensure
         me it was all in my head."
       objectReference: {fileID: 0}
-    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
-      propertyPath: m_fontSize
-      value: 16.55
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

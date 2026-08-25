@@ -118,10 +118,6 @@ PrefabInstance:
         are still far from being operational, and the colony has to eat something.
         But a single thought about this raw, slimy alien meat makes me wanna puke."
       objectReference: {fileID: 0}
-    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
-      propertyPath: m_fontSize
-      value: 16.65
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

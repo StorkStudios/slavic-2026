@@ -117,10 +117,6 @@ PrefabInstance:
         be honest, I'm kind of a dead weight here. What good is a hair stylist in
         a colony struggling for survival? And someone has to take care of that meat."
       objectReference: {fileID: 0}
-    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
-      propertyPath: m_fontSize
-      value: 17.95
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

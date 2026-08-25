@@ -106,10 +106,6 @@ PrefabInstance:
         it'll help me relax. Or maybe I'll just spend my time with the cacti. I definetly
         have to find some way to keep my cool."
       objectReference: {fileID: 0}
-    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
-      propertyPath: m_fontSize
-      value: 16.85
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
