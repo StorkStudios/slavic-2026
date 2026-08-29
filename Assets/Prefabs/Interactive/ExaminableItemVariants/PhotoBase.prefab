@@ -121,6 +121,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1799775212963234207, guid: d052f0c46dd82b1468ceec34f2fe322a, type: 3}
+      propertyPath: actionName
+      value: Look at
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799775212963234207, guid: d052f0c46dd82b1468ceec34f2fe322a, type: 3}
+      propertyPath: cancelActionName
+      value: Step away
+      objectReference: {fileID: 0}
     - target: {fileID: 2113894322597076722, guid: d052f0c46dd82b1468ceec34f2fe322a, type: 3}
       propertyPath: m_Size.x
       value: 0.5
