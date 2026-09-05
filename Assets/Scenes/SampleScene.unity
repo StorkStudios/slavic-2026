@@ -15643,17 +15643,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeatGrinded
       objectReference: {fileID: 0}
-    - target: {fileID: 8874672205740321213, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.3053238
-      objectReference: {fileID: 0}
-    - target: {fileID: 8874672205740321213, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
-      propertyPath: m_LocalPosition.y
+    - target: {fileID: 4454751254563540330, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8874672205740321213, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874672205740321213, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874672205740321213, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.658201
+      value: 2.558
       objectReference: {fileID: 0}
     - target: {fileID: 8874672205740321213, guid: 34e81b3ea38d4ff82b2b1d0089eae6fa, type: 3}
       propertyPath: m_LocalRotation.w
