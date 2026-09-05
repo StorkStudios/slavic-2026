@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-9067152441435155947
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-7_{-9067152441435155947}
+  m_AudioClip: {fileID: 8300000, guid: 74c32cd912188a24e818aa767f575f71, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-8625246575104760964
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-5_{-8625246575104760964}
+  m_AudioClip: {fileID: 8300000, guid: 353bad3e6286d364abaae98fc8450dfb, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5754376962429642603
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-15_{-5754376962429642603}
+  m_AudioClip: {fileID: 8300000, guid: 48c09baccb6459d4697751c325ad99fc, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5131645780541788210
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-33_{-5131645780541788210}
+  m_AudioClip: {fileID: 8300000, guid: a1f8f47991514254fb2ca683033737a3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4410582253504179658
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-12_{-4410582253504179658}
+  m_AudioClip: {fileID: 8300000, guid: 143f5cf07ff1a0149b81309cc62d88b5, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3925254679448932340
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-23_{-3925254679448932340}
+  m_AudioClip: {fileID: 8300000, guid: 61142a4950654e340ae4a9c05fcff510, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3092977851866229662
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-38_{-3092977851866229662}
+  m_AudioClip: {fileID: 8300000, guid: bcde8f9df8ea3db49be4f182a813d7b7, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2202881588633020343
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-16_{-2202881588633020343}
+  m_AudioClip: {fileID: 8300000, guid: 1987fab860556f04f93bb2412934f2d0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1973699949944031352
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-37_{-1973699949944031352}
+  m_AudioClip: {fileID: 8300000, guid: 02cb55f4c8aee974b8a8ac66c7e761f2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1275119538485662034
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-35_{-1275119538485662034}
+  m_AudioClip: {fileID: 8300000, guid: 1d337cadf895aa04f9e9673ca4f0d312, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-75912623468652367
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-26_{-75912623468652367}
+  m_AudioClip: {fileID: 8300000, guid: 7caad64def9b2b74e9406eb9a732dc38, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &79899880863050024
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-31_{79899880863050024}
+  m_AudioClip: {fileID: 8300000, guid: f097003e18aa115498d0cb531722fb0b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1034418643993377091
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-17_{1034418643993377091}
+  m_AudioClip: {fileID: 8300000, guid: 8601338f5e291a84f859f64b8517d1eb, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1035916545049049746
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-27_{1035916545049049746}
+  m_AudioClip: {fileID: 8300000, guid: f19c76f4814d42a46a9e0afb3548cf9a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5037160008130062474
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-30_{5037160008130062474}
+  m_AudioClip: {fileID: 8300000, guid: 0c47cd6f9130ab04aba6869e0d2d0295, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5200861574615011559
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-9_{5200861574615011559}
+  m_AudioClip: {fileID: 8300000, guid: 04a366a244d03c64abba8277cee4f4d9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5746025710178232615
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-13_{5746025710178232615}
+  m_AudioClip: {fileID: 8300000, guid: 2e4148342aef7f949b0d42fbd7c8c123, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6104478424981224416
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-20_{6104478424981224416}
+  m_AudioClip: {fileID: 8300000, guid: db1b7f38482bc3442a2b0d772bb85770, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ButcherSoundsAudioContainer
+  m_Volume: 0
+  m_Pitch: -87
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 80}
+  m_PitchRandomizationRange: {x: -400, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -8625246575104760964}
+  - {fileID: -9067152441435155947}
+  - {fileID: 5200861574615011559}
+  - {fileID: -4410582253504179658}
+  - {fileID: 5746025710178232615}
+  - {fileID: -5754376962429642603}
+  - {fileID: -2202881588633020343}
+  - {fileID: 1034418643993377091}
+  - {fileID: 8416891840279533207}
+  - {fileID: 6104478424981224416}
+  - {fileID: -3925254679448932340}
+  - {fileID: 8113860452200091409}
+  - {fileID: -75912623468652367}
+  - {fileID: 1035916545049049746}
+  - {fileID: 9141149876429009506}
+  - {fileID: 5037160008130062474}
+  - {fileID: 79899880863050024}
+  - {fileID: -5131645780541788210}
+  - {fileID: 6498862509170914535}
+  - {fileID: -1275119538485662034}
+  - {fileID: -1973699949944031352}
+  - {fileID: -3092977851866229662}
+  m_AvoidRepeatingLast: 1
+  m_PlaybackMode: 2
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 0
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6498862509170914535
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-34_{6498862509170914535}
+  m_AudioClip: {fileID: 8300000, guid: 33ccd2a6ed1967c45bb6f425cadd6671, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8113860452200091409
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-24_{8113860452200091409}
+  m_AudioClip: {fileID: 8300000, guid: 8db2f01a7e97b424d88cead39a61efd4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8416891840279533207
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-19_{8416891840279533207}
+  m_AudioClip: {fileID: 8300000, guid: 945e22ef13f18a1418bb813f9d151272, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &9141149876429009506
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: cow-sound-28_{9141149876429009506}
+  m_AudioClip: {fileID: 8300000, guid: 9e185abd209832b4dae737240276cc5e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
