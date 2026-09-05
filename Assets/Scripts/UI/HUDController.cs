@@ -109,12 +109,12 @@ public class HUDController : Singleton<HUDController>
         if (PlayerInteractor.Instance.CanInteract)
         {
             interactAlfa = 1;
-            interactTooltip.text = $"[{InputAdapter.interact.GetBindingDisplayString(group: "Keyboard&Mouse")}] {PlayerInteractor.Instance.Interactable.ActionName}";
+            interactTooltip.text = $"{PlayerInteractor.Instance.Interactable.ActionName}";
         }
         else if (PlayerObjectHolder.Instance.CurrentObject is PickupableItem item && item.CanUse())
         {
             interactAlfa = 1;
-            interactTooltip.text = $"[{InputAdapter.interact.GetBindingDisplayString(group: "Keyboard&Mouse")}] {item.UseName}";
+            interactTooltip.text = $"{item.UseName}";
         }
         else
         {
@@ -124,7 +124,7 @@ public class HUDController : Singleton<HUDController>
         if (PlayerObjectHolder.Instance.IsHoldingObject && UIPicturesController.Instance.CurrentPicture == null)
         {
             dropAlfa = 1;
-            dropTooltip.text = $"[{InputAdapter.drop.GetBindingDisplayString(group: "Keyboard&Mouse")}] {PlayerObjectHolder.Instance.DropActionName}";
+            dropTooltip.text = $"{PlayerObjectHolder.Instance.DropActionName}";
         }
         else
         {
