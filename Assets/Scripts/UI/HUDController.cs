@@ -134,7 +134,7 @@ public class HUDController : Singleton<HUDController>
         if (Minigame.CurrentMinigame != null)
         {
             exitAlfa = 1;
-            exitTooltip.text = $"[{InputAdapter.cancel.GetBindingDisplayString(group: "Keyboard&Mouse")}] Cancel";
+            exitTooltip.text = $"Cancel";
         }
         else
         {
@@ -144,7 +144,7 @@ public class HUDController : Singleton<HUDController>
         if (PlayerWatchWatcher.Instance.CanCheckTime() || PlayerWatchWatcher.Instance.Watching)
         {
             watchAlfa = 1;
-            watchTooltip.text = $"[{InputAdapter.checkTime.GetBindingDisplayString(group: "Keyboard&Mouse")}] {(PlayerWatchWatcher.Instance.Watching ? "Hide watch" : "Show watch")}";
+            watchTooltip.text = $"{(PlayerWatchWatcher.Instance.Watching ? "Hide watch" : "Show watch")}";
         }
         else
         {
