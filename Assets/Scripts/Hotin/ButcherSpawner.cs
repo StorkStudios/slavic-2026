@@ -8,6 +8,8 @@ public class ButcherSpawner : MonoBehaviour
     [SerializeField]
     private GameObject butcherPrefab;
     [SerializeField]
+    private GameObject butcherDisappearParticles;
+    [SerializeField]
     private List<Transform> spawnpoints;
     [SerializeField]
     private AudioSource butcherSpawnAudioSource;
@@ -28,6 +30,7 @@ public class ButcherSpawner : MonoBehaviour
 
     public void DespawnButcher()
     {
+        Instantiate(butcherDisappearParticles, butcher.transform.position, butcher.transform.rotation);
         Destroy(butcher.gameObject);
         butcherIsAlive = false;
     }
