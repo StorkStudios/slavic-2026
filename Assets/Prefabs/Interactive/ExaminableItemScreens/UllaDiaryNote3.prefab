@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324898981641538816, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_fontSize
-      value: 45.65
+      value: 53.35
       objectReference: {fileID: 0}
     - target: {fileID: 1453870536396960887, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_Name
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2614630928487536713, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_fontSize
-      value: 45.65
+      value: 53.35
       objectReference: {fileID: 0}
     - target: {fileID: 2895035732268601900, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_Pivot.x
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773318004274787148, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_fontSize
-      value: 22.8
+      value: 26.65
       objectReference: {fileID: 0}
     - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_text
@@ -116,7 +116,11 @@ PrefabInstance:
         - is actually edible. Maybe not all of it, but some parts for sure. You can
         see where it leads, right?\n\r\n\tI guess there is no other way. The synthfarms
         are still far from being operational, and the colony has to eat something.
-        But a single thought about this raw, slimy alien meat makes me wanna puke."
+        But a single thought about this raw, slimy alien meat makes me wanna puke.\n\t"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
+      propertyPath: m_fontSize
+      value: 26.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

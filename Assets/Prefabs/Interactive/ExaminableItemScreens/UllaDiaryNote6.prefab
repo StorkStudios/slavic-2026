@@ -101,10 +101,15 @@ PrefabInstance:
       value: "\tI worked the first full shift. It was TERRIBLE. All this raw, slimy
         meat... ugh. My heartrate was rising and at some point I think I started
         hallucinating.\n\r\n\tI saw... something. Something big. Something that definetly
-        shouldn't be there. I ran immediatelly, hid in my room and shut the door.\n\r\n\tInside
-        the locker, I found a pack of cigarettes. I quit long time ago, but... maybe
+        shouldn't be there. I ran immediatelly, hid in my room and shut the door.
+        I got all sweaty and My heart was beating like crazy...\n\r\n\tInside the
+        locker, I found a pack of cigarettes. I quit long time ago, but... maybe
         it'll help me relax. Or maybe I'll just spend my time with the cacti. I definetly
         have to find some way to keep my cool."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
+      propertyPath: m_fontSize
+      value: 26.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

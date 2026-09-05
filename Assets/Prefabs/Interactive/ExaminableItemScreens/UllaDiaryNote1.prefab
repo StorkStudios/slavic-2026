@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 324898981641538816, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_fontSize
-      value: 45.65
+      value: 53.35
       objectReference: {fileID: 0}
     - target: {fileID: 1453870536396960887, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_Name
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2614630928487536713, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_fontSize
-      value: 45.65
+      value: 53.35
       objectReference: {fileID: 0}
     - target: {fileID: 2895035732268601900, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_Pivot.x
@@ -108,18 +108,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773318004274787148, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_fontSize
-      value: 22.8
+      value: 26.65
       objectReference: {fileID: 0}
     - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
       propertyPath: m_text
       value: "\tWe're finally on planet Lionech! StEVEN told us he cleared the area
         and brought some alien speciments to the lab. They look... unsettling. There
-        is something disturbingly human-like about them. Ugh.\n\r\n\tI'm sitting
-        inside the base, waiting for Yukari and StEVEN to return. Lucky ones. Their
-        android bodies are immune to the radiation. Meanwhile I'm stuck inside these
-        four walls.\n\r\n\tAt least there are some cacti inside to keep me company.
-        I always liked these plants, their shape and ease of maintaining. I don't
-        know why, but examining them makes me calm and happy."
+        is something disturbingly human-like about them. Ugh.\n\n\tI'm sitting inside
+        the base, waiting for Yukari and StEVEN to return. Lucky ones. Their android
+        bodies are immune to the radiation. Meanwhile I'm stuck inside these four
+        walls.\n\n\tAt least there are some cacti inside to keep me company. I always
+        liked these plants, their shape and ease of maintaining. I don't know why,
+        but examining them makes me calm and happy."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070986682265164292, guid: 5544226b037396441bbf3325159d66b0, type: 3}
+      propertyPath: m_fontSize
+      value: 23.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
