@@ -106,7 +106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Special thanks to Pawel Walig\xF3ra for the model of cactus"
+  m_text: Special thanks to Pawel Waligora for the model of cactus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f231025b6abc74b42a21f929afcad3b5, type: 2}
   m_sharedMaterial: {fileID: -2419837056390960528, guid: f231025b6abc74b42a21f929afcad3b5, type: 2}
