@@ -39,6 +39,10 @@ public class MeatGrinding : Minigame
     private float grindEventTimeout;
     public Trigger grindHotinEvent;
 
+    [Header("Tip")]
+    [SerializeField]
+    private GameObject tableHint;
+
     public override string Name => "Grind";
 
     private float totalRotatedAngle = 0f;
@@ -72,6 +76,8 @@ public class MeatGrinding : Minigame
     {
         base.StartMinigame();
 
+        tableHint.gameObject.SetActive(true);
+
         screenHalf = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
         InputAdapter.interact.started += OnMousePress;
@@ -88,6 +94,8 @@ public class MeatGrinding : Minigame
     public override void EndMinigame(bool win)
     {
         base.EndMinigame(win);
+
+        tableHint.gameObject.SetActive(false);
 
         if (win)
         {

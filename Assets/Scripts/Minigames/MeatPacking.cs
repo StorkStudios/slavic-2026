@@ -24,6 +24,10 @@ public class MeatPacking : Minigame
     [SerializeField]
     private Vector2 cursorHotspot;
 
+    [Header("Tip")]
+    [SerializeField]
+    private GameObject tableHint;
+
     private bool pressed = false;
     private HashSet<Vector3> completedVertices = new HashSet<Vector3>();
 
@@ -53,6 +57,7 @@ public class MeatPacking : Minigame
 
         targetLine.gameObject.SetActive(true);
         line.gameObject.SetActive(true);
+        tableHint.gameObject.SetActive(true);
 
         Reset();
 
@@ -71,6 +76,7 @@ public class MeatPacking : Minigame
 
         targetLine.gameObject.SetActive(false);
         line.gameObject.SetActive(false);
+        tableHint.gameObject.SetActive(false);
 
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
@@ -126,6 +132,7 @@ public class MeatPacking : Minigame
     private void OnMouseRelease(InputAction.CallbackContext context)
     {
         pressed = false;
+        Reset();
     }
 
     private void OnMousePress(InputAction.CallbackContext context)

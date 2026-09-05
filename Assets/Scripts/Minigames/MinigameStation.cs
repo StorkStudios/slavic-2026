@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 
 [RequireComponent(typeof(Minigame))]
 public class MinigameStation : MonoBehaviour, IInteractable

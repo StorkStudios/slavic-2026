@@ -15,7 +15,7 @@ public class Dart : PickupableItem
     [SerializeField]
     private AudioSource hitTargetSound;
 
-    public override string UseName => "throw Dart";
+    public override string UseName => "Throw dart";
 
     private bool used = false;
     private Rigidbody rigidbody;

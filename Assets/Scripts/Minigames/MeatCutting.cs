@@ -24,6 +24,10 @@ public class MeatCutting : Minigame
     private int hotinEventThreshold;
     public Trigger cutHotinEvent;
 
+    [Header("Tip")]
+    [SerializeField]
+    private GameObject tableHint;
+
     private MeatCuttingMarker currentMarker;
     private int markersCut = 0;
 
@@ -45,6 +49,8 @@ public class MeatCutting : Minigame
     {
         base.StartMinigame();
 
+        tableHint.gameObject.SetActive(true);
+
         ShowNextMarker();
 
         Cursor.SetCursor(scaledCursor, Vector2.zero, CursorMode.Auto);
@@ -58,6 +64,8 @@ public class MeatCutting : Minigame
         {
             Destroy(currentMarker.gameObject);
         }
+
+        tableHint.gameObject.SetActive(false);
 
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 

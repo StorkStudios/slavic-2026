@@ -18,7 +18,7 @@ public class Kiep : PickupableItem
     [SerializeField]
     private string stopKiepingSound;
 
-    public override string UseName => "take a puff";
+    public override string UseName => "(HOLD) Take a puff";
 
     private bool isUsing = false;
 

@@ -17,7 +17,7 @@ public class PickupableObject : MonoBehaviour, IInteractable, IPickupable
     private string dropSound;
 
     public string ObjectType => objectType;
-    string IInteractable.ActionName => "pick up " + ObjectType;
+    string IInteractable.ActionName => "Pick up " + ObjectType;
     public string InteractSound => interactSound;
     public string DropSound => dropSound;
     private Collider[] colliders;
