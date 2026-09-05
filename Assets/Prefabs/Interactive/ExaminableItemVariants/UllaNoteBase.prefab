@@ -184,6 +184,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1799775212963234207, guid: d052f0c46dd82b1468ceec34f2fe322a, type: 3}
+      propertyPath: hideSound
+      value: paper_pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799775212963234207, guid: d052f0c46dd82b1468ceec34f2fe322a, type: 3}
+      propertyPath: showSound
+      value: paper_drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799775212963234207, guid: d052f0c46dd82b1468ceec34f2fe322a, type: 3}
       propertyPath: actionName
       value: Read
       objectReference: {fileID: 0}
