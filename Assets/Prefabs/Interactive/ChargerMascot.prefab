@@ -503,6 +503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.95
       objectReference: {fileID: 0}
+    - target: {fileID: 4909045789633720742, guid: 830525d74eae9a842b14f4ae8871c5a8, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5019188058944687579, guid: 830525d74eae9a842b14f4ae8871c5a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
