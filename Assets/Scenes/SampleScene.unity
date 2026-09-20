@@ -19338,6 +19338,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1690567788094343917, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690567788094343917, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 42e684dea3822874181e8d6476d39030, type: 2}
+    - target: {fileID: 1690567788094343917, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690567788094343917, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690567788094343917, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1871704601440298785, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
       propertyPath: m_fontSize
       value: 46.3
@@ -19585,6 +19605,26 @@ PrefabInstance:
     - target: {fileID: 4337915890743250720, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459894485852171590, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459894485852171590, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 42e684dea3822874181e8d6476d39030, type: 2}
+    - target: {fileID: 4459894485852171590, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459894485852171590, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459894485852171590, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4495573986122166026, guid: ab16f28c8e2a8cf41a461a4f5358e12f, type: 3}
       propertyPath: m_fontSize
