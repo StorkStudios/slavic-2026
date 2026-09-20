@@ -47,9 +47,9 @@ MonoBehaviour:
   trigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8758183794352634686}
+      - m_Target: {fileID: 1775607643864417878}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -59,9 +59,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6234978357815400399}
+      - m_Target: {fileID: 4010595882418088615}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -71,9 +71,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 236322588527883285}
+      - m_Target: {fileID: 7091197271221700989}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -83,9 +83,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2051835667815684712}
+      - m_Target: {fileID: 9031685205808129792}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -95,9 +95,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6971652576029942463}
+      - m_Target: {fileID: 2361092387221611117}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -107,9 +107,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 5749987448983572046}
+      - m_Target: {fileID: 1137175459152547484}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -119,9 +119,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1877032318729842068}
+      - m_Target: {fileID: 6487592365754903878}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -131,9 +131,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 374517290221847529}
+      - m_Target: {fileID: 4987329137059349307}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -404,18 +404,6 @@ MonoBehaviour:
   trigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6201065472122229429}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Set
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 623842729445766626}
         m_TargetAssemblyTypeName: 
         m_MethodName: Set
@@ -439,6 +427,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6201065472122229429}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     delay: 0
     printDebugMessages: 0
@@ -616,57 +616,9 @@ MonoBehaviour:
   trigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8758183794352634686}
+      - m_Target: {fileID: 2361092387221611117}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 6234978357815400399}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 236322588527883285}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2051835667815684712}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 6971652576029942463}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -676,9 +628,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5749987448983572046}
+      - m_Target: {fileID: 1137175459152547484}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -688,9 +640,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1877032318729842068}
+      - m_Target: {fileID: 6487592365754903878}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -700,9 +652,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 374517290221847529}
+      - m_Target: {fileID: 4987329137059349307}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_enabled
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -711,6 +663,54 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1775607643864417878}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4010595882418088615}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7091197271221700989}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 9031685205808129792}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
     delay: 0
     printDebugMessages: 0
@@ -2071,18 +2071,6 @@ MonoBehaviour:
   trigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6080778313682604218}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Set
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 8058646360618733141}
         m_TargetAssemblyTypeName: 
         m_MethodName: Set
@@ -2099,6 +2087,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6080778313682604218}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: Set
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2575,7 +2575,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 8663693415803706239}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2587,7 +2587,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6284730709621061518}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2599,7 +2599,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 213736969220166740}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2611,7 +2611,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2146346938961181225}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3381,7 +3381,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 8663693415803706239}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3393,7 +3393,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6284730709621061518}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3405,7 +3405,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2146346938961181225}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3417,7 +3417,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 213736969220166740}
         m_TargetAssemblyTypeName: 
-        m_MethodName: set_active
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4279,7 +4279,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (7)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4503,6 +4503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4436320371783536819, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: trigger.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4545,26 +4549,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+--- !u!1 &1137175459152547484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 208788749450800134, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 949638627850756762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1372590677332293058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2171193233649948504, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 949638627850756762}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &5749987448983572046 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4819348933964098772, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 949638627850756762}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &6234978357815400399 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+--- !u!1 &4010595882418088615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 949638627850756762}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6284730709621061518 stripped
@@ -4717,7 +4721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (13)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4779,7 +4783,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (16)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4841,7 +4845,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (15)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4941,6 +4945,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4436320371783536819, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: trigger.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5031,31 +5039,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+--- !u!1 &1775607643864417878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 2459402206833921643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2361092387221611117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 208788749450800134, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 2459402206833921643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4323506188744005939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2171193233649948504, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 2459402206833921643}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &6971652576029942463 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4819348933964098772, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 2459402206833921643}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8663693415803706239 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 2459402206833921643}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &8758183794352634686 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 2459402206833921643}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2839711746901955485
@@ -5207,7 +5215,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (11)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5269,7 +5277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (12)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5331,7 +5339,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (9)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5393,7 +5401,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (14)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5455,7 +5463,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (10)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5555,6 +5563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4436320371783536819, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: trigger.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5597,31 +5609,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8656169bbd1959343aff06878df160f6, type: 3}
---- !u!65 &374517290221847529 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4819348933964098772, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 5175560867092901693}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2051835667815684712 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 5175560867092901693}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2146346938961181225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 5175560867092901693}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4987329137059349307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 208788749450800134, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 5175560867092901693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6481499626512054373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2171193233649948504, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 5175560867092901693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9031685205808129792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 5175560867092901693}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5596117080674505575
@@ -5634,7 +5646,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (17)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5696,7 +5708,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (4)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5758,7 +5770,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (16)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5858,6 +5870,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4436320371783536819, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: trigger.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5904,7 +5920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5916,19 +5932,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6492521624317400340, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 6407859898629456192}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &236322588527883285 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 6605334266238563669, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 6407859898629456192}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1877032318729842068 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 4819348933964098772, guid: 8656169bbd1959343aff06878df160f6, type: 3}
-  m_PrefabInstance: {fileID: 6407859898629456192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5101709895462835736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2171193233649948504, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 6407859898629456192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6487592365754903878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 208788749450800134, guid: 8656169bbd1959343aff06878df160f6, type: 3}
+  m_PrefabInstance: {fileID: 6407859898629456192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7091197271221700989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4216975604607879229, guid: 8656169bbd1959343aff06878df160f6, type: 3}
   m_PrefabInstance: {fileID: 6407859898629456192}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7415344593525748267
@@ -6031,7 +6047,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (15)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6093,7 +6109,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (2)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6155,7 +6171,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (8)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6217,7 +6233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (5)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6279,7 +6295,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (6)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6341,7 +6357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (3)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6403,7 +6419,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1340192813900168082, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_Name
-      value: Lamp (1)
+      value: Lamp
       objectReference: {fileID: 0}
     - target: {fileID: 1860693562853466408, guid: 92d708601cb4e1e4c8cdfe81a58fbcf3, type: 3}
       propertyPath: m_LocalPosition.x
